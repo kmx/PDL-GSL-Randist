@@ -1,0 +1,17 @@
+Changes
+MANIFEST
+Makefile.PL
+README
+Randist.pm
+Randist.pp
+Randist.yml
+example.pl
+pdlmaker.plm
+t/00-load.t
+t/bad-code.t
+t/boilerplate.t
+t/check-yml-sanity.t
+t/compare-to-c.t
+t/generate-testvalues-generator.pl
+t/manifest.t
+t/mvtestvalues-generator.c
