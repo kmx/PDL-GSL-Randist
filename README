@@ -25,6 +25,3 @@ under the terms of either: the GNU General Public License as published
 by the Free Software Foundation; or the Artistic License.
 
 See http://dev.perl.org/licenses/ for more information.
-
-pdlmaker.plm is from Bryan Jurish's PDL::HMM module which he licenses under the
-Perl license (See http://search.cpan.org/~moocow/PDL-HMM/).

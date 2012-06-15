@@ -5,7 +5,6 @@ README
 Randist.pm
 Randist.pp
 example.pl
-pdlmaker.plm
 share/Randist.yml
 t/00-load.t
 t/bad-code.t

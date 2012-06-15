@@ -820,8 +820,7 @@ You can find documentation for this module with the perldoc command.
 
 =head1 ACKNOWLEDGEMENTS
 
-Thanks to the PDL team and the GSL team!  Thanks to Bryan Jurish (MOOCOW) for
-pdlmaker.plm, a script for making CPAN friendly PDL PP packages.
+Thanks to the PDL team and the GSL team!  
 
 =head1 LICENSE AND COPYRIGHT
 
