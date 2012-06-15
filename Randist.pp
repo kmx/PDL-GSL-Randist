@@ -358,7 +358,7 @@ for my $basename (sort keys %$annotation) {
 # multinomial
 
 {
-    my $sig = 'int numdraws(); double probabilities(n); int [o] counts(n)';
+    my $sig = 'int numdraws(); double p(n); int [o] counts(n)';
     pp_defnd('ran_multinomial_meat',
         Pars => $sig,
         OtherPars => 'IV rng',
@@ -367,7 +367,7 @@ for my $basename (sort keys %$annotation) {
                 INT2PTR(gsl_rng *, $COMP(rng)),
                 $SIZE(n),
                 $numdraws(),
-                $P(probabilities),
+                $P(p),
                 (unsigned int *) $P(counts)
             );
     });
@@ -377,17 +377,20 @@ for my $basename (sort keys %$annotation) {
 }
 
 for (qw/ran_multinomial_pdf ran_multinomial_lnpdf/) {
-    pp_defsig($_,
-        Pars => 'double proportions(n); int counts(n); double [o] probability()',
+    pp_def($_,
+        Pars => 'double p(n); int counts(n); double [o] probability()',
         Code => qq{
             \$probability() = gsl_$_(
             \$SIZE(n),
-            \$P(proportions),
+            \$P(p),
             (unsigned int *) \$P(counts)
             );
         },
         HandleBad => 1,
         BadCode => q{ $SETBAD(probability()); },
+        PMFunc => '', 
+        Doc => 'Note the slightly strange order of arguments.', 
+        BadDoc => ''
     );
 }
 
