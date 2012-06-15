@@ -8,7 +8,7 @@ use Test::More qw(no_plan);
 use Test::Exception;
 
 use YAML qw/LoadFile/;
-my $config = LoadFile("Randist.yml");
+my $config = LoadFile("share/Randist.yml");
 
 DIST:
 while (my ($name,$specs) = each %$config) {

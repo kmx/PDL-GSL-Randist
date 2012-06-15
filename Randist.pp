@@ -304,7 +304,7 @@ sub gen_pp{
 # read in annotation and generate
 
 use YAML qw/LoadFile/;
-my $annotation = LoadFile("Randist.yml");
+my $annotation = LoadFile("share/Randist.yml");
 
 for my $basename (sort keys %$annotation) {
     my $specs = $annotation->{$basename};
