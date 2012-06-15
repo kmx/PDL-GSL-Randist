@@ -31,7 +31,6 @@ sub set_seed{
 }
 
 sub _argument_checker{
-    my $name = shift;
     my $expected_arguments = shift;
     my $val_or_dims = shift;
     if (@_ % 2 != 0){
@@ -44,18 +43,18 @@ sub _argument_checker{
         if (! exists $expected_arguments->{$key}){
             croak "unknown argument $key";
         }
-        push @ordered_args, $opt{$key};
+        $ordered_args[$expected_arguments->{$key}] = $opt{$key};
     }
     return $val_or_dims, @ordered_args;
 }
 
 while (my ($name,$specs) = each %$config) {
-    say $name;
     my $rbasename = $specs->{rname};
     my %expected_arguments;
     if (exists $specs->{args}){
+        my $i = 0;
         for my $arg (@{$specs->{args}}) {
-            $expected_arguments{$arg->{name}} = 1;
+            $expected_arguments{$arg->{name}} = $i++;
         }
     }
     lock_hash(%expected_arguments);
@@ -65,10 +64,7 @@ while (my ($name,$specs) = each %$config) {
         my $rname_pdf = "d$rbasename";
         my $pname_pdf = "ran_${name}_pdf";
         no strict 'refs';
-        *{$rname_pdf} = sub {
-            my ($x, @args) = _argument_checker($name, \%expected_arguments, @_);
-            return $PDL::GSL::Randist::{$pname_pdf}->($x, @args);
-        };
+        *{$rname_pdf} = _make_df($pname_pdf, \%expected_arguments);
         use strict 'refs';
         push @exported, $rname_pdf;
     }
@@ -76,10 +72,7 @@ while (my ($name,$specs) = each %$config) {
         my $rname_cdf = "p$rbasename";
         my $pname_cdf = "cdf_${name}_P";
         no strict 'refs';
-        *{$rname_cdf} = sub {
-            my ($x, @args) = _argument_checker($name, \%expected_arguments, @_);
-            return $PDL::GSL::Randist::{$pname_cdf}->($x, @args);
-        };
+        *{$rname_cdf} = _make_df($pname_cdf, \%expected_arguments);
         use strict 'refs';
         push @exported, $rname_cdf;
     }
@@ -87,10 +80,7 @@ while (my ($name,$specs) = each %$config) {
         my $rname_cdfinv = "q$rbasename";
         my $pname_cdfinv = "cdf_${name}_Pinv";
         no strict 'refs';
-        *{$rname_cdfinv} = sub {
-            my ($P, @args) = _argument_checker($name, \%expected_arguments, @_);
-            return $PDL::GSL::Randist::{$pname_cdfinv}->($P, @args);
-        };
+        *{$rname_cdfinv} = _make_df($pname_cdfinv, \%expected_arguments);
         use strict 'refs';
         push @exported, $rname_cdfinv;
     }
@@ -99,24 +89,42 @@ while (my ($name,$specs) = each %$config) {
         my $pname_sampler = "ran_${name}";
 
         no strict 'refs';
-        *{$rname_sampler} = sub {
-            my ($v, @args) = _argument_checker($name, \%expected_arguments, @_);
-            if (looks_like_number $v || ref $v eq 'PDL'){
-                return $PDL::GSL::Randist::{$pname_sampler}->($rng, @args, $v);
-            }
-            elsif (ref $v eq 'ARRAY'){
-                return $PDL::GSL::Randist::{$pname_sampler}->($rng, @args, @$v);
-            }
-            else{
-                croak "first argument to $rname_sampler must be a count (integer), arrayref (for dimension of desired output pdl), or an output pdl";
-            }
-        };
+        *{$rname_sampler} = _make_r_sampler($pname_sampler, $rname_sampler, \%expected_arguments);
         use strict 'refs';
         push @exported, $rname_sampler;
     }
     push @EXPORT_OK, @exported;
     $EXPORT_TAGS{$rbasename} = \@exported;
 }
+
+sub _make_df{
+    my ($pname, $expected_arguments) = @_;
+    return sub {
+        my ($P, @args) = _argument_checker($expected_arguments, @_);
+        return $PDL::GSL::Randist::{$pname}->($P, @args);
+    };
+}
+sub _make_r_sampler{
+    my ($pname, $rname, $expected_arguments) = @_;
+    return sub{
+        my ($v, @args) = _argument_checker($expected_arguments, @_);
+        if (looks_like_number $v || ref $v eq 'PDL'){
+            return $PDL::GSL::Randist::{$pname}->($rng, @args, $v);
+        }
+        elsif (ref $v eq 'ARRAY'){
+            return $PDL::GSL::Randist::{$pname}->($rng, @args, @$v);
+        }
+        else{
+            croak "first argument to $rname must be a count (integer), arrayref (for dimension of desired output pdl), or an output pdl";
+        }
+    }
+}
+
+*rmultinom   = _make_r_sampler('ran_multinomial',  'rmultinom',   { numdraws => 0, p => 1});
+*dmultinom   = _make_df('ran_multinomial_pdf',   { p => 0, counts => 1 });
+*dmultinomln = _make_df('ran_multinomial_lnpdf', { p => 0, counts => 1 });
+$EXPORT_TAGS{multinom} = [qw/rmultinom  dmultinom  dmultinomln/];
+push @EXPORT_OK, qw/rmultinom  dmultinom  dmultinomln/;
 
 $EXPORT_TAGS{all} = \@EXPORT_OK;
 
