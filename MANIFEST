@@ -15,3 +15,5 @@ t/compare-to-c.t
 t/generate-testvalues-generator.pl
 t/manifest.t
 t/mvtestvalues-generator.c
+# t/rlike.t
+lib/PDL/GSL/Randist/RLike.pm
