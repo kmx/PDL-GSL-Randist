@@ -15,7 +15,7 @@ my %hash = pdlpp_stdargs($package);
 $hash{clean}{FILES} .= " t/*.out t/testvalues.txt t/mvtestvalues.txt t/testvalues-generator.*";
 # $hash{PM}{'lib/PDL/GSL/Randist/RLike.pm'} = '$(INST_LIBDIR)/Randist/RLike.pm';
 
-install_share 'share';
+install_share module => 'PDL::Probability::GSL' => 'share';
 
 chomp( my $libgsl = `gsl-config --libs` );
 chomp( my $cflags = `gsl-config --cflags` );

@@ -1,5 +1,4 @@
-package PDL::GSL::Randist::RLike;
-use version; our $VERSION = qv('0.0.1');
+package PDL::Probability::GSL::RLike;
 use strict;
 use warnings;
 use 5.010_000;
@@ -7,7 +6,7 @@ use Data::Dumper;
 use Carp;
 use autodie;
 use YAML qw/LoadFile/;
-use PDL::GSL::Randist;
+use PDL::Probability::GSL;
 use PDL::GSL::RNG;
 
 require Exporter;
@@ -19,7 +18,7 @@ our %EXPORT_TAGS = ();
 use File::ShareDir qw/:ALL/;
 use Scalar::Util qw/looks_like_number/;
 
-my $file = dist_file('PDL-GSL-Randist', 'Randist.yml');
+my $file = module_file('PDL::Probability::GSL', 'Randist.yml');
 my $config = LoadFile($file);
 
 our $rng = PDL::GSL::RNG->new('taus');
@@ -49,6 +48,7 @@ sub _argument_checker{
 }
 
 while (my ($name,$specs) = each %$config) {
+    say $name;
     my $rbasename = $specs->{rname};
     my @expected_arguments = exists $specs->{args} ? map { $_->{name} } @{$specs->{args}} : ();
     my @exported;
@@ -94,7 +94,7 @@ sub _make_df{
     my ($pname, $expected_arguments) = @_;
     return sub {
         my ($P, @args) = _argument_checker($expected_arguments, @_);
-        return $PDL::GSL::Randist::{$pname}->($P, @args);
+        return $PDL::Probability::GSL::{$pname}->($P, @args);
     };
 }
 sub _make_r_sampler{
@@ -102,10 +102,10 @@ sub _make_r_sampler{
     return sub{
         my ($v, @args) = _argument_checker($expected_arguments, @_);
         if (looks_like_number $v || ref $v eq 'PDL'){
-            return $PDL::GSL::Randist::{$pname}->($rng, @args, $v);
+            return $PDL::Probability::GSL::{$pname}->($rng, @args, $v);
         }
         elsif (ref $v eq 'ARRAY'){
-            return $PDL::GSL::Randist::{$pname}->($rng, @args, @$v);
+            return $PDL::Probability::GSL::{$pname}->($rng, @args, @$v);
         }
         else{
             croak "first argument to $rname must be a count (integer), arrayref (for dimension of desired output pdl), or an output pdl";
@@ -120,6 +120,8 @@ $EXPORT_TAGS{multinom} = [qw/rmultinom  dmultinom  dmultinomln/];
 push @EXPORT_OK, qw/rmultinom  dmultinom  dmultinomln/;
 
 $EXPORT_TAGS{all} = \@EXPORT_OK;
+
+# say Dumper \%EXPORT_TAGS;
 
 1;
 

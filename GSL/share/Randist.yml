@@ -51,6 +51,7 @@ gaussian:
   pdf: 1
   cdf: 1
   cdfinv: 1
+  automatic: 1
   args:
     - name: sigma
       type: double
@@ -73,6 +74,7 @@ gaussian_tail:
   pdf: 1
   cdf: 0
   cdfinv: 0
+  automatic: 1
   args:
     - name: a
       type: double
@@ -92,6 +94,7 @@ exponential:
   pdf: 1
   cdf: 1
   cdfinv: 1
+  automatic: 1
   args:
     - name: mu
       type: double
@@ -112,6 +115,7 @@ laplace:
   pdf: 1
   cdf: 1
   cdfinv: 1
+  automatic: 1
   args:
     - name: a
       type: double
@@ -132,6 +136,7 @@ exppow:
   pdf: 1
   cdf: 1
   cdfinv: 0
+  automatic: 1
   args:
     - name: a
       type: double
@@ -153,6 +158,7 @@ cauchy:
   pdf: 1
   cdf: 1
   cdfinv: 1
+  automatic: 1
   args:
     - name: scale
       type: double
@@ -173,6 +179,7 @@ rayleigh:
   pdf: 1
   cdf: 1
   cdfinv: 1
+  automatic: 1
   args:
     - name: sigma
       type: double
@@ -193,6 +200,7 @@ rayleigh_tail:
   pdf: 1
   cdf: 0
   cdfinv: 0
+  automatic: 1
   args:
     - name: a
       type: double
@@ -212,6 +220,7 @@ landau:
   pdf: 1
   cdf: 0
   cdfinv: 0
+  automatic: 1
   args:
     # double gsl_ran_landau (const gsl_rng * r)
     # double gsl_ran_landau_pdf (double x)
@@ -225,6 +234,7 @@ levy:
   pdf: 0
   cdf: 0
   cdfinv: 0
+  automatic: 1
   args:
     - name: scale
       type: double
@@ -243,6 +253,7 @@ levy_skew:
   pdf: 0
   cdf: 0
   cdfinv: 0
+  automatic: 1
   args:
     - name: scale
       type: double
@@ -264,6 +275,7 @@ gamma:
   pdf: 1
   cdf: 1
   cdfinv: 1
+  automatic: 1
   args:
     - name: a
       type: double
@@ -310,6 +322,7 @@ lognormal:
   pdf: 1
   cdf: 1
   cdfinv: 1
+  automatic: 1
   args:
     - name: zeta
       type: double
@@ -333,6 +346,7 @@ chisq:
   pdf: 1
   cdf: 1
   cdfinv: 1
+  automatic: 1
   args:
     - name: nu
       type: double
@@ -353,6 +367,7 @@ fdist:
   pdf: 1
   cdf: 1
   cdfinv: 1
+  automatic: 1
   args:
     - name: nu1
       type: double
@@ -376,6 +391,7 @@ tdist:
   pdf: 1
   cdf: 1
   cdfinv: 1
+  automatic: 1
   args:
     - name: nu
       type: double
@@ -396,6 +412,7 @@ beta:
   pdf: 1
   cdf: 1
   cdfinv: 1
+  automatic: 1
   args:
     - name: a
       type: double
@@ -419,6 +436,7 @@ logistic:
   pdf: 1
   cdf: 1
   cdfinv: 1
+  automatic: 1
   args:
     - name: a
       type: double
@@ -439,6 +457,7 @@ pareto:
   pdf: 1
   cdf: 1
   cdfinv: 1
+  automatic: 1
   args:
     - name: a
       type: double
@@ -462,6 +481,7 @@ weibull:
   pdf: 1
   cdf: 1
   cdfinv: 1
+  automatic: 1
   args:
     - name: a
       type: double
@@ -485,6 +505,7 @@ gumbel1:
   pdf: 1
   cdf: 1
   cdfinv: 1
+  automatic: 1
   args:
     - name: a
       type: double
@@ -508,6 +529,7 @@ gumbel2:
   pdf: 1
   cdf: 1
   cdfinv: 1
+  automatic: 1
   args:
     - name: a
       type: double
@@ -531,6 +553,7 @@ poisson:
   pdf: 1
   cdf: 1
   cdfinv: 0
+  automatic: 1
   args:
     - name: mu
       type: double
@@ -549,6 +572,7 @@ bernoulli:
   pdf: 1
   cdf: 0
   cdfinv: 0
+  automatic: 1
   args:
     - name: p
       type: double
@@ -565,6 +589,7 @@ negative_binomial:
   pdf: 1
   cdf: 1
   cdfinv: 0
+  automatic: 1
   args:
     - name: p
       type: double
@@ -586,6 +611,7 @@ geometric:
   pdf: 1
   cdf: 1
   cdfinv: 0
+  automatic: 1
   args:
     - name: p
       type: double
@@ -604,6 +630,7 @@ logarithmic:
   pdf: 1
   cdf: 0
   cdfinv: 0
+  automatic: 1
   args:
     - name: p
       type: double
@@ -620,6 +647,7 @@ binomial:
   pdf: 1
   cdf: 1
   cdfinv: 0
+  automatic: 1
   test_min: 0
   test_max: 100
   args:
@@ -643,6 +671,7 @@ pascal:
   pdf: 1
   cdf: 1
   cdfinv: 0
+  automatic: 1
   args:
     - name: p
       type: double
@@ -664,6 +693,7 @@ hypergeometric:
   pdf: 1
   cdf: 1
   cdfinv: 0
+  automatic: 1
   args:
     - name: n1
       type: unsigned int
