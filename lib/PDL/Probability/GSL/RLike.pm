@@ -18,7 +18,7 @@ our %EXPORT_TAGS = ();
 use File::ShareDir qw/:ALL/;
 use Scalar::Util qw/looks_like_number/;
 
-my $file = module_file('PDL::Probability::GSL', 'Randist.yml');
+my $file = module_file('PDL::Probability::GSL', 'gsl_randist.yml');
 my $config = LoadFile($file);
 
 our $rng = PDL::GSL::RNG->new('taus');

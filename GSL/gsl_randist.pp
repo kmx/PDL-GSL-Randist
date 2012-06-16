@@ -26,7 +26,7 @@ use Carp;
 #  double gsl_cdf_pareto_Qinv (double Q, double a, double b);
 # 
 # The strategy is to generate the appropriate pp_def's from the annotation in
-# Randist.yml (which has its own format documentation), which contains an
+# gsl_randist.yml (which has its own format documentation), which contains an
 # entry for each distribution to be handled automatically. Each looks like:
 # 
 # Samplers are slightly more complicated b/c pp_def forces the gsl_rng * object to
@@ -300,7 +300,7 @@ sub gen_pp{
 # read in annotation and generate
 
 use YAML qw/LoadFile/;
-my $annotation = LoadFile("share/Randist.yml");
+my $annotation = LoadFile("share/gsl_randist.yml");
 
 for my $basename (sort keys %$annotation) {
     my $specs = $annotation->{$basename};

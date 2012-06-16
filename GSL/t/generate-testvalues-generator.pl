@@ -8,7 +8,7 @@ END {close STDOUT}
 $| = 1;
 
 use YAML qw/LoadFile/;
-my $config = LoadFile("share/Randist.yml");
+my $config = LoadFile("share/gsl_randist.yml");
 open my $output_fh, '>', 't/testvalues-generator.c';
 
 sub genc{
