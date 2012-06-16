@@ -57,12 +57,16 @@ sub top_targets{
 
     # add gentest target
     $inherited .= q{
-gentest :
+gentest : t/testvalues-generator.out t/mvtestvalues-generator.out t/testvalues.txt t/mvtestvalues.txt
+t/testvalues-generator.out:
 	perl t/generate-testvalues-generator.pl
 	$(CC) `gsl-config --libs --cflags` t/testvalues-generator.c -o t/testvalues-generator.out
+t/mvtestvalues-generator.out:
 	$(CC) `gsl-config --libs --cflags` t/mvtestvalues-generator.c -o t/mvtestvalues-generator.out
-	# this won't work on windows... oh well
+# this won't work on windows... oh well
+t/testvalues.txt:
 	./t/testvalues-generator.out > t/testvalues.txt
+t/mvtestvalues.txt:
 	./t/mvtestvalues-generator.out > t/mvtestvalues.txt
 };
     return $inherited;
