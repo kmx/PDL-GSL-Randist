@@ -5,9 +5,6 @@ use Data::Dumper;
 use autodie;
 use Carp;
 
-our $VERSION = '0.01';
-pp_setversion($VERSION);
-
 # The goal is to wrap as many of the samplers, pdf, cdf, and inverse-cdf 
 # functions possible automatically.
 # 
@@ -51,8 +48,7 @@ pp_setversion($VERSION);
 # 
 #  gen_ran_meat_wrapper('ran_pareto', 2);
 
-
-pp_bless('PDL::GSL::Randist');
+pp_bless('PDL::Probability::GSL');
 pp_addhdr('
 #include <stdio.h>
 #include <gsl/gsl_rng.h>
@@ -293,7 +289,7 @@ sub gen_pp{
         );
         my $numargs = scalar @args;
         pp_addpm(qq{
-            *$perl_funname = make_ran_meat_wrapper(\\\&PDL::GSL::Randist::$perl_meat_funname, $numargs);
+            *$perl_funname = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::$perl_meat_funname, $numargs);
         });
         # pp_add_exported($perl_funname);
         gen_sampler_pod($perl_funname, $ran_pars);
@@ -331,8 +327,8 @@ for my $basename (sort keys %$annotation) {
         Code => q{ $out() = gsl_ran_gaussian_ziggurat( INT2PTR(gsl_rng *, $COMP(rng)), $sigma()); },
     );
 
-    pp_addpm(qq{ *ran_gaussian_ziggurat = make_ran_meat_wrapper(\\\&PDL::GSL::Randist::ran_gaussian_ziggurat_meat, 1); });
-    pp_addpm(qq{ *ran_gaussian_ratio_method = make_ran_meat_wrapper(\\\&PDL::GSL::Randist::ran_gaussian_ratio_method_meat, 1); });
+    pp_addpm(qq{ *ran_gaussian_ziggurat = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_gaussian_ziggurat_meat, 1); });
+    pp_addpm(qq{ *ran_gaussian_ratio_method = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_gaussian_ratio_method_meat, 1); });
 
     gen_sampler_pod('ran_gaussian_ratio_method', $sig);
     gen_sampler_pod('ran_gaussian_ziggurat', $sig);
@@ -350,7 +346,7 @@ for my $basename (sort keys %$annotation) {
         OtherPars => 'IV rng',
         Code => '$out() = gsl_ran_gamma_knuth(INT2PTR(gsl_rng *, $COMP(rng)), $a(), $b());',
     );
-    pp_addpm(' *ran_gamma_knuth = make_ran_meat_wrapper(\&PDL::GSL::Randist::ran_gamma_knuth_meat, 2); ');
+    pp_addpm(' *ran_gamma_knuth = make_ran_meat_wrapper(\&PDL::Probability::GSL::ran_gamma_knuth_meat, 2); ');
     gen_sampler_pod('ran_gamma_knuth', $sig);
 }
 
@@ -372,7 +368,7 @@ for my $basename (sort keys %$annotation) {
             );
     });
 
-    pp_addpm(qq{ *ran_multinomial = make_ran_meat_wrapper(\\\&PDL::GSL::Randist::ran_multinomial_meat, 2); });
+    pp_addpm(qq{ *ran_multinomial = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_multinomial_meat, 2); });
     gen_sampler_pod('ran_multinomial', $sig);
 }
 
@@ -411,7 +407,7 @@ for (qw/ran_multinomial_pdf ran_multinomial_lnpdf/) {
             );
     });
     
-    pp_addpm(qq{ *ran_dirichlet = make_ran_meat_wrapper(\\\&PDL::GSL::Randist::ran_dirichlet_meat, 1); });
+    pp_addpm(qq{ *ran_dirichlet = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_dirichlet_meat, 1); });
     gen_sampler_pod('ran_dirichlet', $sig);
 }
 
@@ -455,7 +451,7 @@ for (qw/ran_dirichlet_pdf ran_dirichlet_lnpdf/) {
         },
     );
     
-    pp_addpm(qq{ *ran_bivariate_gaussian = make_ran_meat_wrapper(\\\&PDL::GSL::Randist::ran_bivariate_gaussian_meat, 2); });
+    pp_addpm(qq{ *ran_bivariate_gaussian = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_bivariate_gaussian_meat, 2); });
     gen_sampler_pod('ran_bivariate_gaussian', $sig);
 }
 
@@ -510,9 +506,9 @@ for my $twod (qw/ran_dir_2d ran_dir_2d_trig_method/) {
     gen_sampler_pod('ran_dir_3d', $sig);
 }
 
-pp_addpm(qq{ *ran_dir_2d = make_ran_meat_wrapper(\\\&PDL::GSL::Randist::ran_dir_2d_meat, 0); });
-pp_addpm(qq{ *ran_dir_2d_trig_method = make_ran_meat_wrapper(\\\&PDL::GSL::Randist::ran_dir_2d_trig_method_meat, 0); });
-pp_addpm(qq{ *ran_dir_3d = make_ran_meat_wrapper(\\\&PDL::GSL::Randist::ran_dir_3d_meat, 0); });
+pp_addpm(qq{ *ran_dir_2d = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_dir_2d_meat, 0); });
+pp_addpm(qq{ *ran_dir_2d_trig_method = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_dir_2d_trig_method_meat, 0); });
+pp_addpm(qq{ *ran_dir_3d = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_dir_3d_meat, 0); });
 
 pp_defnd('ran_dir_nd_meat',
     Pars => 'int size(); double [o] vector(n)', 
@@ -666,7 +662,7 @@ one-dimensional.
 pp_addpm({At => 'Top'}, <<'PROLOGUE');
 =head1 NAME
 
-PDL::GSL::Randist - Comprehensive Perl Data Language (PDL) binding to the GNU
+PDL::Probability::GSL - Comprehensive Perl Data Language (PDL) binding to the GNU
 Scientific Library (GSL) Random Distribution (randist) functions.
 
 =head1 VERSION
@@ -680,10 +676,10 @@ Version 0.01
 
     use PDL;
     use PDL::GSL::RNG;
-    use PDL::GSL::Randist;
+    use PDL::Probability::GSL;
 
     # I suggest you alias the module name:
-    # use Package::Alias 'Rd' =>  'PDL::GSL::Randist';
+    # use Package::Alias 'Rd' =>  'PDL::Probability::GSL';
     
     my $rng = PDL::GSL::RNG->new('taus');
     $rng->set_seed(time);
@@ -699,38 +695,38 @@ Version 0.01
     # sampling functions are called ran_DISTNAME.  The first argument is always a
     # PDL::GSL::RNG object.  The following arguments are parameters specific to
     # that dist. (n, p for binomial, sigma for gaussian, mu for exponential, etc.
-    # See the PDL::GSL::Randist pod).  Last arguments are for output specification.
+    # See the PDL::Probability::GSL pod).  Last arguments are for output specification.
     # You can either pass nothing, in which case a single sample is returned.  If
     # you pass a PDL, it will be filled with samples in-place.  If you pass a like
     # of integers, it will return a new PDL of those dimensions filled with
     # samples.
     
     # draw a sample 
-    print PDL::GSL::Randist::ran_binomial($rng, pdl(.5), long(100)); # n = 100, p = .5
-    print PDL::GSL::Randist::ran_gaussian($rng, pdl(3)); # sigma = 3.0
+    print PDL::Probability::GSL::ran_binomial($rng, pdl(.5), long(100)); # n = 100, p = .5
+    print PDL::Probability::GSL::ran_gaussian($rng, pdl(3)); # sigma = 3.0
     
     # draw 10 samples,put them in an outpdl
     my $counts = zeroes long, 10;
     my $values = zeroes long, 10;
-    PDL::GSL::Randist::ran_binomial($rng, pdl(.5), long(100), $counts);
-    PDL::GSL::Randist::ran_gaussian($rng, pdl(3), $values);
+    PDL::Probability::GSL::ran_binomial($rng, pdl(.5), long(100), $counts);
+    PDL::Probability::GSL::ran_gaussian($rng, pdl(3), $values);
     
     # draw 10 samples, return as 1-D pdl. 
-    print PDL::GSL::Randist::ran_binomial($rng, pdl(.5), long(100), 10);
-    print PDL::GSL::Randist::ran_gaussian($rng, pdl(3), 10); 
+    print PDL::Probability::GSL::ran_binomial($rng, pdl(.5), long(100), 10);
+    print PDL::Probability::GSL::ran_gaussian($rng, pdl(3), 10); 
     
     # draw 100 samples, return as 10x10 pdl
-    print PDL::GSL::Randist::ran_binomial($rng, pdl(.5), long(100), 10, 10);
-    print PDL::GSL::Randist::ran_gaussian($rng, pdl(3), 10, 10); 
+    print PDL::Probability::GSL::ran_binomial($rng, pdl(.5), long(100), 10, 10);
+    print PDL::Probability::GSL::ran_gaussian($rng, pdl(3), 10, 10); 
     
     # draw a single n=10 draw from a multinomial dist with p = [.1, .2, .3, .4]
-    print PDL::GSL::Randist::ran_multinomial($rng, 10, pdl(.1, .2, .3, .4));
+    print PDL::Probability::GSL::ran_multinomial($rng, 10, pdl(.1, .2, .3, .4));
     
     # a 10 n=10 draw from a multinomial dist with p = [.1, .2, .3, .4], return as a
     # 4 x 10 pdl.
     # *WARNING* interface for drawing multiple multivariate samples may change draw,
     # since right now you have to specify the first dimension, which is redundant
-    print PDL::GSL::Randist::ran_multinomial($rng, 10, pdl(.1, .2, .3, .4), 4, 10);
+    print PDL::Probability::GSL::ran_multinomial($rng, 10, pdl(.1, .2, .3, .4), 4, 10);
     
     ### PDF/CDF
     # pdf's are named "ran_DISTNAME_pdf" and cdf are called "cdf_DISTNAME_P" and
@@ -739,17 +735,17 @@ Version 0.01
     # evaluate pdf/cdf at various x's
     my $x_continuous = zeroes(21)->xlinvals(-1, 1); # -1 to -1 by .1
     my $x_discrete = long 1 .. 10;
-    print PDL::GSL::Randist::ran_gaussian_pdf($x_continuous, .5);
-    print PDL::GSL::Randist::cdf_gaussian_P($x_continuous, .5);
-    print PDL::GSL::Randist::ran_binomial_pdf($x_discrete, .5, 20);
-    print PDL::GSL::Randist::cdf_binomial_P($x_discrete, .5, 20);
+    print PDL::Probability::GSL::ran_gaussian_pdf($x_continuous, .5);
+    print PDL::Probability::GSL::cdf_gaussian_P($x_continuous, .5);
+    print PDL::Probability::GSL::ran_binomial_pdf($x_discrete, .5, 20);
+    print PDL::Probability::GSL::cdf_binomial_P($x_discrete, .5, 20);
     
     # inverse cdf. 
     my $P = zeroes(9)->xlinvals(.1, .9);
-    print PDL::GSL::Randist::cdf_gaussian_Pinv($P, .5);
+    print PDL::Probability::GSL::cdf_gaussian_Pinv($P, .5);
     
     # should give us back $x_continuous
-    print PDL::GSL::Randist::cdf_gaussian_Pinv(PDL::GSL::Randist::cdf_gaussian_P($x_continuous, .5), .5); 
+    print PDL::Probability::GSL::cdf_gaussian_Pinv(PDL::Probability::GSL::cdf_gaussian_P($x_continuous, .5), .5); 
 
 =head1 EXPORT
 
@@ -819,7 +815,7 @@ The discrete distribution has no binding yet.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc PDL::GSL::Randist
+    perldoc PDL::Probability::GSL
 
 =head1 ACKNOWLEDGEMENTS
 

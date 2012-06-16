@@ -8,20 +8,12 @@ use ExtUtils::MakeMaker;
 use File::ShareDir::Install;
 PDL::Core::Dev->import();
 
-my $package = ['Randist.pp','Randist','PDL::GSL::Randist'];
+my $package = ['gsl_randist.pp','GSL','PDL::Probability::GSL'];
 
 my %hash = pdlpp_stdargs($package);
 
-$hash{realclean}{FILES} .= " t/*.out t/testvalues.txt t/mvtestvalues.txt t/testvalues-generator.*";
-$hash{VERSION_FROM} = 'Randist.pp';
-$hash{PREREQ_PM}{PDL} = '2.4.2'; # not sure about this...
-$hash{PREREQ_PM}{YAML} = '0'; 
-$hash{PREREQ_PM}{'Test::Exception'} = '0'; 
-$hash{PREREQ_PM}{'Test::More'} = '0'; 
-$hash{PREREQ_PM}{'File::ShareDir'} = '0'; 
-$hash{PM}{'lib/PDL/GSL/Randist/RLike.pm'} = '$(INST_LIBDIR)/Randist/RLike.pm';
-$hash{CONFIGURE_REQUIRES}{'File::ShareDir::Install'} = '0';
-$hash{MIN_PERL_VERSION} = '5.010000'; # i'll remove this requirement if anyone cares
+$hash{clean}{FILES} .= " t/*.out t/testvalues.txt t/mvtestvalues.txt t/testvalues-generator.*";
+# $hash{PM}{'lib/PDL/GSL/Randist/RLike.pm'} = '$(INST_LIBDIR)/Randist/RLike.pm';
 
 install_share 'share';
 
