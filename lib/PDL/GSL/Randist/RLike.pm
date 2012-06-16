@@ -17,7 +17,6 @@ our @EXPORT = qw();
 our %EXPORT_TAGS = ();
 
 use File::ShareDir qw/:ALL/;
-use Hash::Util qw/lock_hash/;
 use Scalar::Util qw/looks_like_number/;
 
 my $file = dist_file('PDL-GSL-Randist', 'Randist.yml');
@@ -39,32 +38,26 @@ sub _argument_checker{
     my %opt = @_;
 
     my @ordered_args;
-    for my $key (keys %opt) {
-        if (! exists $expected_arguments->{$key}){
-            croak "unknown argument $key";
+    for my $arg (@$expected_arguments) {
+        my $val = delete $opt{$arg};
+        if (! defined $val){
+            croak "need argument $arg";
         }
-        $ordered_args[$expected_arguments->{$key}] = $opt{$key};
+        push @ordered_args, $val;
     }
     return $val_or_dims, @ordered_args;
 }
 
 while (my ($name,$specs) = each %$config) {
     my $rbasename = $specs->{rname};
-    my %expected_arguments;
-    if (exists $specs->{args}){
-        my $i = 0;
-        for my $arg (@{$specs->{args}}) {
-            $expected_arguments{$arg->{name}} = $i++;
-        }
-    }
-    lock_hash(%expected_arguments);
+    my @expected_arguments = exists $specs->{args} ? map { $_->{name} } @{$specs->{args}} : ();
     my @exported;
 
     if ($specs->{pdf}){
         my $rname_pdf = "d$rbasename";
         my $pname_pdf = "ran_${name}_pdf";
         no strict 'refs';
-        *{$rname_pdf} = _make_df($pname_pdf, \%expected_arguments);
+        *{$rname_pdf} = _make_df($pname_pdf, \@expected_arguments);
         use strict 'refs';
         push @exported, $rname_pdf;
     }
@@ -72,7 +65,7 @@ while (my ($name,$specs) = each %$config) {
         my $rname_cdf = "p$rbasename";
         my $pname_cdf = "cdf_${name}_P";
         no strict 'refs';
-        *{$rname_cdf} = _make_df($pname_cdf, \%expected_arguments);
+        *{$rname_cdf} = _make_df($pname_cdf, \@expected_arguments);
         use strict 'refs';
         push @exported, $rname_cdf;
     }
@@ -80,7 +73,7 @@ while (my ($name,$specs) = each %$config) {
         my $rname_cdfinv = "q$rbasename";
         my $pname_cdfinv = "cdf_${name}_Pinv";
         no strict 'refs';
-        *{$rname_cdfinv} = _make_df($pname_cdfinv, \%expected_arguments);
+        *{$rname_cdfinv} = _make_df($pname_cdfinv, \@expected_arguments);
         use strict 'refs';
         push @exported, $rname_cdfinv;
     }
@@ -89,7 +82,7 @@ while (my ($name,$specs) = each %$config) {
         my $pname_sampler = "ran_${name}";
 
         no strict 'refs';
-        *{$rname_sampler} = _make_r_sampler($pname_sampler, $rname_sampler, \%expected_arguments);
+        *{$rname_sampler} = _make_r_sampler($pname_sampler, $rname_sampler, \@expected_arguments);
         use strict 'refs';
         push @exported, $rname_sampler;
     }
@@ -120,9 +113,9 @@ sub _make_r_sampler{
     }
 }
 
-*rmultinom   = _make_r_sampler('ran_multinomial',  'rmultinom',   { numdraws => 0, p => 1});
-*dmultinom   = _make_df('ran_multinomial_pdf',   { p => 0, counts => 1 });
-*dmultinomln = _make_df('ran_multinomial_lnpdf', { p => 0, counts => 1 });
+*rmultinom   = _make_r_sampler('ran_multinomial',  'rmultinom',   [qw/numdraws p/]);
+*dmultinom   = _make_df('ran_multinomial_pdf',   [qw/p counts/]);
+*dmultinomln = _make_df('ran_multinomial_lnpdf', [qw/p counts/]);
 $EXPORT_TAGS{multinom} = [qw/rmultinom  dmultinom  dmultinomln/];
 push @EXPORT_OK, qw/rmultinom  dmultinom  dmultinomln/;
 
