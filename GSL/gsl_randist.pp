@@ -72,11 +72,19 @@ my %generic_types = ( Continuous => ['D'],    Discrete => ['L'],);
 sub pp_defnd{ pp_def(@_, PMFunc => '', Doc => undef); }
 
 # create a pod entry with only the signature.
-sub pp_defsig{ pp_def(@_, PMFunc => '', Doc => '', BadDoc => ''); }
+sub pp_defsig{ 
+    pp_def(@_, PMFunc => '', Doc => '', BadDoc => ''); 
+}
+
+sub section_header{ pp_addpm(qq{\n=head1 $_[0]\n\n=cut\n\n}); }
 
 # pod generator for samplers manually bound functions.
 sub gen_sampler_pod{
-    my ($funname, $sig) = @_;
+    my ($funname, $type, $args) = @_;
+    my $sig = join(" ; ", map({ "$_->{type} $_->{name}()" } @$args) , "$outtype{$type} [o] out()" );
+
+    my $example_args = join(", ", map({ "\$$_->{name}" } @$args));
+
     pp_addpm(qq{
 
 =head2 $funname
@@ -85,10 +93,27 @@ sub gen_sampler_pod{
 
   Signature: (PDL::GSL::RNG rng(); $sig)
 
+Usage: 
+
+  my \$single_draw = $funname(\$rng, $example_args);
+  my \$multi_draws = $funname(\$rng, $example_args, [ ... output pdl dims ...] );
+  my \$outpdl_draw = $funname(\$rng, $example_args, \$outpdl);
+
 =cut
 
 })
 }
+
+
+
+=head2 ran_gaussian
+
+=for sig
+
+  Signature: (PDL::GSL::RNG rng(); double sigma() ; double [o] out())
+
+=cut
+
 
 sub c_pdf_name      { 'gsl_' . perl_pdf_name(@_)}
 sub c_sampler_name  { 'gsl_' . perl_sampler_name(@_) }
@@ -191,8 +216,10 @@ sub gen_pp{
     my $type = $specs->{type};
 
     if ($type ne 'Continuous' && $type ne 'Discrete'){
-        croak "type must be Continous or Discrete";
+        croak "type must be Continuous or Discrete";
     }
+
+    section_header($specs->{name});
 
     # pdf and cdf share the 
     { 
@@ -317,10 +344,12 @@ sub gen_pp{
         );
         my $numargs = scalar @args;
         pp_addpm(qq{
-            *$perl_funname = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::$perl_meat_funname, $type, $numargs);
+
+            *$perl_funname = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::$perl_meat_funname, '$type', $numargs);
+
         });
         # pp_add_exported($perl_funname);
-        gen_sampler_pod($perl_funname, $ran_pars);
+        gen_sampler_pod($perl_funname, $type, \@args);
     }
 }
 
@@ -339,6 +368,7 @@ for my $basename (sort keys %$annotation) {
 #######################################################################
 # alternate gaussian samplers
 
+section_header('Alternate Gaussian Samplers');
 
 {
     my $sig = 'double sigma(); double [o] out()';
@@ -358,12 +388,14 @@ for my $basename (sort keys %$annotation) {
     pp_addpm(qq{ *ran_gaussian_ziggurat = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_gaussian_ziggurat_meat, 'Continuous', 1); });
     pp_addpm(qq{ *ran_gaussian_ratio_method = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_gaussian_ratio_method_meat, 'Continuous', 1); });
 
-    gen_sampler_pod('ran_gaussian_ratio_method', $sig);
-    gen_sampler_pod('ran_gaussian_ziggurat', $sig);
+    gen_sampler_pod('ran_gaussian_ratio_method', 'Continuous', [{name => 'sigma', type => 'double'}]);
+    gen_sampler_pod('ran_gaussian_ziggurat', 'Continuous', [{name => 'sigma', type => 'double'}]);
 }
 
 #######################################################################
 # alternate gamma sampler
+
+section_header('Alternate Gamma Samplers');
 
 {
     my $sig = 'double a() ; double b() ; double [o] out()';
@@ -373,46 +405,71 @@ for my $basename (sort keys %$annotation) {
         Code => '$out() = gsl_ran_gamma_knuth(INT2PTR(gsl_rng *, $COMP(rng)), $a(), $b());',
     );
     pp_addpm(q{ *ran_gamma_knuth = make_ran_meat_wrapper(\&PDL::Probability::GSL::ran_gamma_knuth_meat, 'Continuous', 2); });
-    gen_sampler_pod('ran_gamma_knuth', $sig);
+    gen_sampler_pod('ran_gamma_knuth', 'Continuous', [{name => 'a', type => 'double'}, {name => 'b', type => 'double'}]); 
 }
 
 #######################################################################
 # multinomial
 
-pp_defnd('ran_multinomial_meat',
-    Pars => 'int numdraws(); double p(n); int [o] counts(n)',
-    OtherPars => 'IV rng',
-    Code => q{
-        gsl_ran_multinomial(
-            INT2PTR(gsl_rng *, $COMP(rng)),
-            $SIZE(n),
-            $numdraws(),
-            $P(p),
-            (unsigned int *) $P(counts)
-        );
-});
+section_header('Multinomial Distribution');
 
-#gen_sampler_pod('ran_multinomial', $sig);
-
-pp_addpm(q{
-    sub ran_multinomial{
-        my ($rng, $numdraws, $p, @outpdl_or_dims) = @_;
-
-        check_rng($rng);
-        $p = PDL::Core::topdl $p;
-
-        if (ref $outpdl_or_dims[0] eq 'PDL'){
-            ran_multinomial_meat($numdraws, $p, $outpdl_or_dims[0], $$rng);
-            return $outpdl_or_dims[0];
+{
+    my $sig = 'int numdraws(); double p(n); int [o] counts(n)';
+    pp_defnd('ran_multinomial_meat',
+        Pars => $sig,
+        OtherPars => 'IV rng',
+        Code => q{
+            gsl_ran_multinomial(
+                INT2PTR(gsl_rng *, $COMP(rng)),
+                $SIZE(n),
+                $numdraws(),
+                $P(p),
+                (unsigned int *) $P(counts)
+            );
+    });
+    
+    pp_addpm(q{
+        sub ran_multinomial{
+            my ($rng, $numdraws, $p, @outpdl_or_dims) = @_;
+    
+            check_rng($rng);
+            $p = PDL::Core::topdl $p;
+    
+            if (ref $outpdl_or_dims[0] eq 'PDL'){
+                ran_multinomial_meat($numdraws, $p, $outpdl_or_dims[0], $$rng);
+                return $outpdl_or_dims[0];
+            }
+            else {
+                # first dims is implicit
+                my $tmp_output = zeroes(long, $p->dims(), @outpdl_or_dims);
+                ran_multinomial_meat($numdraws, $p, $tmp_output, $$rng);
+                return $tmp_output;
+            }
         }
-        else {
-            # first dims is implicit
-            my $tmp_output = zeroes(long, $p->dims(), @outpdl_or_dims);
-            ran_multinomial_meat($numdraws, $p, $tmp_output, $$rng);
-            return $tmp_output;
-        }
-    }
-});
+    });
+    
+    pp_addpm(qq{
+    
+=head2 ran_multinomial
+
+Draws \$numdraws samples from a multinomial distribution with probabilities \$p,
+returns counts in a pdl with the same (first) dimensions as \$p.
+
+=for sig
+
+  Signature: (PDL::GSL::RNG rng(); $sig)
+
+Usage:
+
+  ran_multinomial(\$rng, \$numdraws, \$p, \$outpdl); # \$outpdl's first dimensions must be (\$p->dims())
+
+  my \$single_draw = ran_multinomial(\$rng, \$numdraws, \$p); 
+  my \$multi_draws = ran_multinomial(\$rng, \$numdraws, \$p, \@dims); # returns pdl with dimensions (\$p->dims(), \@dims)
+
+=cut
+
+    });
+}
 
 for (qw/ran_multinomial_pdf ran_multinomial_lnpdf/) {
     pp_def($_,
@@ -435,40 +492,63 @@ for (qw/ran_multinomial_pdf ran_multinomial_lnpdf/) {
 #######################################################################
 # dirichlet
 
-pp_defnd('ran_dirichlet_meat',
-    Pars => 'double alpha(n); double [o] theta(n)',
-    OtherPars => 'IV rng',
-    Code => q{
-        gsl_ran_dirichlet(
-            INT2PTR(gsl_rng *, $COMP(rng)),
-            $SIZE(n),
-            $P(alpha),
-            $P(theta)
-        );
-});
+section_header('Dirichlet Distribution');
+
+{
+    my $sig = 'double alpha(n); double [o] theta(n)';
+    pp_defnd('ran_dirichlet_meat',
+        Pars => $sig,
+        OtherPars => 'IV rng',
+        Code => q{
+            gsl_ran_dirichlet(
+                INT2PTR(gsl_rng *, $COMP(rng)),
+                $SIZE(n),
+                $P(alpha),
+                $P(theta)
+            );
+    });
+        
+    pp_addpm(q{
+        sub ran_dirichlet{
+            my ($rng, $alpha, @outpdl_or_dims) = @_;
     
-pp_addpm(q{
-    sub ran_dirichlet{
-        my ($rng, $alpha, @outpdl_or_dims) = @_;
-
-        check_rng($rng);
-
-        $alpha = PDL::Core::topdl $alpha;
-
-        if (ref $outpdl_or_dims[0] eq 'PDL'){
-            ran_dirichlet_meat($alpha, $outpdl_or_dims[0], $$rng);
-            return $outpdl_or_dims[0];
+            check_rng($rng);
+    
+            $alpha = PDL::Core::topdl $alpha;
+    
+            if (ref $outpdl_or_dims[0] eq 'PDL'){
+                ran_dirichlet_meat($alpha, $outpdl_or_dims[0], $$rng);
+                return $outpdl_or_dims[0];
+            }
+            else {
+                # first dims is implicit
+                my $tmp_output = zeroes(double, $alpha->dims(), @outpdl_or_dims);
+                ran_dirichlet_meat($alpha, $tmp_output, $$rng);
+                return $tmp_output;
+            }
         }
-        else {
-            # first dims is implicit
-            my $tmp_output = zeroes(double, $alpha->dims(), @outpdl_or_dims);
-            ran_dirichlet_meat($alpha, $tmp_output, $$rng);
-            return $tmp_output;
-        }
-    }
-});
+    });
 
-# gen_sampler_pod('ran_dirichlet', $sig);
+    pp_addpm(qq{
+    
+=head2 ran_dirichlet
+
+=for sig
+
+  Signature: (PDL::GSL::RNG rng(); $sig)
+
+Usage:
+
+  ran_dirichlet(\$rng, \$alpha, \$outpdl); # \$outpdl's first dimensions must be (\$alpha->dims())
+
+  my \$single_draw = ran_dirichlet(\$rng, \$alpha); 
+  my \$multi_draws = ran_dirichlet(\$rng, \$alpha, \@dims); # returns pdl with dimensions (\$alpha->dims(), \@dims)
+
+=cut
+
+    });
+}
+
 
 for (qw/ran_dirichlet_pdf ran_dirichlet_lnpdf/) {
     my $code = qq{ \$probability() = gsl_$_( \$SIZE(n), \$P(alpha), \$P(theta)); };
@@ -497,19 +577,40 @@ for (qw/ran_dirichlet_pdf ran_dirichlet_lnpdf/) {
 #######################################################################
 # bivariate_gaussian
 
-pp_defnd('ran_bivariate_gaussian_meat',
-    Pars => "double sigma(n=2); double rho(); double [o] out(n=2)",
-    OtherPars => 'IV rng',
-    Code => q{
-        double x, y;
-        gsl_ran_bivariate_gaussian( INT2PTR(gsl_rng *, $COMP(rng)), $sigma(n=>0), $sigma(n=>1), $rho(), &x, &y);
-        $out(n=>0) = x;
-        $out(n=>1) = y;
-    },
-);
-    
-pp_addpm(qq{ *ran_bivariate_gaussian = make_mv_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_bivariate_gaussian_meat, 2, 2); });
-# gen_sampler_pod('ran_bivariate_gaussian', $sig);
+section_header('Bivariate Gaussian Distribution');
+
+{
+    my $sig = "double sigma(n=2); double rho(); double [o] out(n=2)";
+    pp_defnd('ran_bivariate_gaussian_meat',
+        Pars => $sig,
+        OtherPars => 'IV rng',
+        Code => q{
+            double x, y;
+            gsl_ran_bivariate_gaussian( INT2PTR(gsl_rng *, $COMP(rng)), $sigma(n=>0), $sigma(n=>1), $rho(), &x, &y);
+            $out(n=>0) = x;
+            $out(n=>1) = y;
+        },
+    );
+        
+    pp_addpm(qq{ *ran_bivariate_gaussian = make_mv_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_bivariate_gaussian_meat, 2, 2); });
+
+    pp_addpm(qq{
+=head2 ran_bivariate_gaussian
+
+=for sig
+
+  Signature: (PDL::GSL::RNG rng(); $sig)
+
+Usage:
+
+  ran_bivariate_gaussian(\$rng, pdl(\$sigma_x, \$sigma_y), \$rho, \$dim); # returns pdl dim(2, \$dim);
+  
+  my \$xy     = ran_bivariate_gaussian(\$rng, pdl(\$sigma_x, \$sigma_y), \$rho); # returns pdl dim(2)
+  my \$xy_vec = ran_bivariate_gaussian(\$rng, pdl(\$sigma_x, \$sigma_y), \$rho, \$dim); # returns pdl dim(2, \$dim);
+
+=cut 
+    });
+}
 
 {
     my $code = q{ $prob() = gsl_ran_bivariate_gaussian_pdf( $xy(n => 0), $xy(n => 1), $sigma(n => 0), $sigma(n => 1), $rho()); };
@@ -531,6 +632,7 @@ pp_addpm(qq{ *ran_bivariate_gaussian = make_mv_ran_meat_wrapper(\\\&PDL::Probabi
 #######################################################################
 # Spherical Vector Distributions
 
+section_header('Spherical Vector Distribution');
 for my $twod (qw/ran_dir_2d ran_dir_2d_trig_method/) {
     my $sig = 'double [o] vector(n=2)';
     pp_defnd($twod . "_meat",
@@ -543,7 +645,15 @@ for my $twod (qw/ran_dir_2d ran_dir_2d_trig_method/) {
             \$vector(n => 1) = y;
         },
     );
-    gen_sampler_pod($twod, $sig);
+    pp_addpm(qq{
+=head2 $twod
+
+=for sig
+
+  Signature: (PDL::GSL::RNG rng(); $sig)
+
+=cut 
+    });
 }
     
 {
@@ -559,7 +669,15 @@ for my $twod (qw/ran_dir_2d ran_dir_2d_trig_method/) {
             $vector(n => 2) = z;
         },
     );
-    gen_sampler_pod('ran_dir_3d', $sig);
+    pp_addpm(qq{
+=head2 ran_dir_3d_meat
+
+=for sig
+
+  Signature: (PDL::GSL::RNG rng(); $sig)
+
+=cut 
+    });
 }
 
 pp_addpm(qq{ *ran_dir_2d = make_mv_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_dir_2d_meat, 2, 0); });
@@ -591,11 +709,20 @@ sub ran_dir_nd{
         return $tmpout;
     }
 }
+=head2 ran_dir_nd
+
+=for sig
+
+  Signature: (PDL::GSL::RNG rng(); int size(); double [o] vector(n))
+
+=cut 
+
 });
 
 #######################################################################
 # Shuffling and Sampling
 
+section_header('Shuffling and Sampling');
 # choose/sample are ordered draws from src into dest.
 #     void gsl_ran_shuffle (const gsl_rng * r, void * base, size_t n, size_t size)
 #     int gsl_ran_choose (const gsl_rng * r, void * dest, size_t k, void * src, size_t n, size_t size)
