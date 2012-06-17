@@ -106,7 +106,7 @@ sub perl_cdf_Qinv_name { my ($name) = @_; "cdf_${name}_Qinv"; }
 pp_addpm(q{
 
 sub check_rng{
-    croak "first argument must be a PDL::GSL::RNG" if (ref $_[0] ne 'PDL::GSL::RNG');
+    croak "first argument must be a PDL::GSL::RNG" if ref($_[0]) ne 'PDL::GSL::RNG';
 }
 
 sub make_ran_meat_wrapper{
@@ -116,7 +116,7 @@ sub make_ran_meat_wrapper{
     return sub {
         my ($rng, @opt) = @_;
 
-        croak "first argument of $ran_name must be a PDL::GSL::RNG" if (ref $rng ne 'PDL::GSL::RNG');
+        check_rng($rng);
 
         my @args = map { PDL::Core::topdl($_) } @opt[0 .. $numargs - 1];
         my @var_or_dims = @opt[$numargs .. $#opt];
@@ -146,7 +146,7 @@ sub make_mv_ran_meat_wrapper{
 
     return sub {
         my ($rng, @opt) = @_;
-        croak "first argument of ran_multinomial must be a PDL::GSL::RNG" if (ref $rng ne 'PDL::GSL::RNG');
+        check_rng($rng);
 
         my @args = map { PDL::Core::topdl($_) } @opt[0 .. $numargs - 1];
         my @outpdl_or_dims = @opt[$numargs .. $#opt];
@@ -398,7 +398,7 @@ pp_addpm(q{
     sub ran_multinomial{
         my ($rng, $numdraws, $p, @outpdl_or_dims) = @_;
 
-        croak "first argument of ran_multinomial must be a PDL::GSL::RNG" if (ref $rng ne 'PDL::GSL::RNG');
+        check_rng($rng);
         $p = PDL::Core::topdl $p;
 
         if (ref $outpdl_or_dims[0] eq 'PDL'){
@@ -451,7 +451,7 @@ pp_addpm(q{
     sub ran_dirichlet{
         my ($rng, $alpha, @outpdl_or_dims) = @_;
 
-        croak "first argument of ran_multinomial must be a PDL::GSL::RNG" if (ref $rng ne 'PDL::GSL::RNG');
+        check_rng($rng);
 
         $alpha = PDL::Core::topdl $alpha;
 
@@ -579,7 +579,7 @@ pp_addpm(q{
 sub ran_dir_nd{
     my ($rng, $dim, @outpdl_or_additional_dims) = @_;
     
-    croak "first argument of $ran_name must be a PDL::GSL::RNG" if (ref $rng ne 'PDL::GSL::RNG');
+    check_rng($rng);
 
     if (ref $outpdl eq 'PDL'){
         ran_dir_nd_meat($dim, $outpdl, $$rng);
