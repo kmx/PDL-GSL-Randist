@@ -104,6 +104,11 @@ sub perl_cdf_Pinv_name { my ($name) = @_; "cdf_${name}_Pinv"; }
 sub perl_cdf_Qinv_name { my ($name) = @_; "cdf_${name}_Qinv"; }
 
 pp_addpm(q{
+
+sub check_rng{
+    croak "first argument must be a PDL::GSL::RNG" if (ref $_[0] ne 'PDL::GSL::RNG');
+}
+
 sub make_ran_meat_wrapper{
     my ($ran_meat_ref, $type, $numargs) = @_;
     my $outpdl_type = $type eq 'Continuous' ? 'double' : 'long';
@@ -111,9 +116,7 @@ sub make_ran_meat_wrapper{
     return sub {
         my ($rng, @opt) = @_;
 
-        if (ref $rng ne 'PDL::GSL::RNG'){
-            croak "first argument of $ran_name must be a PDL::GSL::RNG";
-        }
+        croak "first argument of $ran_name must be a PDL::GSL::RNG" if (ref $rng ne 'PDL::GSL::RNG');
 
         my @args = map { PDL::Core::topdl($_) } @opt[0 .. $numargs - 1];
         my @var_or_dims = @opt[$numargs .. $#opt];
@@ -130,6 +133,30 @@ sub make_ran_meat_wrapper{
         else {
             #my $tmp_output = pdl(0);
             my $tmp_output = null;
+            $ran_meat_ref->(@args, $tmp_output, $$rng);
+            return $tmp_output;
+        }
+    }
+}
+
+# for bivgauss and 2d/3d directional samplers. no type (assume double). base_dim == implicit 
+# size of dim-0 (2 for bivgauss/2d, 3 for 3d)
+sub make_mv_ran_meat_wrapper{
+    my ($ran_meat_ref, $base_dims, $numargs) = @_;
+
+    return sub {
+        my ($rng, @opt) = @_;
+        croak "first argument of ran_multinomial must be a PDL::GSL::RNG" if (ref $rng ne 'PDL::GSL::RNG');
+
+        my @args = map { PDL::Core::topdl($_) } @opt[0 .. $numargs - 1];
+        my @outpdl_or_dims = @opt[$numargs .. $#opt];
+
+        if (ref $outpdl_or_dims[0] eq 'PDL'){
+            $ran_meat_ref->(@args, $outpdl_or_dims[0], $$rng);
+            return $outpdl_or_dims[0];
+        }
+        else {
+            my $tmp_output = zeroes(double, $base_dims, @outpdl_or_dims);
             $ran_meat_ref->(@args, $tmp_output, $$rng);
             return $tmp_output;
         }
@@ -371,9 +398,7 @@ pp_addpm(q{
     sub ran_multinomial{
         my ($rng, $numdraws, $p, @outpdl_or_dims) = @_;
 
-        if (ref $rng ne 'PDL::GSL::RNG'){
-            croak "first argument of ran_multinomial must be a PDL::GSL::RNG";
-        }
+        croak "first argument of ran_multinomial must be a PDL::GSL::RNG" if (ref $rng ne 'PDL::GSL::RNG');
         $p = PDL::Core::topdl $p;
 
         if (ref $outpdl_or_dims[0] eq 'PDL'){
@@ -410,31 +435,24 @@ for (qw/ran_multinomial_pdf ran_multinomial_lnpdf/) {
 #######################################################################
 # dirichlet
 
-{
-    my $sig = 'double alpha(n); double [o] theta(n)';
-    pp_defnd('ran_dirichlet_meat',
-        Pars => $sig,
-        OtherPars => 'IV rng',
-        Code => q{
-            gsl_ran_dirichlet(
-                INT2PTR(gsl_rng *, $COMP(rng)),
-                $SIZE(n),
-                $P(alpha),
-                $P(theta)
-            );
-    });
+pp_defnd('ran_dirichlet_meat',
+    Pars => 'double alpha(n); double [o] theta(n)',
+    OtherPars => 'IV rng',
+    Code => q{
+        gsl_ran_dirichlet(
+            INT2PTR(gsl_rng *, $COMP(rng)),
+            $SIZE(n),
+            $P(alpha),
+            $P(theta)
+        );
+});
     
-# pp_addpm(qq{ *ran_dirichlet = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_dirichlet_meat, 'Continuous', 1); });
-    gen_sampler_pod('ran_dirichlet', $sig);
-}
-
 pp_addpm(q{
     sub ran_dirichlet{
         my ($rng, $alpha, @outpdl_or_dims) = @_;
 
-        if (ref $rng ne 'PDL::GSL::RNG'){
-            croak "first argument of ran_multinomial must be a PDL::GSL::RNG";
-        }
+        croak "first argument of ran_multinomial must be a PDL::GSL::RNG" if (ref $rng ne 'PDL::GSL::RNG');
+
         $alpha = PDL::Core::topdl $alpha;
 
         if (ref $outpdl_or_dims[0] eq 'PDL'){
@@ -449,6 +467,8 @@ pp_addpm(q{
         }
     }
 });
+
+# gen_sampler_pod('ran_dirichlet', $sig);
 
 for (qw/ran_dirichlet_pdf ran_dirichlet_lnpdf/) {
     my $code = qq{ \$probability() = gsl_$_( \$SIZE(n), \$P(alpha), \$P(theta)); };
@@ -477,22 +497,19 @@ for (qw/ran_dirichlet_pdf ran_dirichlet_lnpdf/) {
 #######################################################################
 # bivariate_gaussian
 
-{
-    my $sig = "double sigma(n=2); double rho(); double [o] out(n=2)";
-    pp_defnd('ran_bivariate_gaussian_meat',
-        Pars => $sig,
-        OtherPars => 'IV rng',
-        Code => q{
-            double x, y;
-            gsl_ran_bivariate_gaussian( INT2PTR(gsl_rng *, $COMP(rng)), $sigma(n=>0), $sigma(n=>1), $rho(), &x, &y);
-            $out(n=>0) = x;
-            $out(n=>1) = y;
-        },
-    );
+pp_defnd('ran_bivariate_gaussian_meat',
+    Pars => "double sigma(n=2); double rho(); double [o] out(n=2)",
+    OtherPars => 'IV rng',
+    Code => q{
+        double x, y;
+        gsl_ran_bivariate_gaussian( INT2PTR(gsl_rng *, $COMP(rng)), $sigma(n=>0), $sigma(n=>1), $rho(), &x, &y);
+        $out(n=>0) = x;
+        $out(n=>1) = y;
+    },
+);
     
-    pp_addpm(qq{ *ran_bivariate_gaussian = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_bivariate_gaussian_meat, 'Continuous', 2); });
-    gen_sampler_pod('ran_bivariate_gaussian', $sig);
-}
+pp_addpm(qq{ *ran_bivariate_gaussian = make_mv_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_bivariate_gaussian_meat, 2, 2); });
+# gen_sampler_pod('ran_bivariate_gaussian', $sig);
 
 {
     my $code = q{ $prob() = gsl_ran_bivariate_gaussian_pdf( $xy(n => 0), $xy(n => 1), $sigma(n => 0), $sigma(n => 1), $rho()); };
@@ -545,9 +562,9 @@ for my $twod (qw/ran_dir_2d ran_dir_2d_trig_method/) {
     gen_sampler_pod('ran_dir_3d', $sig);
 }
 
-pp_addpm(qq{ *ran_dir_2d = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_dir_2d_meat, 'Continuous', 0); });
-pp_addpm(qq{ *ran_dir_2d_trig_method = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_dir_2d_trig_method_meat, 'Continuous', 0); });
-pp_addpm(qq{ *ran_dir_3d = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_dir_3d_meat, 'Continuous', 0); });
+pp_addpm(qq{ *ran_dir_2d = make_mv_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_dir_2d_meat, 2, 0); });
+pp_addpm(qq{ *ran_dir_2d_trig_method = make_mv_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_dir_2d_trig_method_meat, 2, 0); });
+pp_addpm(qq{ *ran_dir_3d = make_mv_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_dir_3d_meat, 3, 0); });
 
 pp_defnd('ran_dir_nd_meat',
     Pars => 'int size(); double [o] vector(n)', 
@@ -562,9 +579,7 @@ pp_addpm(q{
 sub ran_dir_nd{
     my ($rng, $dim, @outpdl_or_additional_dims) = @_;
     
-    if (ref $rng ne 'PDL::GSL::RNG'){
-        croak "first argument of $ran_name must be a PDL::GSL::RNG";
-    }
+    croak "first argument of $ran_name must be a PDL::GSL::RNG" if (ref $rng ne 'PDL::GSL::RNG');
 
     if (ref $outpdl eq 'PDL'){
         ran_dir_nd_meat($dim, $outpdl, $$rng);
