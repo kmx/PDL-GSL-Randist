@@ -560,7 +560,7 @@ Usage:
 
 for (qw/ran_dirichlet_pdf ran_dirichlet_lnpdf/) {
     my $code = qq{ \$probability() = gsl_$_( \$SIZE(n), \$P(alpha), \$P(theta)); };
-    pp_defnd($_,
+    pp_defsig($_,
         Pars => 'double alpha(n); double theta(n); double [o] probability()',
         Code => $code,
         HandleBad => 1,
@@ -626,7 +626,7 @@ Usage:
 
 {
     my $code = q{ $prob() = gsl_ran_bivariate_gaussian_pdf( $xy(n => 0), $xy(n => 1), $sigma(n => 0), $sigma(n => 1), $rho()); };
-    pp_defnd('ran_bivariate_gaussian_pdf',
+    pp_defsig('ran_bivariate_gaussian_pdf',
         Pars => 'double xy(n=2); double sigma(n=2); double rho(); double [o] prob()',
         Code => $code,
         HandleBad => 1,
