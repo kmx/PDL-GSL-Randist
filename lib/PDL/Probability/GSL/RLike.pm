@@ -6,6 +6,7 @@ use Data::Dumper;
 use Carp;
 use autodie;
 use YAML qw/LoadFile/;
+use PDL;
 use PDL::Probability::GSL;
 use PDL::GSL::RNG;
 
@@ -24,9 +25,14 @@ my $config = LoadFile($file);
 our $rng = PDL::GSL::RNG->new('taus');
 $rng->set_seed(time);
 
+=head2 set_seed
+=cut
 sub set_seed{
     $rng->set_seed(shift);
 }
+
+#######################################################################
+# utility
 
 sub _argument_checker{
     my $expected_arguments = shift;
@@ -47,8 +53,38 @@ sub _argument_checker{
     return $val_or_dims, @ordered_args;
 }
 
+sub _make_df{
+    my ($pname, $expected_arguments) = @_;
+    return sub {
+        my ($P, @args) = _argument_checker($expected_arguments, @_);
+        return $PDL::Probability::GSL::{$pname}->($P, @args);
+    };
+}
+sub _make_r_sampler{
+    my ($pname, $rname, $expected_arguments) = @_;
+    return sub{
+        my ($v, @args) = _argument_checker($expected_arguments, @_);
+        if (looks_like_number $v || ref $v eq 'PDL'){
+            return $PDL::Probability::GSL::{$pname}->($rng, @args, $v);
+        }
+        elsif (ref $v eq 'ARRAY'){
+            return $PDL::Probability::GSL::{$pname}->($rng, @args, @$v);
+        }
+        else{
+            croak "first argument to $rname must be a count (integer), arrayref (for dimension of desired output pdl), or an output pdl";
+        }
+    }
+}
+
+sub _add_tag{
+    my ($basename, @funcs) = @_;
+    $EXPORT_TAGS{$basename} = [@funcs];
+    push @EXPORT_OK, @funcs;
+}
+
+#######################################################################
+
 while (my ($name,$specs) = each %$config) {
-    say $name;
     my $rbasename = $specs->{rname};
     my @expected_arguments = exists $specs->{args} ? map { $_->{name} } @{$specs->{args}} : ();
     my @exported;
@@ -90,38 +126,32 @@ while (my ($name,$specs) = each %$config) {
     $EXPORT_TAGS{$rbasename} = \@exported;
 }
 
-sub _make_df{
-    my ($pname, $expected_arguments) = @_;
-    return sub {
-        my ($P, @args) = _argument_checker($expected_arguments, @_);
-        return $PDL::Probability::GSL::{$pname}->($P, @args);
-    };
-}
-sub _make_r_sampler{
-    my ($pname, $rname, $expected_arguments) = @_;
-    return sub{
-        my ($v, @args) = _argument_checker($expected_arguments, @_);
-        if (looks_like_number $v || ref $v eq 'PDL'){
-            return $PDL::Probability::GSL::{$pname}->($rng, @args, $v);
-        }
-        elsif (ref $v eq 'ARRAY'){
-            return $PDL::Probability::GSL::{$pname}->($rng, @args, @$v);
-        }
-        else{
-            croak "first argument to $rname must be a count (integer), arrayref (for dimension of desired output pdl), or an output pdl";
-        }
-    }
-}
 
 *rmultinom   = _make_r_sampler('ran_multinomial',  'rmultinom',   [qw/numdraws p/]);
 *dmultinom   = _make_df('ran_multinomial_pdf',   [qw/p counts/]);
 *dmultinomln = _make_df('ran_multinomial_lnpdf', [qw/p counts/]);
-$EXPORT_TAGS{multinom} = [qw/rmultinom  dmultinom  dmultinomln/];
-push @EXPORT_OK, qw/rmultinom  dmultinom  dmultinomln/;
+
+_add_tag('multinom', qw/rmultinom dmultinom dmultinomln/);
+
+*rdirichlet   = _make_r_sampler('ran_dirichlet', [qw/alpha/]);
+*ddirichlet   = _make_df('ran_dirichlet_pdf', [qw/alpha/]);
+*ddirichletln = _make_df('ran_dirichlet_lnpdf', [qw/alpha/]);
+
+_add_tag('dirichlet', qw/rdirichlet ddirichlet ddirichlet/);
+
+*rsample = _make_r_sampler('ran_sample', [qw/src count/]);
+*rchoose = _make_r_sampler('ran_choose', [qw/src count/]);
+*rshuffle = _make_r_sampler('ran_shuffle', [qw/src/]);
+
+_add_tag('sample', qw/rsample rchoose/);
+_add_tag('shuffle', qw/rshuffle/);
+
+*rbinorm   = _make_r_sampler('ran_binorm', [qw/sigma rho/]);
+*dbinorm   = _make_df('ran_binorm_pdf', [qw/sigma rho/]);
+
+_add_tag('binorm', qw/rbinorm rbinorm/);
 
 $EXPORT_TAGS{all} = \@EXPORT_OK;
-
-# say Dumper \%EXPORT_TAGS;
 
 1;
 
