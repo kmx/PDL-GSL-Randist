@@ -79,18 +79,19 @@ void test_dirichlet(void){
     theta[2] = 0.220000000209;
     theta[3] = 0.154093189072;
     
+    /* theta and alpha flipped in perl interface */
     prob = gsl_ran_dirichlet_pdf (SIZE, alpha, theta);
     printf("gsl_ran_dirichlet_pdf\t");
-    print_double_array(alpha, SIZE);
-    printf("\t");
     print_double_array(theta, SIZE);
+    printf("\t");
+    print_double_array(alpha, SIZE);
     printf("\t%.12f\n", prob);
 
     prob = gsl_ran_dirichlet_lnpdf (SIZE, alpha, theta);
     printf("gsl_ran_dirichlet_lnpdf\t");
-    print_double_array(alpha, SIZE);
-    printf("\t");
     print_double_array(theta, SIZE);
+    printf("\t");
+    print_double_array(alpha, SIZE);
     printf("\t%.12f\n", prob);
 }
 

@@ -560,8 +560,8 @@ Usage:
 
 for (qw/ran_dirichlet_pdf ran_dirichlet_lnpdf/) {
     my $code = qq{ \$probability() = gsl_$_( \$SIZE(n), \$P(alpha), \$P(theta)); };
-    pp_defsig($_,
-        Pars => 'double alpha(n); double theta(n); double [o] probability()',
+    pp_def($_,
+        Pars => 'double theta(n); double alpha(n); double [o] probability()',
         Code => $code,
         HandleBad => 1,
         BadCode => qq{
@@ -579,6 +579,8 @@ for (qw/ran_dirichlet_pdf ran_dirichlet_lnpdf/) {
                 $code
             }
         },
+        PMFunc => '', 
+        Doc => 'Note: the argument order is swapped compared to C so that theta comes first.', 
     );
 }
 
@@ -868,13 +870,6 @@ pp_addpm({At => 'Top'}, <<'PROLOGUE');
 
 PDL::Probability::GSL - Comprehensive Perl Data Language (PDL) binding to the GNU
 Scientific Library (GSL) Random Distribution (randist) functions.
-
-=head1 VERSION
-
-Version 0.01
-
-=cut
-
 
 =head1 SYNOPSIS
 
