@@ -104,16 +104,10 @@ Usage:
 })
 }
 
-
-
-=head2 ran_gaussian
-
-=for sig
-
-  Signature: (PDL::GSL::RNG rng(); double sigma() ; double [o] out())
-
-=cut
-
+sub add_to_tag{
+    my ($tag, $name) = @_;
+    pp_addpm(qq{ push \@{\$EXPORT_TAGS{'$tag'}}, '$name'; push \@EXPORT_OK, '$name'; } );
+}
 
 sub c_pdf_name      { 'gsl_' . perl_pdf_name(@_)}
 sub c_sampler_name  { 'gsl_' . perl_sampler_name(@_) }
@@ -253,6 +247,7 @@ sub gen_pp{
                 GenericTypes => $generic_types{$type},
                 code_and_badcode($code, 'out', 'val', @argnames)
             );
+            add_to_tag($basename, $perl_funname);
         }
         if ($specs->{cdf}){
             # pp_def('cdf_pareto_P',
@@ -281,6 +276,8 @@ sub gen_pp{
                 GenericTypes => ['D'],
                 code_and_badcode($code_Q, 'out', 'val', @argnames)
             );
+            add_to_tag($basename, $perl_funname_P);
+            add_to_tag($basename, $perl_funname_Q);
         }
     }
 
@@ -314,6 +311,8 @@ sub gen_pp{
             Pars => $pars_cdfinv,
             code_and_badcode($code_Qinv, 'out', 'val', @argnames), 
         );
+        add_to_tag($basename, $perl_funname_Pinv);
+        add_to_tag($basename, $perl_funname_Qinv);
     }
 
     if ($specs->{sample}){
@@ -350,6 +349,7 @@ sub gen_pp{
         });
         # pp_add_exported($perl_funname);
         gen_sampler_pod($perl_funname, $type, \@args);
+        add_to_tag($basename, $perl_funname);
     }
 }
 
@@ -390,6 +390,9 @@ section_header('Alternate Gaussian Samplers');
 
     gen_sampler_pod('ran_gaussian_ratio_method', 'Continuous', [{name => 'sigma', type => 'double'}]);
     gen_sampler_pod('ran_gaussian_ziggurat', 'Continuous', [{name => 'sigma', type => 'double'}]);
+
+    add_to_tag('gaussian', 'ran_gaussian_ratio_method');
+    add_to_tag('gaussian', 'ran_gaussian_ziggurat');
 }
 
 #######################################################################
@@ -406,6 +409,7 @@ section_header('Alternate Gamma Samplers');
     );
     pp_addpm(q{ *ran_gamma_knuth = make_ran_meat_wrapper(\&PDL::Probability::GSL::ran_gamma_knuth_meat, 'Continuous', 2); });
     gen_sampler_pod('ran_gamma_knuth', 'Continuous', [{name => 'a', type => 'double'}, {name => 'b', type => 'double'}]); 
+    add_to_tag('gamma', 'ran_gamma_knuth');
 }
 
 #######################################################################
@@ -488,6 +492,10 @@ for (qw/ran_multinomial_pdf ran_multinomial_lnpdf/) {
         BadDoc => ''
     );
 }
+
+add_to_tag('multinomial', 'ran_multinomial');
+add_to_tag('multinomial', 'ran_multinomial_pdf');
+add_to_tag('multinomial', 'ran_multinomial_lnpdf');
 
 #######################################################################
 # dirichlet
@@ -574,6 +582,10 @@ for (qw/ran_dirichlet_pdf ran_dirichlet_lnpdf/) {
     );
 }
 
+add_to_tag('dirichlet', 'ran_dirichlet');
+add_to_tag('dirichlet', 'ran_dirichlet_pdf');
+add_to_tag('dirichlet', 'ran_dirichlet_lnpdf');
+
 #######################################################################
 # bivariate_gaussian
 
@@ -628,6 +640,9 @@ Usage:
         }
     );
 }
+
+add_to_tag('bivariate_gaussian', 'ran_bivariate_gaussian');
+add_to_tag('bivariate_gaussian', 'ran_bivariate_gaussian_pdf');
 
 #######################################################################
 # Spherical Vector Distributions
@@ -719,6 +734,11 @@ sub ran_dir_nd{
 
 });
 
+add_to_tag('spherical', 'ran_dir_2d');
+add_to_tag('spherical', 'ran_dir_2d_trig_method');
+add_to_tag('spherical', 'ran_dir_3d');
+add_to_tag('spherical', 'ran_dir_nd');
+
 #######################################################################
 # Shuffling and Sampling
 
@@ -729,19 +749,11 @@ section_header('Shuffling and Sampling');
 #     void gsl_ran_sample (const gsl_rng * r, void * dest, size_t k, void * src, size_t n, size_t size)
 
 for my $ss (qw/choose sample/) {
-    
     pp_defnd("ran_${ss}_meat",
         Pars => 'dest(k); src(n)',
         OtherPars => 'IV rng',
         Code => qq{
-            gsl_ran_$ss(
-                INT2PTR(gsl_rng *, \$COMP(rng)), 
-                \$P(dest), 
-                \$SIZE(k), 
-                \$P(src), 
-                \$SIZE(n), 
-                sizeof(\$GENERIC())
-            );
+            gsl_ran_$ss( INT2PTR(gsl_rng *, \$COMP(rng)), \$P(dest), \$SIZE(k), \$P(src), \$SIZE(n), sizeof(\$GENERIC()));
         },
     );
 }
@@ -836,9 +848,12 @@ one-dimensional.
 
 });
 
+add_to_tag('sampling', 'ran_choose');
+add_to_tag('sampling', 'ran_sample');
+add_to_tag('shuffle', 'ran_shuffle');
+
 #######################################################################
 # documentation
-
 
 pp_addpm({At => 'Top'}, <<'PROLOGUE');
 =head1 NAME
