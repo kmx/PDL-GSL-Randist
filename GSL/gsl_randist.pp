@@ -76,7 +76,7 @@ sub pp_defsig{
     pp_def(@_, PMFunc => '', Doc => '', BadDoc => ''); 
 }
 
-sub section_header{ pp_addpm(qq{\n=head1 $_[0]\n\n=cut\n\n}); }
+sub section_header{ pp_addpm(qq{\n=head1 $_[0] (:$_[1])\n\n=cut\n\n}); }
 
 # pod generator for samplers manually bound functions.
 sub gen_sampler_pod{
@@ -213,7 +213,7 @@ sub gen_pp{
         croak "type must be Continuous or Discrete";
     }
 
-    section_header($specs->{name});
+    section_header($specs->{name}, $basename);
 
     # pdf and cdf share the 
     { 
@@ -368,7 +368,7 @@ for my $basename (sort keys %$annotation) {
 #######################################################################
 # alternate gaussian samplers
 
-section_header('Alternate Gaussian Samplers');
+section_header('Alternate Gaussian Samplers', 'gaussian');
 
 {
     my $sig = 'double sigma(); double [o] out()';
@@ -398,7 +398,7 @@ section_header('Alternate Gaussian Samplers');
 #######################################################################
 # alternate gamma sampler
 
-section_header('Alternate Gamma Samplers');
+section_header('Alternate Gamma Samplers', 'gamma');
 
 {
     my $sig = 'double a() ; double b() ; double [o] out()';
@@ -415,7 +415,7 @@ section_header('Alternate Gamma Samplers');
 #######################################################################
 # multinomial
 
-section_header('Multinomial Distribution');
+section_header('Multinomial Distribution', 'multinomial');
 
 {
     my $sig = 'int numdraws(); double p(n); int [o] counts(n)';
@@ -500,7 +500,7 @@ add_to_tag('multinomial', 'ran_multinomial_lnpdf');
 #######################################################################
 # dirichlet
 
-section_header('Dirichlet Distribution');
+section_header('Dirichlet Distribution', 'dirichlet');
 
 {
     my $sig = 'double alpha(n); double [o] theta(n)';
@@ -589,7 +589,7 @@ add_to_tag('dirichlet', 'ran_dirichlet_lnpdf');
 #######################################################################
 # bivariate_gaussian
 
-section_header('Bivariate Gaussian Distribution');
+section_header('Bivariate Gaussian Distribution', 'bivariate_gaussian');
 
 {
     my $sig = "double sigma(n=2); double rho(); double [o] out(n=2)";
@@ -647,7 +647,8 @@ add_to_tag('bivariate_gaussian', 'ran_bivariate_gaussian_pdf');
 #######################################################################
 # Spherical Vector Distributions
 
-section_header('Spherical Vector Distribution');
+section_header('Spherical Vector Distribution', 'spherical');
+
 for my $twod (qw/ran_dir_2d ran_dir_2d_trig_method/) {
     my $sig = 'double [o] vector(n=2)';
     pp_defnd($twod . "_meat",
@@ -685,7 +686,7 @@ for my $twod (qw/ran_dir_2d ran_dir_2d_trig_method/) {
         },
     );
     pp_addpm(qq{
-=head2 ran_dir_3d_meat
+=head2 ran_dir_3d
 
 =for sig
 
@@ -742,9 +743,32 @@ add_to_tag('spherical', 'ran_dir_nd');
 #######################################################################
 # Shuffling and Sampling
 
-section_header('Shuffling and Sampling');
+section_header('Sampling', 'sample');
+pp_addpm(q{
+
+=head2 ran_choose
+
+Sample count items from src without replacement, put them (in order) into
+out(). ran_choose is not threadable (src must be one dimensional). count must
+be <= n.
+
+=for sig
+
+  Signature: (PDL::GSL::RNG rng(); src(n); count(); out())
+
+=head2 ran_sample
+
+Sample count items from src with replacement, put them (in order) into
+out(). ran_sample is not threadable (src must be one dimensional). 
+
+=for sig
+
+  Signature: (PDL::GSL::RNG rng(); src(n); count(); out())
+
+=cut 
+});
+
 # choose/sample are ordered draws from src into dest.
-#     void gsl_ran_shuffle (const gsl_rng * r, void * base, size_t n, size_t size)
 #     int gsl_ran_choose (const gsl_rng * r, void * dest, size_t k, void * src, size_t n, size_t size)
 #     void gsl_ran_sample (const gsl_rng * r, void * dest, size_t k, void * src, size_t n, size_t size)
 
@@ -795,6 +819,25 @@ pp_addpm(q{
     }
 });
 
+#######################################################################
+# Shuffling
+
+section_header('Shuffling', 'shuffle');
+pp_addpm(q{
+=head2 ran_shuffle
+
+Return a new piddle with shuffled elements from src. src must be
+one-dimensional.
+
+=for sig
+
+  Signature: (PDL::GSL::RNG rng(); src(n))
+
+=cut
+
+});
+
+# void gsl_ran_shuffle (const gsl_rng * r, void * base, size_t n, size_t size)
 pp_defnd('ran_shuffle_meat',
     Pars => 'foo(n)', 
     OtherPars => 'IV rng',
@@ -813,43 +856,8 @@ pp_addpm(q{
     }
 });
 
-
-pp_addpm(q{
-
-=head2 ran_choose
-
-Sample count items from src without replacement, put them (in order) into
-out(). ran_choose is not threadable (src must be one dimensional). count must
-be <= n.
-
-=for sig
-
-  Signature: (PDL::GSL::RNG rng(); src(n); count(); out())
-
-=head2 ran_sample
-
-Sample count items from src with replacement, put them (in order) into
-out(). ran_sample is not threadable (src must be one dimensional). 
-
-=for sig
-
-  Signature: (PDL::GSL::RNG rng(); src(n); count(); out())
-
-=head2 ran_shuffle
-
-Return a new piddle with shuffled elements from src. src must be
-one-dimensional.
-
-=for sig
-
-  Signature: (PDL::GSL::RNG rng(); src(n))
-
-=cut
-
-});
-
-add_to_tag('sampling', 'ran_choose');
-add_to_tag('sampling', 'ran_sample');
+add_to_tag('sample', 'ran_choose');
+add_to_tag('sample', 'ran_sample');
 add_to_tag('shuffle', 'ran_shuffle');
 
 #######################################################################
@@ -872,57 +880,10 @@ Version 0.01
 
     use PDL;
     use PDL::GSL::RNG;
-    use PDL::Probability::GSL;
-
-    # I suggest you alias the module name:
-    # use Package::Alias 'Rd' =>  'PDL::Probability::GSL';
+    use PDL::Probability::GSL qw/:binomial :gaussian :multinomial/;
     
     my $rng = PDL::GSL::RNG->new('taus');
     $rng->set_seed(time);
-    
-    # Examples are shown with a discrete dist (binomial) and a continuos dist
-    # (gaussian). It should be simple to translate them the other distributions.
-    
-    # However, the bivariate-gaussian, dirichlet, multinomial, spherical, and
-    # sampling distribution functions have slightly different interfaces so pay
-    # attention to their section in the POD.
-    
-    ### Samplers
-    # sampling functions are called ran_DISTNAME.  The first argument is always a
-    # PDL::GSL::RNG object.  The following arguments are parameters specific to
-    # that dist. (n, p for binomial, sigma for gaussian, mu for exponential, etc.
-    # See the PDL::Probability::GSL pod).  Last arguments are for output specification.
-    # You can either pass nothing, in which case a single sample is returned.  If
-    # you pass a PDL, it will be filled with samples in-place.  If you pass a like
-    # of integers, it will return a new PDL of those dimensions filled with
-    # samples.
-    
-    # draw a sample 
-    print PDL::Probability::GSL::ran_binomial($rng, pdl(.5), long(100)); # n = 100, p = .5
-    print PDL::Probability::GSL::ran_gaussian($rng, pdl(3)); # sigma = 3.0
-    
-    # draw 10 samples,put them in an outpdl
-    my $counts = zeroes long, 10;
-    my $values = zeroes long, 10;
-    PDL::Probability::GSL::ran_binomial($rng, pdl(.5), long(100), $counts);
-    PDL::Probability::GSL::ran_gaussian($rng, pdl(3), $values);
-    
-    # draw 10 samples, return as 1-D pdl. 
-    print PDL::Probability::GSL::ran_binomial($rng, pdl(.5), long(100), 10);
-    print PDL::Probability::GSL::ran_gaussian($rng, pdl(3), 10); 
-    
-    # draw 100 samples, return as 10x10 pdl
-    print PDL::Probability::GSL::ran_binomial($rng, pdl(.5), long(100), 10, 10);
-    print PDL::Probability::GSL::ran_gaussian($rng, pdl(3), 10, 10); 
-    
-    # draw a single n=10 draw from a multinomial dist with p = [.1, .2, .3, .4]
-    print PDL::Probability::GSL::ran_multinomial($rng, 10, pdl(.1, .2, .3, .4));
-    
-    # a 10 n=10 draw from a multinomial dist with p = [.1, .2, .3, .4], return as a
-    # 4 x 10 pdl.
-    # *WARNING* interface for drawing multiple multivariate samples may change draw,
-    # since right now you have to specify the first dimension, which is redundant
-    print PDL::Probability::GSL::ran_multinomial($rng, 10, pdl(.1, .2, .3, .4), 4, 10);
     
     ### PDF/CDF
     # pdf's are named "ran_DISTNAME_pdf" and cdf are called "cdf_DISTNAME_P" and
@@ -931,17 +892,57 @@ Version 0.01
     # evaluate pdf/cdf at various x's
     my $x_continuous = zeroes(21)->xlinvals(-1, 1); # -1 to -1 by .1
     my $x_discrete = long 1 .. 10;
-    print PDL::Probability::GSL::ran_gaussian_pdf($x_continuous, .5);
-    print PDL::Probability::GSL::cdf_gaussian_P($x_continuous, .5);
-    print PDL::Probability::GSL::ran_binomial_pdf($x_discrete, .5, 20);
-    print PDL::Probability::GSL::cdf_binomial_P($x_discrete, .5, 20);
+    print ran_gaussian_pdf($x_continuous, .5);
+    print cdf_gaussian_P($x_continuous, .5);
+    print ran_binomial_pdf($x_discrete, .5, 20);
+    print cdf_binomial_P($x_discrete, .5, 20);
     
-    # inverse cdf. 
+    ### Inverse CDF
     my $P = zeroes(9)->xlinvals(.1, .9);
-    print PDL::Probability::GSL::cdf_gaussian_Pinv($P, .5);
+    print cdf_gaussian_Pinv($P, .5);
     
     # should give us back $x_continuous
-    print PDL::Probability::GSL::cdf_gaussian_Pinv(PDL::Probability::GSL::cdf_gaussian_P($x_continuous, .5), .5); 
+    print cdf_gaussian_Pinv(cdf_gaussian_P($x_continuous, .5), .5); 
+    
+    ### Samplers
+    # sampling functions are called ran_DISTNAME.  The first argument is always a
+    # PDL::GSL::RNG object.  The following arguments are parameters specific to
+    # that dist. (n, p for binomial, sigma for gaussian, mu for exponential, etc.
+    # See the PDL::GSL::Randist pod).  
+    #
+    # There are three ways to specify the output.
+    # 1) Pass nothing in the last parameter, in which case it'll return a scalar PDL.
+    
+    print ran_binomial($rng, pdl(.5), long(100)); # n = 100, p = .5
+    print ran_gaussian($rng, pdl(3)); # sigma = 3.0
+    
+    # 2) Pass an output-PDL to be filled with results:
+    
+    my $counts = zeroes long, 10;
+    my $values = zeroes double, 10;
+    # draw 10 samples,put them in the outpdl
+    ran_binomial($rng, pdl(.5), long(100), $counts);
+    ran_gaussian($rng, pdl(3), $values);
+    
+    # 3) Pass dimensions 
+    
+    # draw 10 samples, return as 1-D pdl. 
+    print ran_binomial($rng, pdl(.5), long(100), 10); 
+    print ran_gaussian($rng, pdl(3), 10); 
+    
+    # draw 100 samples, return as 10x10 pdl
+    print ran_binomial($rng, pdl(.5), long(100), 10, 10);
+    print ran_gaussian($rng, pdl(3), 10, 10); 
+    
+    # Multivariate dists like Multinomial are slighly different because the first
+    # dimensions are implicit:
+    
+    # sample a single n=10 draw from a multinomial dist with p = [.1, .2, # .3, .4]
+    # return as a dim(4) PDL.
+    print ran_multinomial($rng, 10, pdl(.1, .2, .3, .4));
+    
+    # draw 15 multinomial with p=[.1,.2,.3,.4] and return as 4 x 15
+    print ran_multinomial($rng, 10, pdl(.1, .2, .3, .4), 15);
 
 =head1 EXPORT
 
@@ -993,43 +994,32 @@ functions (possibly modelled after R) which includes such conviniences.
 
 All the non-sampler functions should handle PDL's BAD values appropriately.
 
+=head2 Export Tags
+
+:all exports everything.  :gaussian exports all gaussian functions, :binomial
+all binomial functions, etc. Tag names are in parentheses below.
+
 =cut
 
 PROLOGUE
 
+#######################################################################
+
 pp_addpm({At => 'Bot'}, <<EPILOGUE);
-
-=head1 AUTHOR
-
-T. Nishimura, C<< <tnish at fastmail.jp> >>
 
 =head1 BUGS
 
 The discrete distribution has no binding yet.
 
-=head1 SUPPORT
+=head1 AUTHOR AND COPYRIGHT
 
-You can find documentation for this module with the perldoc command.
-
-    perldoc PDL::Probability::GSL
-
-=head1 ACKNOWLEDGEMENTS
-
-Thanks to the PDL team and the GSL team!  
-
-=head1 LICENSE AND COPYRIGHT
-
-Copyright 2012 T. Nishimura.
-
-This program is free software; you can redistribute it and/or modify it
-under the terms of either: the GNU General Public License as published
-by the Free Software Foundation; or the Artistic License.
-
-See http://dev.perl.org/licenses/ for more information.
+See PDL::Probability.
 
 =cut
 
 EPILOGUE
+
+pp_addpm(q{ $EXPORT_TAGS{all} = [map { @$_ } values %EXPORT_TAGS]; });
 
 pp_export_nothing();
 pp_done();
