@@ -59,6 +59,26 @@ pp_addhdr('
 pp_addpm(q{
 use Carp;
 use Scalar::Util qw/looks_like_number/;
+
+# PDL::Core added automatically, below is rest of PDL::Lite(F);
+# apparently, if we don't load these here and try to run something like
+#
+# use PDL::Probability::GSL qw/:all/;
+# say PDL::Probability::GSL::binomial_pdf(10, .4, 20);
+#
+# Without use-ing PDL(::Lite(F)), it will segfault. Probably b/c many of the modules below 
+# add stuff directly to the PDL namespace. Not exactly sure if there is a
+# bug in PDL or not.
+
+use PDL::Ops '';
+use PDL::Primitive '';
+use PDL::Ufunc '';
+use PDL::Basic '';
+use PDL::Slices '';
+use PDL::Bad '';
+use PDL::Version;
+use PDL::Lvalue;
+
 });
 
 #######################################################################
@@ -339,14 +359,10 @@ sub gen_pp{
         pp_defnd($perl_meat_funname,
             Pars => $ran_pars,
             OtherPars => 'IV rng',
-            Code => $code,
+            code_and_badcode($code, 'out', @argnames),
         );
         my $numargs = scalar @args;
-        pp_addpm(qq{
-
-            *$perl_funname = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::$perl_meat_funname, '$type', $numargs);
-
-        });
+        pp_addpm(qq{ *$perl_funname = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::$perl_meat_funname, '$type', $numargs); });
         # pp_add_exported($perl_funname);
         gen_sampler_pod($perl_funname, $type, \@args);
         add_to_tag($basename, $perl_funname);
