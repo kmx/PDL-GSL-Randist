@@ -1,4 +1,4 @@
-package PDL::Probability::GSL::RLike;
+package PDL::Probability::RLike;
 use strict;
 use warnings;
 use 5.010_000;
@@ -127,9 +127,9 @@ while (my ($name,$specs) = each %$config) {
 }
 
 
-*rmultinom   = _make_r_sampler('ran_multinomial',  'rmultinom',   [qw/numdraws p/]);
-*dmultinom   = _make_df('ran_multinomial_pdf',   [qw/p counts/]);
-*dmultinomln = _make_df('ran_multinomial_lnpdf', [qw/p counts/]);
+*rmultinom   = _make_r_sampler('ran_multinomial',  'rmultinom',   [qw/n p/]);
+*dmultinom   = _make_df('ran_multinomial_pdf',   [qw/p n/]);
+*dmultinomln = _make_df('ran_multinomial_lnpdf', [qw/p n/]);
 
 _add_tag('multinom', qw/rmultinom dmultinom dmultinomln/);
 
