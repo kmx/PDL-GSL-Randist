@@ -36,39 +36,69 @@ sub set_seed{
 
 sub _argument_checker{
     my $expected_arguments = shift;
+    my $location_name = shift;
     my $val_or_dims = shift;
-    if (@_ % 2 != 0){
-        croak "odd number of arguments passed to RLike function";
-    }
+
+    croak "odd number of arguments passed to RLike function" if (@_ % 2 != 0);
+
     my %opt = @_;
 
     my @ordered_args;
     for my $arg (@$expected_arguments) {
-        my $val = delete $opt{$arg};
+        my $val = delete $opt{$arg->{name}};
         if (! defined $val){
             croak "need argument $arg";
         }
+        if (! looks_like_number($val) and ref $val ne 'PDL'){
+            if ($arg->{type} eq 'double'){
+                $val = double $val;
+            }
+            elsif ($arg->{type} eq 'unsigned int'){
+                $val = long $val;
+            }
+        }
         push @ordered_args, $val;
     }
-    return $val_or_dims, @ordered_args;
+    
+    my $location = 0.0;
+    $location = delete $opt{$location_name} if defined $location_name;
+    if (! looks_like_number $location){
+        $location = double $location;
+    }
+
+    if (keys %opt > 0){
+        croak "unknown keys " . join ",", keys %opt;
+    }
+    return $val_or_dims, $location, @ordered_args;
 }
 
 sub _make_df{
+    my ($pname, $type, $expected_arguments, $location_name) = @_;
+    return sub {
+        my ($x, $location, @args) = _argument_checker($expected_arguments, $location_name, @_);
+        if (! looks_like_number($x) and ref $x ne 'PDL'){
+            $x = $type eq 'Continuous' ? double($x) : long($x);
+        }
+        return $PDL::Probability::GSL::{$pname}->($x - $location, @args);
+    };
+}
+sub _make_dfinv{
     my ($pname, $expected_arguments) = @_;
     return sub {
-        my ($P, @args) = _argument_checker($expected_arguments, @_);
+        my ($P, undef, @args) = _argument_checker($expected_arguments, undef, @_);
         return $PDL::Probability::GSL::{$pname}->($P, @args);
     };
 }
 sub _make_r_sampler{
-    my ($pname, $rname, $expected_arguments) = @_;
+    my ($pname, $rname, $expected_arguments, $location_name) = @_;
     return sub{
-        my ($v, @args) = _argument_checker($expected_arguments, @_);
+        my ($v, $location, @args) = _argument_checker($expected_arguments, $location_name, @_);
         if (looks_like_number $v || ref $v eq 'PDL'){
-            return $PDL::Probability::GSL::{$pname}->($rng, @args, $v);
+            return $location + $PDL::Probability::GSL::{$pname}->($rng, @args, $v);
         }
         elsif (ref $v eq 'ARRAY'){
-            return $PDL::Probability::GSL::{$pname}->($rng, @args, @$v);
+            say "bar";
+            return $location + $PDL::Probability::GSL::{$pname}->($rng, @args, @$v);
         }
         else{
             croak "first argument to $rname must be a count (integer), arrayref (for dimension of desired output pdl), or an output pdl";
@@ -86,14 +116,15 @@ sub _add_tag{
 
 while (my ($name,$specs) = each %$config) {
     my $rbasename = $specs->{rname};
-    my @expected_arguments = exists $specs->{args} ? map { $_->{name} } @{$specs->{args}} : ();
+    my $location_name = $specs->{addlocation} eq '1' ? 'location' : $specs->{addlocation};
+    my @expected_arguments = defined $specs->{args} ? @{$specs->{args}} : ();
     my @exported;
 
     if ($specs->{pdf}){
         my $rname_pdf = "d$rbasename";
         my $pname_pdf = "ran_${name}_pdf";
         no strict 'refs';
-        *{$rname_pdf} = _make_df($pname_pdf, \@expected_arguments);
+        *{$rname_pdf} = _make_df($pname_pdf, $specs->{type}, \@expected_arguments, $location_name);
         use strict 'refs';
         push @exported, $rname_pdf;
     }
@@ -101,7 +132,7 @@ while (my ($name,$specs) = each %$config) {
         my $rname_cdf = "p$rbasename";
         my $pname_cdf = "cdf_${name}_P";
         no strict 'refs';
-        *{$rname_cdf} = _make_df($pname_cdf, \@expected_arguments);
+        *{$rname_cdf} = _make_df($pname_cdf, $specs->{type}, \@expected_arguments, $location_name);
         use strict 'refs';
         push @exported, $rname_cdf;
     }
@@ -109,7 +140,7 @@ while (my ($name,$specs) = each %$config) {
         my $rname_cdfinv = "q$rbasename";
         my $pname_cdfinv = "cdf_${name}_Pinv";
         no strict 'refs';
-        *{$rname_cdfinv} = _make_df($pname_cdfinv, \@expected_arguments);
+        *{$rname_cdfinv} = _make_dfinv($pname_cdfinv, \@expected_arguments);
         use strict 'refs';
         push @exported, $rname_cdfinv;
     }
@@ -118,7 +149,7 @@ while (my ($name,$specs) = each %$config) {
         my $pname_sampler = "ran_${name}";
 
         no strict 'refs';
-        *{$rname_sampler} = _make_r_sampler($pname_sampler, $rname_sampler, \@expected_arguments);
+        *{$rname_sampler} = _make_r_sampler($pname_sampler, $rname_sampler, \@expected_arguments, $location_name);
         use strict 'refs';
         push @exported, $rname_sampler;
     }
