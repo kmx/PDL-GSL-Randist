@@ -27,7 +27,7 @@ use Carp;
 # 
 # The strategy is to generate the appropriate pp_def's from the annotation in
 # gsl_randist.yml (which has its own format documentation), which contains an
-# entry for each distribution to be handled automatically. Each looks like:
+# entry for each distribution to be handled automatically. 
 # 
 # Samplers are slightly more complicated b/c pp_def forces the gsl_rng * object to
 # come last in the parameter list.  Therefore, we create a "meat" binding first:
@@ -54,8 +54,8 @@ pp_addhdr('
 #include <gsl/gsl_rng.h>
 #include <gsl/gsl_randist.h>
 #include <gsl/gsl_cdf.h>
-
 ');
+
 pp_addpm(q{
 use Carp;
 use Scalar::Util qw/looks_like_number/;
