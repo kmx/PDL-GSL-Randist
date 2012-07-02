@@ -1,6 +1,7 @@
-PDL-GSL-Randist
+PDL-Probability
 
-Comprehensive Perl Data Language (PDL) binding to the GNU Scientific Library
+PDL probability distribution samplers and density, cumulative distribution, and
+quantile functions.  Includes comprehensive PDL to the GNU Scientific Library
 (GSL) Random Distribution (randist) functions.
 
 INSTALLATION
@@ -14,7 +15,8 @@ To install this module, run the following commands:
 
 SUPPORT AND DOCUMENTATION
 
-    perldoc PDL::GSL::Randist
+    perldoc PDL::Probability::GSL
+    perldoc PDL::Probability::RLike
 
 LICENSE AND COPYRIGHT
 

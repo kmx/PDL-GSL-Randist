@@ -7,16 +7,16 @@
 # pdf:         # Boolean: is there a gsl_ran_<name>_pdf?
 # cdf:         # Boolean: is there a gsl_ran_<name>_P and gsl_ran_<name>_Q?
 # cdfinv:      # Boolean: is there a gsl_ran_<name>_Pinv and gsl_ran_<name>_Qinv?
-# args:
+# args:        # ordered list of arguments
 #   - name: argument1      
-#     type: argument1_type
-#     testval: 123
+#     type: argument1_type  # double or unsigned in
+#     testval: 123          # test value used in generate-testvalues-generator.pl
 #   - name: argument2
 #     type: argument2_type
 #     testval: 456
 # rname:       # base name for R-like interface
 # addlocation: # add location parameter to R-like interface? 1 for yes, /\w+/ for name 
-
+#
 # Note: The following distributions are bound manually b/c they are multivariate:
 #   Bivariate Gaussian
 #   Spherical Vector Distributions
@@ -709,7 +709,7 @@ hypergeometric:
     # double gsl_cdf_hypergeometric_P (unsigned int k, unsigned int n1, unsigned int n2, unsigned int t)
     # double gsl_cdf_hypergeometric_Q (unsigned int k, unsigned int n1, unsigned int n2, unsigned int t)
 
-#### manual
+### manually bound functions 
 
 # Spherical Vector Distributions
 #     void gsl_ran_dir_2d (const gsl_rng * r, double * x, double * y)

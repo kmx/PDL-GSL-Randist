@@ -1,3 +1,9 @@
+/* 
+ * this c program will call the C functions for multinomial, dirichlet,
+ * bivariate_gaussian, dir, and shuffle and output a tab-separated file to be
+ * used by compare-to-c.t
+ */
+
 #include <stdio.h>
 #include <gsl/gsl_rng.h>
 #include <gsl/gsl_randist.h>

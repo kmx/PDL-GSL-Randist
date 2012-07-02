@@ -1,11 +1,11 @@
-#!/usr/bin/env perl
+# this script generates testvalues-generator.c, a c program which will call C
+# versions of the gsl functions and output a tab-separated file with testable
+# values, used by compare-to-c.t
+
 use strict;
 use warnings FATAL => "all";
 use 5.010_000;
-use Data::Dumper;
 use autodie;
-END {close STDOUT}
-$| = 1;
 
 use YAML qw/LoadFile/;
 my $config = LoadFile("share/gsl_randist.yml");

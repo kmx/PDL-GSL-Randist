@@ -1,11 +1,11 @@
-#!/usr/bin/env perl
+# make sure the annotation file gsl_randist.yml is not malformed or missing
+# necessary fields.
+
 use strict;
 use warnings;
 use 5.010_000;
-use Data::Dumper;
 use autodie;
 use Test::More qw(no_plan);
-use Test::Exception;
 
 use YAML qw/LoadFile/;
 my $config = LoadFile("share/gsl_randist.yml");
@@ -31,20 +31,3 @@ while (my ($name,$specs) = each %$config) {
     ok(1, "$name yaml annotation");
 }
 
-__END__
-gumbel1: 
-  name: Type-1 Gumbel Distribution
-  rname: gumbel1
-  type: Continuous
-  sample: 1
-  addlocation: 1
-  pdf: 1
-  cdf: 1
-  cdfinv: 1
-  args:
-    - name: a
-      type: double
-      testval: 2.9
-    - name: b
-      type: double
-      testval: 4.6

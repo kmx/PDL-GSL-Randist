@@ -1,11 +1,8 @@
-#!/usr/bin/env perl
 use strict;
 use warnings;
 use 5.010_000;
-use Data::Dumper;
 use autodie;
 use Test::More qw(no_plan);
-use Test::Exception;
 use PDL;
 use PDL::Core qw/topdl/;
 use PDL::Probability::GSL;
@@ -45,8 +42,6 @@ while (my ($name,$specs) = each %$config) {
         }
     }
 }
-
-my $prob;
 
 for my $f (qw/ran_multinomial_pdf ran_multinomial_lnpdf ran_dirichlet_pdf ran_dirichlet_lnpdf/){
     ok( $PDL::Probability::GSL::{$f}->(pdl('.1, BAD, .3, .4'), pdl '2,3,4,5')->isbad(), "$f bad-code test index 0" );

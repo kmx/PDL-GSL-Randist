@@ -1,11 +1,12 @@
-#!/usr/bin/env perl
+# make sure the bound functions are threading correctly and returned the
+# appropriately sized pdls. not really complete yet-- should do a better job on
+# autogen'd functions
+
 use strict;
 use warnings;
 use 5.010_000;
-use Data::Dumper;
 use autodie;
 use Test::More qw(no_plan);
-use Test::Exception;
 
 use PDL;
 use PDL::GSL::RNG;

@@ -1,7 +1,6 @@
 use 5.006;
 use strict;
 use warnings;
-use Data::Dumper;
 
 use PDL::Core::Dev;
 use ExtUtils::MakeMaker;
@@ -13,7 +12,6 @@ my $package = ['gsl_randist.pp','GSL','PDL::Probability::GSL'];
 my %hash = pdlpp_stdargs($package);
 
 $hash{clean}{FILES} .= " t/*.out t/testvalues.txt t/mvtestvalues.txt t/testvalues-generator.*";
-# $hash{PM}{'lib/PDL/GSL/Randist/RLike.pm'} = '$(INST_LIBDIR)/Randist/RLike.pm';
 
 install_share module => 'PDL::Probability::GSL' => 'share';
 
@@ -27,7 +25,6 @@ if ($libgsl && $major_version == 1 && $minor_version >= 13) { # 13 is the lowest
     unshift @{ $hash{'LIBS'} }, $libgsl;
     $hash{'INC'} .= " $cflags";
     WriteMakefile( %hash );
-    print Dumper \%hash;
     sub MY::postamble {
         my $self = shift;
         my @ret = File::ShareDir::Install::postamble( $self );
