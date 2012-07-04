@@ -957,9 +957,9 @@ Scientific Library (GSL) Random Distribution (randist) functions.
 
 =head1 EXPORT
 
-Nothing is exported by default.  I suggest using Package::Alias or aliased
-(both available on CPAN) so you can call functions like "Rd::ran_gaussian()"
-instead of PDL::RNG::Randist::ran_gaussian()).
+Nothing is exported by default.  :all exports everything.  :gaussian exports
+all gaussian functions, :binomial all binomial functions, etc. Tag names are in
+parentheses below.
 
 =head1 NOTES
 
@@ -967,10 +967,12 @@ instead of PDL::RNG::Randist::ran_gaussian()).
 
 Samplers are named "ran_RANDIST()" (eg. "ran_gaussian()"), 
 probability density/mass functions are named "ran_RANDIST_pdf()" (eg. "ran_gaussian_pdf()"), 
-cumulative distribution functions are named "cdf_RANDIST_P()" and "cdf_RANDIST_Q()" (eg. "cdf_gaussian_P()" and "cdf_gaussian_Q()"), 
+cumulative distribution function are named "cdf_RANDIST_P()" and "cdf_RANDIST_Q()" (eg. "cdf_gaussian_P()" and "cdf_gaussian_Q()"), 
 inverse cumulative distribution functions (quantiles) are named "cdf_RANDIST_Pinv()" and "cdf_RANDIST_Qinv()" (eg. "cdf_gaussian_Pinv()" and "cdf_gaussian_Qinv()"). 
 
-Note that the relationship between the "P" cdf and thr "Q" cdf is cdf_RANDIST_P + cdf_RANDIST_Q = 1.
+The _Q CDF functions are complementary CDF functions: cdf_RANDIST_P
++ cdf_RANDIST_Q = 1. Both exist because it is often more accurate numerically to 
+calculate the complementary CDF directly instead of calculating 1 - CDF.
 
 A particular distribution may not have all 4 types of functions.  (Discrete
 distributions don't have inverse CDF's, Levy distributions don't have pdf's,
@@ -999,16 +1001,17 @@ For example, the gaussian functions only have a sigma argument, and not a mean.
 I thought about adding the location parameters to the appropriate randists, but
 this would be contrary to the goal of module to create a straight binding to
 GSL's Randist.  Instead, I plan to make an alternative interface to the
-functions (possibly modelled after R) which includes such conviniences.
+functions (possibly modelled after R) which includes such conveniences.
 
 =head2 Bad Values
 
 All the non-sampler functions should handle PDL's BAD values appropriately.
 
-=head2 Export Tags
+=head2 Floating point and integer PDL's
 
-:all exports everything.  :gaussian exports all gaussian functions, :binomial
-all binomial functions, etc. Tag names are in parentheses below.
+If you pass a floating point PDL to a function where an integer PDL is
+expected, it will be cast automatically to a integer, as in C, by truncation.
+(ADD MORE ON THIS.)
 
 =cut
 

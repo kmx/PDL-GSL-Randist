@@ -25,10 +25,12 @@ my $config = LoadFile($file);
 our $rng = PDL::GSL::RNG->new('taus');
 $rng->set_seed(time);
 
-=head2 set_seed
-=cut
-sub set_seed{
-    $rng->set_seed(shift);
+sub set_rng{ 
+    my $new_rng = shift;
+    if (ref $new_rng ne 'PDL::GSL::RNG'){
+        croak "first argument to set_rng must be PDL::GSL::RNG object";
+    }
+    $rng = $new_rng;
 }
 
 #######################################################################
@@ -186,3 +188,21 @@ $EXPORT_TAGS{all} = \@EXPORT_OK;
 
 1;
 
+=head1 NAME
+
+INCOMPLETE!!
+
+PDL::Probability::RLike - R-Like interface to probability distribution functions.
+
+=head1 SYNOPSIS
+
+=head1 EXPORT 
+
+Nothing is exported by default.  Export tags for each set of functions is given in 
+parenthesis below.
+
+=head1 FUNCTIONS
+
+=head2 set_rng()
+
+=cut
