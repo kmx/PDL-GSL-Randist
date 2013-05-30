@@ -7,13 +7,13 @@ use ExtUtils::MakeMaker;
 use File::ShareDir::Install;
 PDL::Core::Dev->import();
 
-my $package = ['gsl_randist.pp','GSL','PDL::Probability::GSL'];
+my $package = ['gsl_randist.pp','Randist','PDL::GSL::Randist'];
 
 my %hash = pdlpp_stdargs($package);
 
 $hash{clean}{FILES} .= " t/*.out t/testvalues.txt t/mvtestvalues.txt t/testvalues-generator.*";
 
-install_share module => 'PDL::Probability::GSL' => 'share';
+install_share module => 'PDL::GSL::Randist' => 'share';
 
 chomp( my $libgsl = `gsl-config --libs` );
 chomp( my $cflags = `gsl-config --cflags` );
@@ -57,9 +57,12 @@ sub top_targets{
 gentest : t/testvalues-generator.out t/mvtestvalues-generator.out t/testvalues.txt t/mvtestvalues.txt
 t/testvalues-generator.out:
 	perl t/generate-testvalues-generator.pl
-	$(CC) `gsl-config --libs --cflags` t/testvalues-generator.c -o t/testvalues-generator.out
+	$(CC) -c `gsl-config --cflags` t/testvalues-generator.c -o t/testvalues-generator.o
+	$(CC) t/testvalues-generator.o -o t/testvalues-generator.out `gsl-config --libs` 
+
 t/mvtestvalues-generator.out:
-	$(CC) `gsl-config --libs --cflags` t/mvtestvalues-generator.c -o t/mvtestvalues-generator.out
+	$(CC) -c `gsl-config --cflags` t/mvtestvalues-generator.c -o t/mvtestvalues-generator.o
+	$(CC) t/mvtestvalues-generator.o -o t/mvtestvalues-generator.out `gsl-config --libs` 
 # this won't work on windows... oh well
 t/testvalues.txt:
 	./t/testvalues-generator.out > t/testvalues.txt

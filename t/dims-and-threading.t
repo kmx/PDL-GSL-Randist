@@ -10,7 +10,7 @@ use Test::More qw(no_plan);
 
 use PDL;
 use PDL::GSL::RNG;
-use PDL::Probability::GSL qw/:gaussian :binomial :multinomial :spherical :dirichlet :bivariate_gaussian/;
+use PDL::GSL::Randist qw/:gaussian :binomial :multinomial :spherical :dirichlet :bivariate_gaussian/;
 
 my $rng = PDL::GSL::RNG->new('taus');
 $rng->set_seed(time);
@@ -50,9 +50,9 @@ $rng->set_seed(time);
     # sphericals
     
     for my $dir2d (qw/ran_dir_2d ran_dir_2d_trig_method/) {
-        is_deeply( [2],        [$PDL::Probability::GSL::{$dir2d}($rng)->dims()], "$dir2d single");
-        is_deeply( [2, 10],    [$PDL::Probability::GSL::{$dir2d}($rng, 10)->dims()], "$dir2d multi 1");
-        is_deeply( [2, 10, 7], [$PDL::Probability::GSL::{$dir2d}($rng, 10, 7)->dims()], "$dir2d multi 2");
+        is_deeply( [2],        [$PDL::GSL::Randist::{$dir2d}($rng)->dims()], "$dir2d single");
+        is_deeply( [2, 10],    [$PDL::GSL::Randist::{$dir2d}($rng, 10)->dims()], "$dir2d multi 1");
+        is_deeply( [2, 10, 7], [$PDL::GSL::Randist::{$dir2d}($rng, 10, 7)->dims()], "$dir2d multi 2");
     }
 
     is_deeply( [3],        [ran_dir_3d($rng)->dims()], "ran_dir_3d single");

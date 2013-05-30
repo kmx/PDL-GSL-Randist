@@ -48,7 +48,7 @@ use Carp;
 # 
 #  gen_ran_meat_wrapper('ran_pareto', 2);
 
-pp_bless('PDL::Probability::GSL');
+pp_bless('PDL::GSL::Randist');
 pp_addhdr('
 #include <stdio.h>
 #include <gsl/gsl_rng.h>
@@ -63,8 +63,8 @@ use Scalar::Util qw/looks_like_number/;
 # PDL::Core added automatically, below is rest of PDL::Lite(F);
 # apparently, if we don't load these here and try to run something like
 #
-# use PDL::Probability::GSL qw/:all/;
-# say PDL::Probability::GSL::binomial_pdf(10, .4, 20);
+# use PDL::GSL::Randist qw/:all/;
+# say PDL::GSL::Randist::binomial_pdf(10, .4, 20);
 #
 # Without use-ing PDL(::Lite(F)), it will segfault. Probably b/c many of the modules below 
 # add stuff directly to the PDL namespace. Not exactly sure if there is a
@@ -362,7 +362,7 @@ sub gen_pp{
             code_and_badcode($code, 'out', @argnames),
         );
         my $numargs = scalar @args;
-        pp_addpm(qq{ *$perl_funname = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::$perl_meat_funname, '$type', $numargs); });
+        pp_addpm(qq{ *$perl_funname = make_ran_meat_wrapper(\\\&PDL::GSL::Randist::$perl_meat_funname, '$type', $numargs); });
         # pp_add_exported($perl_funname);
         gen_sampler_pod($perl_funname, $type, \@args);
         add_to_tag($basename, $perl_funname);
@@ -401,8 +401,8 @@ section_header('Alternate Gaussian Samplers', 'gaussian');
         Code => q{ $out() = gsl_ran_gaussian_ziggurat( INT2PTR(gsl_rng *, $COMP(rng)), $sigma()); },
     );
 
-    pp_addpm(qq{ *ran_gaussian_ziggurat = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_gaussian_ziggurat_meat, 'Continuous', 1); });
-    pp_addpm(qq{ *ran_gaussian_ratio_method = make_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_gaussian_ratio_method_meat, 'Continuous', 1); });
+    pp_addpm(qq{ *ran_gaussian_ziggurat = make_ran_meat_wrapper(\\\&PDL::GSL::Randist::ran_gaussian_ziggurat_meat, 'Continuous', 1); });
+    pp_addpm(qq{ *ran_gaussian_ratio_method = make_ran_meat_wrapper(\\\&PDL::GSL::Randist::ran_gaussian_ratio_method_meat, 'Continuous', 1); });
 
     gen_sampler_pod('ran_gaussian_ratio_method', 'Continuous', [{name => 'sigma', type => 'double'}]);
     gen_sampler_pod('ran_gaussian_ziggurat', 'Continuous', [{name => 'sigma', type => 'double'}]);
@@ -423,7 +423,7 @@ section_header('Alternate Gamma Samplers', 'gamma');
         OtherPars => 'IV rng',
         Code => '$out() = gsl_ran_gamma_knuth(INT2PTR(gsl_rng *, $COMP(rng)), $a(), $b());',
     );
-    pp_addpm(q{ *ran_gamma_knuth = make_ran_meat_wrapper(\&PDL::Probability::GSL::ran_gamma_knuth_meat, 'Continuous', 2); });
+    pp_addpm(q{ *ran_gamma_knuth = make_ran_meat_wrapper(\&PDL::GSL::Randist::ran_gamma_knuth_meat, 'Continuous', 2); });
     gen_sampler_pod('ran_gamma_knuth', 'Continuous', [{name => 'a', type => 'double'}, {name => 'b', type => 'double'}]); 
     add_to_tag('gamma', 'ran_gamma_knuth');
 }
@@ -622,7 +622,7 @@ section_header('Bivariate Gaussian Distribution', 'bivariate_gaussian');
         },
     );
         
-    pp_addpm(qq{ *ran_bivariate_gaussian = make_mv_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_bivariate_gaussian_meat, 2, 2); });
+    pp_addpm(qq{ *ran_bivariate_gaussian = make_mv_ran_meat_wrapper(\\\&PDL::GSL::Randist::ran_bivariate_gaussian_meat, 2, 2); });
 
     pp_addpm(qq{
 =head2 ran_bivariate_gaussian
@@ -714,9 +714,9 @@ for my $twod (qw/ran_dir_2d ran_dir_2d_trig_method/) {
     });
 }
 
-pp_addpm(qq{ *ran_dir_2d = make_mv_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_dir_2d_meat, 2, 0); });
-pp_addpm(qq{ *ran_dir_2d_trig_method = make_mv_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_dir_2d_trig_method_meat, 2, 0); });
-pp_addpm(qq{ *ran_dir_3d = make_mv_ran_meat_wrapper(\\\&PDL::Probability::GSL::ran_dir_3d_meat, 3, 0); });
+pp_addpm(qq{ *ran_dir_2d = make_mv_ran_meat_wrapper(\\\&PDL::GSL::Randist::ran_dir_2d_meat, 2, 0); });
+pp_addpm(qq{ *ran_dir_2d_trig_method = make_mv_ran_meat_wrapper(\\\&PDL::GSL::Randist::ran_dir_2d_trig_method_meat, 2, 0); });
+pp_addpm(qq{ *ran_dir_3d = make_mv_ran_meat_wrapper(\\\&PDL::GSL::Randist::ran_dir_3d_meat, 3, 0); });
 
 pp_defnd('ran_dir_nd_meat',
     Pars => 'int size(); double [o] vector(n)', 
@@ -884,14 +884,14 @@ add_to_tag('shuffle', 'ran_shuffle');
 pp_addpm({At => 'Top'}, <<'PROLOGUE');
 =head1 NAME
 
-PDL::Probability::GSL - Comprehensive Perl Data Language (PDL) binding to the GNU
+PDL::GSL::Randist - Comprehensive Perl Data Language (PDL) binding to the GNU
 Scientific Library (GSL) Random Distribution (randist) functions.
 
 =head1 SYNOPSIS
 
     use PDL;
     use PDL::GSL::RNG;
-    use PDL::Probability::GSL qw/:binomial :gaussian :multinomial/;
+    use PDL::GSL::Randist qw/:binomial :gaussian :multinomial/;
     
     my $rng = PDL::GSL::RNG->new('taus');
     $rng->set_seed(time);
