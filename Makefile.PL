@@ -1,40 +1,60 @@
 use 5.006;
 use strict;
 use warnings;
-
+use Data::Dumper;
 use PDL::Core::Dev;
 use ExtUtils::MakeMaker;
-use File::ShareDir::Install;
 PDL::Core::Dev->import();
 
-my $package = ['gsl_randist.pp','Randist','PDL::GSL::Randist'];
-
-my %hash = pdlpp_stdargs($package);
-
-$hash{clean}{FILES} .= " t/*.out t/testvalues.txt t/mvtestvalues.txt t/testvalues-generator.*";
-
-install_share module => 'PDL::GSL::Randist' => 'share';
-
-chomp( my $libgsl = `gsl-config --libs` );
-chomp( my $cflags = `gsl-config --cflags` );
-chomp( my $version = `gsl-config --version` );
-
-my ($major_version, $minor_version) = $version =~ /^(\d+)\.(\d+)$/;
-
-if ($libgsl && $major_version == 1 && $minor_version >= 13) { # 13 is the lowest I tested with...
-    unshift @{ $hash{'LIBS'} }, $libgsl;
-    $hash{'INC'} .= " $cflags";
-    WriteMakefile( %hash );
-    sub MY::postamble {
-        my $self = shift;
-        my @ret = File::ShareDir::Install::postamble( $self );
-        push @ret, pdlpp_postamble($package);
-        return join "\n", @ret;
-    };
+if (! gsl_ok()){
+    die "can't find gsl-config or version too old? oldest supported version is 1.13";
 }
-else {
-    warn "no GSL";
-    exit;
+if (! pdl_gsl_ok() ){
+    die "gsl is installed, but can't load PDL::GSL::RNG, which means PDL apparently wasn't built with it. Try reinstalling PDL.";
+}
+
+WriteMakefile( 
+    'NAME'      => 'PDL::GSL::Randist',
+    'LIBS'      => [gsl_libs()],
+    'INC'       => PDL_INCLUDE() . " " . gsl_cflags(),
+    'TYPEMAPS'  => [PDL_TYPEMAP()],
+    'OBJECT'    => 'Randist$(OBJ_EXT)',
+    'NO_MYMETA' => 1,
+    'PM' => { 'Randist.pm' => '$(INST_LIBDIR)/Randist.pm' },
+    'MAN3PODS' => {
+        'Randist.pm' => '$(INST_MAN3DIR)/PDL::GSL::Randist.$(MAN3EXT)'
+    },
+    'clean' => {
+        'FILES' => 'Randist.xs Randist.pm Randist$(OBJ_EXT) Randist.c t/*.out t/*.o t/testvalues.txt t/mvtestvalues.txt t/testvalues-generator.*',
+    },
+    # 'VERSION_FROM' => 'mylib.pd',
+);
+
+sub MY::postamble {
+    pdlpp_postamble( ['gsl_randist.pp','Randist','PDL::GSL::Randist'] );
+};
+
+sub gsl_ok{
+    if (0 == system('gsl-config --version > /dev/null 2> /dev/null')){
+        chomp( my $version = `gsl-config --version` );
+        my ($major_version, $minor_version) = $version =~ /^(\d+)\.(\d+)$/;
+        return $major_version == 1 && $minor_version >= 13;
+    }
+    return;
+}
+sub pdl_gsl_ok{
+    eval { require PDL::GSL::RNG; };
+    return !$@;
+}
+sub gsl_libs{
+    my $libgsl = `gsl-config --libs`;
+    chomp $libgsl;
+    return $libgsl;
+}
+sub gsl_cflags{
+    my $cflags = `gsl-config --cflags`;
+    chomp $cflags;
+    return $cflags;
 }
 
 #######################################################################
@@ -63,6 +83,7 @@ t/testvalues-generator.out:
 t/mvtestvalues-generator.out:
 	$(CC) -c `gsl-config --cflags` t/mvtestvalues-generator.c -o t/mvtestvalues-generator.o
 	$(CC) t/mvtestvalues-generator.o -o t/mvtestvalues-generator.out `gsl-config --libs` 
+
 # this won't work on windows... oh well
 t/testvalues.txt:
 	./t/testvalues-generator.out > t/testvalues.txt
