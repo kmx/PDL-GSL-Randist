@@ -5,6 +5,8 @@ use Data::Dumper;
 use autodie;
 use Carp;
 
+our $VERSION = '0.01';
+
 # The goal is to wrap as many of the samplers, pdf, cdf, and inverse-cdf 
 # functions possible automatically.
 # 
@@ -55,6 +57,8 @@ pp_addhdr('
 #include <gsl/gsl_randist.h>
 #include <gsl/gsl_cdf.h>
 ');
+
+pp_setversion($VERSION);
 
 pp_addpm(q{
 use Carp;

@@ -1,0 +1,10 @@
+gsl_randist.pp
+gsl_randist.yml
+Makefile.PL
+MANIFEST
+t/bad-code.t
+t/check-yml-sanity.t
+t/compare-to-c.t
+t/dims-and-threading.t
+t/generate-testvalues-generator.pl
+t/mvtestvalues-generator.c

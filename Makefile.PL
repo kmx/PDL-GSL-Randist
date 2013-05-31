@@ -27,7 +27,7 @@ WriteMakefile(
     'clean' => {
         'FILES' => 'Randist.xs Randist.pm Randist$(OBJ_EXT) Randist.c t/*.out t/*.o t/testvalues.txt t/mvtestvalues.txt t/testvalues-generator.*',
     },
-    # 'VERSION_FROM' => 'mylib.pd',
+    'VERSION_FROM' => 'gsl_randist.pp',
 );
 
 sub MY::postamble {
