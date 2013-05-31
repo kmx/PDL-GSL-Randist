@@ -1,7 +1,6 @@
 use 5.006;
 use strict;
 use warnings;
-use Data::Dumper;
 use PDL::Core::Dev;
 use ExtUtils::MakeMaker;
 PDL::Core::Dev->import();
@@ -29,6 +28,14 @@ WriteMakefile(
         'FILES' => 'Randist.xs Randist.pm Randist$(OBJ_EXT) Randist.c t/*.out t/*.o t/testvalues.txt t/mvtestvalues.txt t/testvalues-generator.*',
     },
     'VERSION_FROM' => 'gsl_randist.pp',
+    'BUILD_REQUIRES' => { 
+        'ExtUtils::MakeMaker' => 0,
+        'PDL'                 => '2.006', # the version I dev'd with
+        'YAML'                => '0.84',
+    },
+    'PREREQ_PM' => {
+        'PDL'        => '2.006',
+    },
 );
 
 sub MY::postamble {
