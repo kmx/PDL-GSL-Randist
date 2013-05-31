@@ -15,6 +15,7 @@ if (! pdl_gsl_ok() ){
 
 WriteMakefile( 
     'NAME'      => 'PDL::GSL::Randist',
+    'ABSTRACT'  => 'PDL binding to the GSL (GNU Scientific Libray) Random Distribution functions';
     'LIBS'      => [gsl_libs()],
     'INC'       => PDL_INCLUDE() . " " . gsl_cflags(),
     'TYPEMAPS'  => [PDL_TYPEMAP()],
