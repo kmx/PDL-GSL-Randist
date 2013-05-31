@@ -8,7 +8,7 @@ use 5.010_000;
 use autodie;
 
 use YAML qw/LoadFile/;
-my $config = LoadFile("share/gsl_randist.yml");
+my $config = LoadFile("gsl_randist.yml");
 open my $output_fh, '>', 't/testvalues-generator.c';
 
 sub genc{

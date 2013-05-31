@@ -373,7 +373,7 @@ sub gen_pp{
 # read in annotation and generate
 
 use YAML qw/LoadFile/;
-my $annotation = LoadFile("share/gsl_randist.yml");
+my $annotation = LoadFile("gsl_randist.yml");
 
 for my $basename (sort keys %$annotation) {
     my $specs = $annotation->{$basename};

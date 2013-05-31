@@ -8,7 +8,7 @@ use PDL::Core qw/topdl/;
 use PDL::GSL::Randist;
 
 use YAML qw/LoadFile/;
-my $config = LoadFile("share/gsl_randist.yml");
+my $config = LoadFile("gsl_randist.yml");
 
 DIST:
 while (my ($name,$specs) = each %$config) {
