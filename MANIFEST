@@ -9,3 +9,5 @@ t/dims-and-threading.t
 t/generate-testvalues-generator.pl
 t/mvtestvalues-generator.c
 lib/PDL/GSL/Randist.pod
+LICENSE
+README
