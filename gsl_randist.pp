@@ -1027,11 +1027,7 @@ pp_addpm({At => 'Bot'}, <<EPILOGUE);
 
 =head1 BUGS
 
-The discrete distribution has no binding yet.
-
-=head1 AUTHOR AND COPYRIGHT
-
-See PDL::Probability.
+The discrete distribution has no binding yet. Probably a whole lot more.
 
 =cut
 
