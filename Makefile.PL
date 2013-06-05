@@ -1,4 +1,4 @@
-use 5.006;
+use 5.01;
 use strict;
 use warnings;
 use PDL::Core::Dev;
@@ -32,6 +32,7 @@ WriteMakefile(
         'ExtUtils::MakeMaker' => 0,
         'PDL'                 => '2.006', # the version I dev'd with
         'YAML'                => '0.84',
+        'autodie'             => 0,       # Not in core until 5.12
     },
     'PREREQ_PM' => {
         'PDL'        => '2.006',
@@ -43,7 +44,9 @@ sub MY::postamble {
 };
 
 sub gsl_ok{
-    if (0 == system('gsl-config --version > /dev/null 2> /dev/null')){
+    use File::Spec;
+    my $devnull = File::Spec->devnull; # Portable null device
+    if (0 == system("gsl-config --version > $devnull 2> $devnull")){
         chomp( my $version = `gsl-config --version` );
         my ($major_version, $minor_version) = $version =~ /^(\d+)\.(\d+)$/;
         return $major_version == 1 && $minor_version >= 13;
@@ -75,28 +78,38 @@ sub gsl_cflags{
 
 package MY;
 sub top_targets{
+    use Cwd;
+    my $cwd = Cwd::getcwd();
+    $cwd =~ s/\//\\/g;
+    $ENV{PATH} .= ";$cwd\\t" if $^O =~ /MSWin32/i;
     my $inherited = shift->SUPER::top_targets(@_);
+    my $flags = `gsl-config --cflags`; chomp $flags;
+    my $libs = `gsl-config --libs`; chomp $libs;
+    my $_out = $^O =~ /MSWin32/i    ? 'testvalues-generator.out > t/testvalues.txt'
+                                    : './t/testvalues-generator.out > t/testvalues.txt';
+    my $_mvout = $^O =~ /MSWin32/i  ? 'mvtestvalues-generator.out > t/mvtestvalues.txt'
+                                    : './t/mvtestvalues-generator.out > t/mvtestvalues.txt';
 
     # add gentest target to all
     $inherited =~ s/^(all.*)$/$1 gentest/xm;
 
     # add gentest target
-    $inherited .= q{
+    $inherited .= "
 gentest : t/testvalues-generator.out t/mvtestvalues-generator.out t/testvalues.txt t/mvtestvalues.txt
 t/testvalues-generator.out:
 	perl t/generate-testvalues-generator.pl
-	$(CC) -c `gsl-config --cflags` t/testvalues-generator.c -o t/testvalues-generator.o
-	$(CC) t/testvalues-generator.o -o t/testvalues-generator.out `gsl-config --libs` 
+	\$(CC) -c $flags t/testvalues-generator.c -o t/testvalues-generator.o
+	\$(CC) t/testvalues-generator.o -o t/testvalues-generator.out $libs
 
 t/mvtestvalues-generator.out:
-	$(CC) -c `gsl-config --cflags` t/mvtestvalues-generator.c -o t/mvtestvalues-generator.o
-	$(CC) t/mvtestvalues-generator.o -o t/mvtestvalues-generator.out `gsl-config --libs` 
+	\$(CC) -c $flags t/mvtestvalues-generator.c -o t/mvtestvalues-generator.o
+	\$(CC) t/mvtestvalues-generator.o -o t/mvtestvalues-generator.out $libs
 
 # this won't work on windows... oh well
 t/testvalues.txt:
-	./t/testvalues-generator.out > t/testvalues.txt
+	$_out
 t/mvtestvalues.txt:
-	./t/mvtestvalues-generator.out > t/mvtestvalues.txt
-};
+	$_mvout;
+";
     return $inherited;
 }
