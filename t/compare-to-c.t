@@ -8,7 +8,7 @@ use warnings FATAL => "all";
 use 5.010_000;
 use autodie;
 
-use Test::More qw(no_plan);
+use Test::More tests => 2306;
 use Test::Exception;
 use Scalar::Util qw/looks_like_number/;
 
@@ -29,7 +29,9 @@ for my $file (qw{t/testvalues.txt t/mvtestvalues.txt}) {
         my ($funname, @others) = split /\t/, $line;
         # say $line;
 
-        my $c_val = pdl $others[-1];
+        my $c_val_isfinite = $others[-1] !~ /nan|inf|1\.#IND|1\.#INF/;
+        my $c_val = $c_val_isfinite ? pdl $others[-1] : pdl "nan";
+
         my @args = map { looks_like_number $_ ? $_ : pdl $_ } @others[0 .. $#others - 1];
 
         # say join "\n", $c_val, @args;
@@ -43,20 +45,25 @@ for my $file (qw{t/testvalues.txt t/mvtestvalues.txt}) {
             my $p_val = $PDL::GSL::Randist::{$funname}->($rng, @args);
             ok(
                 all(abs($p_val - $c_val) < .000_000_1),
-                "$funname ($c_val) ($p_val)"
+                "$funname (args: @args) (p: $p_val) (c: $c_val)"
             );
         }
         else{
             my $p_val = $PDL::GSL::Randist::{$funname}->(@args);
-            if ($c_val =~ /nan/){ # regexp instead of simple eq b/c some funcs return -nan
-                ok(! $p_val->isfinite(), "$funname ($p_val) ($c_val) *");
-            }
-            else {
-                ok(
-                    all(abs($p_val - $c_val) < .000_000_1),
-                    "$funname ($c_val) ($p_val)"
-                );
-            }
+            my $p_val_isfinite = $p_val->isfinite();
+            ok (
+                (
+                    ! $c_val_isfinite && ! $p_val_isfinite
+                ) # both nan/inf/bad
+                ||
+                (
+                    $c_val_isfinite && $p_val_isfinite 
+                    && 
+                    all(abs($p_val - $c_val) < .000_000_1)
+                ),
+                "$funname (args: @args) (p: $p_val) (c: $c_val)",
+            );
+
         }
     }
     close $fh;
