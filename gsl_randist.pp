@@ -5,7 +5,7 @@ use Data::Dumper;
 use autodie;
 use Carp;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 # The goal is to wrap as many of the samplers, pdf, cdf, and inverse-cdf 
 # functions possible automatically.
