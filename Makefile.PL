@@ -1,33 +1,30 @@
-use 5.01;
+use 5.010;
 use strict;
 use warnings;
 use PDL::Core::Dev;
 use ExtUtils::MakeMaker;
-PDL::Core::Dev->import();
 
 if (! gsl_ok()){
-    die "can't find gsl-config or version too old? oldest supported version is 1.13";
+    warn "can't find gsl-config or version too old? oldest supported version is 1.13";
+    exit 0;
 }
 if (! pdl_gsl_ok() ){
-    die "gsl is installed, but can't load PDL::GSL::RNG, which means PDL apparently wasn't built with it. Try reinstalling PDL.";
+    warn "gsl is installed, but can't load PDL::GSL::RNG, which means PDL apparently wasn't built with it. Try reinstalling PDL.";
+    exit 0;
 }
 
+my $package = [qw/gsl_randist.pd Randist PDL::GSL::Randist/];
+my %eumm_args = pdlpp_stdargs($package);
+$eumm_args{INC} .= " " . gsl_cflags();
+$eumm_args{LIBS}->[0] .= " " . gsl_libs();
+
+
 WriteMakefile( 
-    'NAME'      => 'PDL::GSL::Randist',
+    %eumm_args,
     'ABSTRACT'  => 'PDL binding to the GSL (GNU Scientific Libray) Random Distribution functions',
-    'LIBS'      => [gsl_libs()],
-    'INC'       => PDL_INCLUDE() . " " . gsl_cflags(),
-    'TYPEMAPS'  => [PDL_TYPEMAP()],
-    'OBJECT'    => 'Randist$(OBJ_EXT)',
-    'NO_MYMETA' => 1,
-    'PM' => { 'Randist.pm' => '$(INST_LIBDIR)/Randist.pm' },
-    'MAN3PODS' => {
-        'Randist.pm' => '$(INST_MAN3DIR)/PDL::GSL::Randist.$(MAN3EXT)'
-    },
-    'clean' => {
-        'FILES' => 'Randist.xs Randist.pm Randist$(OBJ_EXT) Randist.c t/*.out t/*.o t/testvalues.txt t/mvtestvalues.txt t/testvalues-generator.*',
-    },
-    'VERSION_FROM' => 'gsl_randist.pp',
+    'AUTHOR'    => 'Tom Nishimura',
+    'LICENSE'   => 'perl',
+    'VERSION_FROM' => 'gsl_randist.pd',
     'BUILD_REQUIRES' => { 
         'ExtUtils::MakeMaker' => 0,
         'PDL'                 => '2.006', # the version I dev'd with
@@ -37,17 +34,26 @@ WriteMakefile(
     'PREREQ_PM' => {
         'PDL'        => '2.006',
     },
+    'META_MERGE' => {
+        resources    => {
+            repository   => 'https://github.com/tnishimura/PDL-GSL-Randist',
+        },
+    },
+   'clean' => {
+        'FILES' => 't/*.out t/*.exe t/*.o t/*.obj',
+    },
 );
 
 sub MY::postamble {
-    pdlpp_postamble( ['gsl_randist.pp','Randist','PDL::GSL::Randist'] );
+    pdlpp_postamble($package);
 };
 
 sub gsl_ok{
     use File::Spec;
     my $devnull = File::Spec->devnull; # Portable null device
     if (0 == system("gsl-config --version > $devnull 2> $devnull")){
-        chomp( my $version = `gsl-config --version` );
+        my $version = `gsl-config --version`;
+        $version =~ s/[\r\n]+$//; # MSWin32 friendly
         my ($major_version, $minor_version) = $version =~ /^(\d+)\.(\d+)$/;
         return $major_version == 1 && $minor_version >= 13;
     }
@@ -59,12 +65,12 @@ sub pdl_gsl_ok{
 }
 sub gsl_libs{
     my $libgsl = `gsl-config --libs`;
-    chomp $libgsl;
+    $libgsl =~ s/[\r\n]+$//; # MSWin32 friendly
     return $libgsl;
 }
 sub gsl_cflags{
     my $cflags = `gsl-config --cflags`;
-    chomp $cflags;
+    $cflags =~ s/[\r\n]+$//; # MSWin32 friendly
     return $cflags;
 }
 
@@ -75,41 +81,33 @@ sub gsl_cflags{
 #
 # t/generate-testvalues-generator.pl -> t/testvalues-generator.c -> t/testvalues-generator.out -> t/testvalues.txt
 # t/mvtestvalues-generator.c -> t/mvtestvalues-generator.out -> t/mvtestvalues.txt
+#
+# to (re)generate the t/*testvalues.txt files use: make gentest
 
 package MY;
-sub top_targets{
-    use Cwd;
-    my $cwd = Cwd::getcwd();
-    $cwd =~ s/\//\\/g;
-    $ENV{PATH} .= ";$cwd\\t" if $^O =~ /MSWin32/i;
-    my $inherited = shift->SUPER::top_targets(@_);
-    my $flags = `gsl-config --cflags`; chomp $flags;
-    my $libs = `gsl-config --libs`; chomp $libs;
-    my $_out = $^O =~ /MSWin32/i    ? 'testvalues-generator.out > t/testvalues.txt'
-                                    : './t/testvalues-generator.out > t/testvalues.txt';
-    my $_mvout = $^O =~ /MSWin32/i  ? 'mvtestvalues-generator.out > t/mvtestvalues.txt'
-                                    : './t/mvtestvalues-generator.out > t/mvtestvalues.txt';
 
-    # add gentest target to all
-    $inherited =~ s/^(all.*)$/$1 gentest/xm;
+sub top_targets{
+    my $inherited = shift->SUPER::top_targets(@_);
+    my $flags = `gsl-config --cflags`; $flags =~ s/[\r\n]+$//;
+    my $libs  = `gsl-config --libs`;   $libs  =~ s/[\r\n]+$//;
+
+    my $exe_ext = $^O eq 'MSWin32' ? 'exe' : 'out';
+    my $sep     = $^O eq 'MSWin32' ? '\\' : '/';
 
     # add gentest target
     $inherited .= "
-gentest : t/testvalues-generator.out t/mvtestvalues-generator.out t/testvalues.txt t/mvtestvalues.txt
-t/testvalues-generator.out:
+gentest: t/testvalues-generator.$exe_ext t/mvtestvalues-generator.$exe_ext
+	.${sep}t${sep}testvalues-generator.$exe_ext > t${sep}testvalues.txt
+	.${sep}t${sep}mvtestvalues-generator.$exe_ext > t${sep}mvtestvalues.txt
+
+t/testvalues-generator.$exe_ext:
 	perl t/generate-testvalues-generator.pl
 	\$(CC) -c $flags t/testvalues-generator.c -o t/testvalues-generator.o
-	\$(CC) t/testvalues-generator.o -o t/testvalues-generator.out $libs
+	\$(CC) t/testvalues-generator.o -o t/testvalues-generator.$exe_ext $libs
 
-t/mvtestvalues-generator.out:
+t/mvtestvalues-generator.$exe_ext:
 	\$(CC) -c $flags t/mvtestvalues-generator.c -o t/mvtestvalues-generator.o
-	\$(CC) t/mvtestvalues-generator.o -o t/mvtestvalues-generator.out $libs
-
-# this won't work on windows... oh well
-t/testvalues.txt:
-	$_out
-t/mvtestvalues.txt:
-	$_mvout;
+	\$(CC) t/mvtestvalues-generator.o -o t/mvtestvalues-generator.$exe_ext $libs
 ";
     return $inherited;
 }

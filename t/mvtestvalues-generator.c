@@ -41,7 +41,7 @@ void print_double_array(double array[], size_t count){
 void test_multinomial(void){
     double p[SIZE] = { .1, .2, .3, .4 };
     int n[SIZE] = { 0, 0, 0, 0 };
-    int numdraws = 100;
+    int numdraws = 60;
     double prob;
 
     gsl_ran_multinomial(rng, SIZE, numdraws, p, n); 

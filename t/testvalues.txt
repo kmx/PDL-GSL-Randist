@@ -1,0 +1,2292 @@
+9955
+gsl_ran_gaussian_tail_pdf	-5	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	-4.6	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	-4.2	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	-3.8	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	-3.4	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	-3	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	-2.6	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	-2.2	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	-1.8	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	-1.4	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	-1	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	-0.6	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	-0.2	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	0.2	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	0.6	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	1	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	1.4	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	1.8	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	2.2	2.4	8.2	0.000000000000
+gsl_ran_gaussian_tail_pdf	2.6	2.4	8.2	0.120209097055
+gsl_ran_gaussian_tail_pdf	3	2.4	8.2	0.118223387591
+gsl_ran_gaussian_tail_pdf	3.4	2.4	8.2	0.115994138776
+gsl_ran_gaussian_tail_pdf	3.8	2.4	8.2	0.113536439484
+gsl_ran_gaussian_tail_pdf	4.2	2.4	8.2	0.110866688854
+gsl_ran_gaussian_tail_pdf	4.6	2.4	8.2	0.108002414388
+gsl_ran_gaussian_tail	2.4	8.2	5.179430625499
+gsl_ran_gaussian_tail	2.4	8.2	21.326066758981
+gsl_ran_gaussian_tail	2.4	8.2	3.159473332001
+gsl_ran_gaussian_tail	2.4	8.2	11.369886657300
+gsl_ran_gaussian_tail	2.4	8.2	3.341704063737
+gsl_ran_gaussian_tail	2.4	8.2	4.889776000347
+gsl_ran_gaussian_tail	2.4	8.2	11.605999350956
+gsl_ran_gaussian_tail	2.4	8.2	9.179513897514
+gsl_ran_gaussian_tail	2.4	8.2	8.022053108628
+gsl_ran_gaussian_tail	2.4	8.2	4.979827737591
+gsl_ran_beta_pdf	-5	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	-4.6	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	-4.2	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	-3.8	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	-3.4	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	-3	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	-2.6	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	-2.2	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	-1.8	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	-1.4	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	-1	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	-0.6	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	-0.2	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	0.2	3.5	2.0	0.225395652132
+gsl_ran_beta_pdf	0.6	3.5	2.0	1.756785245840
+gsl_ran_beta_pdf	1	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	1.4	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	1.8	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	2.2	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	2.6	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	3	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	3.4	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	3.8	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	4.2	3.5	2.0	0.000000000000
+gsl_ran_beta_pdf	4.6	3.5	2.0	0.000000000000
+gsl_cdf_beta_P	-5	3.5	2.0	0.000000000000
+gsl_cdf_beta_Q	-5	3.5	2.0	1.000000000000
+gsl_cdf_beta_P	-4.6	3.5	2.0	0.000000000000
+gsl_cdf_beta_Q	-4.6	3.5	2.0	1.000000000000
+gsl_cdf_beta_P	-4.2	3.5	2.0	0.000000000000
+gsl_cdf_beta_Q	-4.2	3.5	2.0	1.000000000000
+gsl_cdf_beta_P	-3.8	3.5	2.0	0.000000000000
+gsl_cdf_beta_Q	-3.8	3.5	2.0	1.000000000000
+gsl_cdf_beta_P	-3.4	3.5	2.0	0.000000000000
+gsl_cdf_beta_Q	-3.4	3.5	2.0	1.000000000000
+gsl_cdf_beta_P	-3	3.5	2.0	0.000000000000
+gsl_cdf_beta_Q	-3	3.5	2.0	1.000000000000
+gsl_cdf_beta_P	-2.6	3.5	2.0	0.000000000000
+gsl_cdf_beta_Q	-2.6	3.5	2.0	1.000000000000
+gsl_cdf_beta_P	-2.2	3.5	2.0	0.000000000000
+gsl_cdf_beta_Q	-2.2	3.5	2.0	1.000000000000
+gsl_cdf_beta_P	-1.8	3.5	2.0	0.000000000000
+gsl_cdf_beta_Q	-1.8	3.5	2.0	1.000000000000
+gsl_cdf_beta_P	-1.4	3.5	2.0	0.000000000000
+gsl_cdf_beta_Q	-1.4	3.5	2.0	1.000000000000
+gsl_cdf_beta_P	-1	3.5	2.0	0.000000000000
+gsl_cdf_beta_Q	-1	3.5	2.0	1.000000000000
+gsl_cdf_beta_P	-0.6	3.5	2.0	0.000000000000
+gsl_cdf_beta_Q	-0.6	3.5	2.0	1.000000000000
+gsl_cdf_beta_P	-0.2	3.5	2.0	0.000000000000
+gsl_cdf_beta_Q	-0.2	3.5	2.0	1.000000000000
+gsl_cdf_beta_P	0.2	3.5	2.0	0.013595293303
+gsl_cdf_beta_Q	0.2	3.5	2.0	0.986404706697
+gsl_cdf_beta_P	0.6	3.5	2.0	0.401550913335
+gsl_cdf_beta_Q	0.6	3.5	2.0	0.598449086665
+gsl_cdf_beta_P	1	3.5	2.0	1.000000000000
+gsl_cdf_beta_Q	1	3.5	2.0	0.000000000000
+gsl_cdf_beta_P	1.4	3.5	2.0	1.000000000000
+gsl_cdf_beta_Q	1.4	3.5	2.0	0.000000000000
+gsl_cdf_beta_P	1.8	3.5	2.0	1.000000000000
+gsl_cdf_beta_Q	1.8	3.5	2.0	0.000000000000
+gsl_cdf_beta_P	2.2	3.5	2.0	1.000000000000
+gsl_cdf_beta_Q	2.2	3.5	2.0	0.000000000000
+gsl_cdf_beta_P	2.6	3.5	2.0	1.000000000000
+gsl_cdf_beta_Q	2.6	3.5	2.0	0.000000000000
+gsl_cdf_beta_P	3	3.5	2.0	1.000000000000
+gsl_cdf_beta_Q	3	3.5	2.0	0.000000000000
+gsl_cdf_beta_P	3.4	3.5	2.0	1.000000000000
+gsl_cdf_beta_Q	3.4	3.5	2.0	0.000000000000
+gsl_cdf_beta_P	3.8	3.5	2.0	1.000000000000
+gsl_cdf_beta_Q	3.8	3.5	2.0	0.000000000000
+gsl_cdf_beta_P	4.2	3.5	2.0	1.000000000000
+gsl_cdf_beta_Q	4.2	3.5	2.0	0.000000000000
+gsl_cdf_beta_P	4.6	3.5	2.0	1.000000000000
+gsl_cdf_beta_Q	4.6	3.5	2.0	0.000000000000
+gsl_cdf_beta_Pinv	0.1	3.5	2.0	0.371507766855
+gsl_cdf_beta_Qinv	0.1	3.5	2.0	0.874422199692
+gsl_cdf_beta_Pinv	0.2	3.5	2.0	0.467448265606
+gsl_cdf_beta_Qinv	0.2	3.5	2.0	0.812062152728
+gsl_cdf_beta_Pinv	0.3	3.5	2.0	0.538704414062
+gsl_cdf_beta_Qinv	0.3	3.5	2.0	0.757821534144
+gsl_cdf_beta_Pinv	0.4	3.5	2.0	0.599116535105
+gsl_cdf_beta_Qinv	0.4	3.5	2.0	0.706037576777
+gsl_cdf_beta_Pinv	0.5	3.5	2.0	0.653913949752
+gsl_cdf_beta_Qinv	0.5	3.5	2.0	0.653913949752
+gsl_cdf_beta_Pinv	0.6	3.5	2.0	0.706037576777
+gsl_cdf_beta_Qinv	0.6	3.5	2.0	0.599116535105
+gsl_cdf_beta_Pinv	0.7	3.5	2.0	0.757821534144
+gsl_cdf_beta_Qinv	0.7	3.5	2.0	0.538704414062
+gsl_cdf_beta_Pinv	0.8	3.5	2.0	0.812062152728
+gsl_cdf_beta_Qinv	0.8	3.5	2.0	0.467448265606
+gsl_cdf_beta_Pinv	0.9	3.5	2.0	0.874422199692
+gsl_cdf_beta_Qinv	0.9	3.5	2.0	0.371507766855
+gsl_ran_beta	3.5	2.0	0.589364413680
+gsl_ran_beta	3.5	2.0	0.734599694546
+gsl_ran_beta	3.5	2.0	0.775670927751
+gsl_ran_beta	3.5	2.0	0.653501304231
+gsl_ran_beta	3.5	2.0	0.329382270407
+gsl_ran_beta	3.5	2.0	0.425218499299
+gsl_ran_beta	3.5	2.0	0.662883110675
+gsl_ran_beta	3.5	2.0	0.789196668850
+gsl_ran_beta	3.5	2.0	0.846607030099
+gsl_ran_beta	3.5	2.0	0.880145785495
+gsl_ran_bernoulli_pdf	0	.7	0.300000000000
+gsl_ran_bernoulli_pdf	1	.7	0.700000000000
+gsl_ran_bernoulli_pdf	2	.7	0.000000000000
+gsl_ran_bernoulli_pdf	3	.7	0.000000000000
+gsl_ran_bernoulli_pdf	4	.7	0.000000000000
+gsl_ran_bernoulli_pdf	5	.7	0.000000000000
+gsl_ran_bernoulli_pdf	6	.7	0.000000000000
+gsl_ran_bernoulli_pdf	7	.7	0.000000000000
+gsl_ran_bernoulli_pdf	8	.7	0.000000000000
+gsl_ran_bernoulli_pdf	9	.7	0.000000000000
+gsl_ran_bernoulli_pdf	10	.7	0.000000000000
+gsl_ran_bernoulli	.7	1
+gsl_ran_bernoulli	.7	0
+gsl_ran_bernoulli	.7	0
+gsl_ran_bernoulli	.7	1
+gsl_ran_bernoulli	.7	1
+gsl_ran_bernoulli	.7	1
+gsl_ran_bernoulli	.7	1
+gsl_ran_bernoulli	.7	1
+gsl_ran_bernoulli	.7	0
+gsl_ran_bernoulli	.7	1
+gsl_ran_exponential_pdf	-5	3.3	0.000000000000
+gsl_ran_exponential_pdf	-4.6	3.3	0.000000000000
+gsl_ran_exponential_pdf	-4.2	3.3	0.000000000000
+gsl_ran_exponential_pdf	-3.8	3.3	0.000000000000
+gsl_ran_exponential_pdf	-3.4	3.3	0.000000000000
+gsl_ran_exponential_pdf	-3	3.3	0.000000000000
+gsl_ran_exponential_pdf	-2.6	3.3	0.000000000000
+gsl_ran_exponential_pdf	-2.2	3.3	0.000000000000
+gsl_ran_exponential_pdf	-1.8	3.3	0.000000000000
+gsl_ran_exponential_pdf	-1.4	3.3	0.000000000000
+gsl_ran_exponential_pdf	-1	3.3	0.000000000000
+gsl_ran_exponential_pdf	-0.6	3.3	0.000000000000
+gsl_ran_exponential_pdf	-0.2	3.3	0.000000000000
+gsl_ran_exponential_pdf	0.2	3.3	0.285210284886
+gsl_ran_exponential_pdf	0.6	3.3	0.252652399417
+gsl_ran_exponential_pdf	1	3.3	0.223811125733
+gsl_ran_exponential_pdf	1.4	3.3	0.198262197856
+gsl_ran_exponential_pdf	1.8	3.3	0.175629781450
+gsl_ran_exponential_pdf	2.2	3.3	0.155580945161
+gsl_ran_exponential_pdf	2.6	3.3	0.137820763070
+gsl_ran_exponential_pdf	3	3.3	0.122087976221
+gsl_ran_exponential_pdf	3.4	3.3	0.108151149404
+gsl_ran_exponential_pdf	3.8	3.3	0.095805266656
+gsl_ran_exponential_pdf	4.2	3.3	0.084868715400
+gsl_ran_exponential_pdf	4.6	3.3	0.075180614857
+gsl_cdf_exponential_P	-5	3.3	0.000000000000
+gsl_cdf_exponential_Q	-5	3.3	1.000000000000
+gsl_cdf_exponential_P	-4.6	3.3	0.000000000000
+gsl_cdf_exponential_Q	-4.6	3.3	1.000000000000
+gsl_cdf_exponential_P	-4.2	3.3	0.000000000000
+gsl_cdf_exponential_Q	-4.2	3.3	1.000000000000
+gsl_cdf_exponential_P	-3.8	3.3	0.000000000000
+gsl_cdf_exponential_Q	-3.8	3.3	1.000000000000
+gsl_cdf_exponential_P	-3.4	3.3	0.000000000000
+gsl_cdf_exponential_Q	-3.4	3.3	1.000000000000
+gsl_cdf_exponential_P	-3	3.3	0.000000000000
+gsl_cdf_exponential_Q	-3	3.3	1.000000000000
+gsl_cdf_exponential_P	-2.6	3.3	0.000000000000
+gsl_cdf_exponential_Q	-2.6	3.3	1.000000000000
+gsl_cdf_exponential_P	-2.2	3.3	0.000000000000
+gsl_cdf_exponential_Q	-2.2	3.3	1.000000000000
+gsl_cdf_exponential_P	-1.8	3.3	0.000000000000
+gsl_cdf_exponential_Q	-1.8	3.3	1.000000000000
+gsl_cdf_exponential_P	-1.4	3.3	0.000000000000
+gsl_cdf_exponential_Q	-1.4	3.3	1.000000000000
+gsl_cdf_exponential_P	-1	3.3	0.000000000000
+gsl_cdf_exponential_Q	-1	3.3	1.000000000000
+gsl_cdf_exponential_P	-0.6	3.3	0.000000000000
+gsl_cdf_exponential_Q	-0.6	3.3	1.000000000000
+gsl_cdf_exponential_P	-0.2	3.3	0.000000000000
+gsl_cdf_exponential_Q	-0.2	3.3	1.000000000000
+gsl_cdf_exponential_P	0.2	3.3	0.058806059875
+gsl_cdf_exponential_Q	0.2	3.3	0.941193940125
+gsl_cdf_exponential_P	0.6	3.3	0.166247081925
+gsl_cdf_exponential_Q	0.6	3.3	0.833752918075
+gsl_cdf_exponential_P	1	3.3	0.261423285081
+gsl_cdf_exponential_Q	1	3.3	0.738576714919
+gsl_cdf_exponential_P	1.4	3.3	0.345734747076
+gsl_cdf_exponential_Q	1.4	3.3	0.654265252924
+gsl_cdf_exponential_P	1.8	3.3	0.420421721215
+gsl_cdf_exponential_Q	1.8	3.3	0.579578278785
+gsl_cdf_exponential_P	2.2	3.3	0.486582880967
+gsl_cdf_exponential_Q	2.2	3.3	0.513417119033
+gsl_cdf_exponential_P	2.6	3.3	0.545191481868
+gsl_cdf_exponential_Q	2.6	3.3	0.454808518132
+gsl_cdf_exponential_P	3	3.3	0.597109678471
+gsl_cdf_exponential_Q	3	3.3	0.402890321529
+gsl_cdf_exponential_P	3.4	3.3	0.643101206968
+gsl_cdf_exponential_Q	3.4	3.3	0.356898793032
+gsl_cdf_exponential_P	3.8	3.3	0.683842620036
+gsl_cdf_exponential_Q	3.8	3.3	0.316157379964
+gsl_cdf_exponential_P	4.2	3.3	0.719933239178
+gsl_cdf_exponential_Q	4.2	3.3	0.280066760822
+gsl_cdf_exponential_P	4.6	3.3	0.751903970971
+gsl_cdf_exponential_Q	4.6	3.3	0.248096029029
+gsl_cdf_exponential_Pinv	0.1	3.3	0.347689701671
+gsl_cdf_exponential_Qinv	0.1	3.3	7.598530806880
+gsl_cdf_exponential_Pinv	0.2	3.3	0.736373719337
+gsl_cdf_exponential_Qinv	0.2	3.3	5.311145111033
+gsl_cdf_exponential_Pinv	0.3	3.3	1.177027314998
+gsl_cdf_exponential_Qinv	0.3	3.3	3.973110254276
+gsl_cdf_exponential_Pinv	0.4	3.3	1.685724558428
+gsl_cdf_exponential_Qinv	0.4	3.3	3.023759415185
+gsl_cdf_exponential_Pinv	0.5	3.3	2.287385695848
+gsl_cdf_exponential_Qinv	0.5	3.3	2.287385695848
+gsl_cdf_exponential_Pinv	0.6	3.3	3.023759415185
+gsl_cdf_exponential_Qinv	0.6	3.3	1.685724558428
+gsl_cdf_exponential_Pinv	0.7	3.3	3.973110254276
+gsl_cdf_exponential_Qinv	0.7	3.3	1.177027314998
+gsl_cdf_exponential_Pinv	0.8	3.3	5.311145111033
+gsl_cdf_exponential_Qinv	0.8	3.3	0.736373719337
+gsl_cdf_exponential_Pinv	0.9	3.3	7.598530806880
+gsl_cdf_exponential_Qinv	0.9	3.3	0.347689701671
+gsl_ran_exponential	3.3	5.924961428018
+gsl_ran_exponential	3.3	0.269963224057
+gsl_ran_exponential	3.3	0.104846873997
+gsl_ran_exponential	3.3	3.923982346283
+gsl_ran_exponential	3.3	2.834542344772
+gsl_ran_exponential	3.3	2.677225247300
+gsl_ran_exponential	3.3	6.020524727010
+gsl_ran_exponential	3.3	4.109468852570
+gsl_ran_exponential	3.3	6.782548249924
+gsl_ran_exponential	3.3	3.983642778408
+gsl_ran_pareto_pdf	-5	1.5	1.1	0.000000000000
+gsl_ran_pareto_pdf	-4.6	1.5	1.1	0.000000000000
+gsl_ran_pareto_pdf	-4.2	1.5	1.1	0.000000000000
+gsl_ran_pareto_pdf	-3.8	1.5	1.1	0.000000000000
+gsl_ran_pareto_pdf	-3.4	1.5	1.1	0.000000000000
+gsl_ran_pareto_pdf	-3	1.5	1.1	0.000000000000
+gsl_ran_pareto_pdf	-2.6	1.5	1.1	0.000000000000
+gsl_ran_pareto_pdf	-2.2	1.5	1.1	0.000000000000
+gsl_ran_pareto_pdf	-1.8	1.5	1.1	0.000000000000
+gsl_ran_pareto_pdf	-1.4	1.5	1.1	0.000000000000
+gsl_ran_pareto_pdf	-1	1.5	1.1	0.000000000000
+gsl_ran_pareto_pdf	-0.6	1.5	1.1	0.000000000000
+gsl_ran_pareto_pdf	-0.2	1.5	1.1	0.000000000000
+gsl_ran_pareto_pdf	0.2	1.5	1.1	0.000000000000
+gsl_ran_pareto_pdf	0.6	1.5	1.1	0.000000000000
+gsl_ran_pareto_pdf	1	1.5	1.1	0.000000000000
+gsl_ran_pareto_pdf	1.4	1.5	1.1	0.746208510054
+gsl_ran_pareto_pdf	1.8	1.5	1.1	0.398106275911
+gsl_ran_pareto_pdf	2.2	1.5	1.1	0.241059129950
+gsl_ran_pareto_pdf	2.6	1.5	1.1	0.158762129988
+gsl_ran_pareto_pdf	3	1.5	1.1	0.111013846317
+gsl_ran_pareto_pdf	3.4	1.5	1.1	0.081186345791
+gsl_ran_pareto_pdf	3.8	1.5	1.1	0.061478221489
+gsl_ran_pareto_pdf	4.2	1.5	1.1	0.047869298239
+gsl_ran_pareto_pdf	4.6	1.5	1.1	0.038131659613
+gsl_cdf_pareto_P	-5	1.5	1.1	0.000000000000
+gsl_cdf_pareto_Q	-5	1.5	1.1	1.000000000000
+gsl_cdf_pareto_P	-4.6	1.5	1.1	0.000000000000
+gsl_cdf_pareto_Q	-4.6	1.5	1.1	1.000000000000
+gsl_cdf_pareto_P	-4.2	1.5	1.1	0.000000000000
+gsl_cdf_pareto_Q	-4.2	1.5	1.1	1.000000000000
+gsl_cdf_pareto_P	-3.8	1.5	1.1	0.000000000000
+gsl_cdf_pareto_Q	-3.8	1.5	1.1	1.000000000000
+gsl_cdf_pareto_P	-3.4	1.5	1.1	0.000000000000
+gsl_cdf_pareto_Q	-3.4	1.5	1.1	1.000000000000
+gsl_cdf_pareto_P	-3	1.5	1.1	0.000000000000
+gsl_cdf_pareto_Q	-3	1.5	1.1	1.000000000000
+gsl_cdf_pareto_P	-2.6	1.5	1.1	0.000000000000
+gsl_cdf_pareto_Q	-2.6	1.5	1.1	1.000000000000
+gsl_cdf_pareto_P	-2.2	1.5	1.1	0.000000000000
+gsl_cdf_pareto_Q	-2.2	1.5	1.1	1.000000000000
+gsl_cdf_pareto_P	-1.8	1.5	1.1	0.000000000000
+gsl_cdf_pareto_Q	-1.8	1.5	1.1	1.000000000000
+gsl_cdf_pareto_P	-1.4	1.5	1.1	0.000000000000
+gsl_cdf_pareto_Q	-1.4	1.5	1.1	1.000000000000
+gsl_cdf_pareto_P	-1	1.5	1.1	0.000000000000
+gsl_cdf_pareto_Q	-1	1.5	1.1	1.000000000000
+gsl_cdf_pareto_P	-0.6	1.5	1.1	0.000000000000
+gsl_cdf_pareto_Q	-0.6	1.5	1.1	1.000000000000
+gsl_cdf_pareto_P	-0.2	1.5	1.1	0.000000000000
+gsl_cdf_pareto_Q	-0.2	1.5	1.1	1.000000000000
+gsl_cdf_pareto_P	0.2	1.5	1.1	0.000000000000
+gsl_cdf_pareto_Q	0.2	1.5	1.1	1.000000000000
+gsl_cdf_pareto_P	0.6	1.5	1.1	0.000000000000
+gsl_cdf_pareto_Q	0.6	1.5	1.1	1.000000000000
+gsl_cdf_pareto_P	1	1.5	1.1	0.000000000000
+gsl_cdf_pareto_Q	1	1.5	1.1	1.000000000000
+gsl_cdf_pareto_P	1.4	1.5	1.1	0.303538723949
+gsl_cdf_pareto_Q	1.4	1.5	1.1	0.696461276051
+gsl_cdf_pareto_P	1.8	1.5	1.1	0.522272468907
+gsl_cdf_pareto_Q	1.8	1.5	1.1	0.477727531093
+gsl_cdf_pareto_P	2.2	1.5	1.1	0.646446609407
+gsl_cdf_pareto_Q	2.2	1.5	1.1	0.353553390593
+gsl_cdf_pareto_P	2.6	1.5	1.1	0.724812308020
+gsl_cdf_pareto_Q	2.6	1.5	1.1	0.275187691980
+gsl_cdf_pareto_P	3	1.5	1.1	0.777972307366
+gsl_cdf_pareto_Q	3	1.5	1.1	0.222027692634
+gsl_cdf_pareto_P	3.4	1.5	1.1	0.815977616208
+gsl_cdf_pareto_Q	3.4	1.5	1.1	0.184022383792
+gsl_cdf_pareto_P	3.8	1.5	1.1	0.844255172228
+gsl_cdf_pareto_Q	3.8	1.5	1.1	0.155744827772
+gsl_cdf_pareto_P	4.2	1.5	1.1	0.865965964931
+gsl_cdf_pareto_Q	4.2	1.5	1.1	0.134034035069
+gsl_cdf_pareto_P	4.6	1.5	1.1	0.883062910519
+gsl_cdf_pareto_Q	4.6	1.5	1.1	0.116937089481
+gsl_cdf_pareto_Pinv	0.1	1.5	1.1	1.180042581185
+gsl_cdf_pareto_Qinv	0.1	1.5	1.1	5.105747716974
+gsl_cdf_pareto_Pinv	0.2	1.5	1.1	1.276436929244
+gsl_cdf_pareto_Qinv	0.2	1.5	1.1	3.216419512034
+gsl_cdf_pareto_Pinv	0.3	1.5	1.1	1.395277717024
+gsl_cdf_pareto_Qinv	0.3	1.5	1.1	2.454587483635
+gsl_cdf_pareto_Pinv	0.4	1.5	1.1	1.546293219720
+gsl_cdf_pareto_Qinv	0.4	1.5	1.1	2.026217324252
+gsl_cdf_pareto_Pinv	0.5	1.5	1.1	1.746141157165
+gsl_cdf_pareto_Qinv	0.5	1.5	1.1	1.746141157165
+gsl_cdf_pareto_Pinv	0.6	1.5	1.1	2.026217324252
+gsl_cdf_pareto_Qinv	0.6	1.5	1.1	1.546293219720
+gsl_cdf_pareto_Pinv	0.7	1.5	1.1	2.454587483635
+gsl_cdf_pareto_Qinv	0.7	1.5	1.1	1.395277717024
+gsl_cdf_pareto_Pinv	0.8	1.5	1.1	3.216419512034
+gsl_cdf_pareto_Qinv	0.8	1.5	1.1	1.276436929244
+gsl_cdf_pareto_Pinv	0.9	1.5	1.1	5.105747716974
+gsl_cdf_pareto_Qinv	0.9	1.5	1.1	1.180042581185
+gsl_ran_pareto	1.5	1.1	3.667645340550
+gsl_ran_pareto	1.5	1.1	3.246789816703
+gsl_ran_pareto	1.5	1.1	5.529416890813
+gsl_ran_pareto	1.5	1.1	1.513696664635
+gsl_ran_pareto	1.5	1.1	1.364533864501
+gsl_ran_pareto	1.5	1.1	1.927543202301
+gsl_ran_pareto	1.5	1.1	1.152439906781
+gsl_ran_pareto	1.5	1.1	1.798910143907
+gsl_ran_pareto	1.5	1.1	6.011720040465
+gsl_ran_pareto	1.5	1.1	1.177142625236
+gsl_ran_lognormal_pdf	-5	3.2	2.3	0.000000000000
+gsl_ran_lognormal_pdf	-4.6	3.2	2.3	0.000000000000
+gsl_ran_lognormal_pdf	-4.2	3.2	2.3	0.000000000000
+gsl_ran_lognormal_pdf	-3.8	3.2	2.3	0.000000000000
+gsl_ran_lognormal_pdf	-3.4	3.2	2.3	0.000000000000
+gsl_ran_lognormal_pdf	-3	3.2	2.3	0.000000000000
+gsl_ran_lognormal_pdf	-2.6	3.2	2.3	0.000000000000
+gsl_ran_lognormal_pdf	-2.2	3.2	2.3	0.000000000000
+gsl_ran_lognormal_pdf	-1.8	3.2	2.3	0.000000000000
+gsl_ran_lognormal_pdf	-1.4	3.2	2.3	0.000000000000
+gsl_ran_lognormal_pdf	-1	3.2	2.3	0.000000000000
+gsl_ran_lognormal_pdf	-0.6	3.2	2.3	0.000000000000
+gsl_ran_lognormal_pdf	-0.2	3.2	2.3	0.000000000000
+gsl_ran_lognormal_pdf	0.2	3.2	2.3	0.097424688422
+gsl_ran_lognormal_pdf	0.6	3.2	2.3	0.078665093766
+gsl_ran_lognormal_pdf	1	3.2	2.3	0.065893758722
+gsl_ran_lognormal_pdf	1.4	3.2	2.3	0.057077378096
+gsl_ran_lognormal_pdf	1.8	3.2	2.3	0.050560097936
+gsl_ran_lognormal_pdf	2.2	3.2	2.3	0.045502965190
+gsl_ran_lognormal_pdf	2.6	3.2	2.3	0.041439740243
+gsl_ran_lognormal_pdf	3	3.2	2.3	0.038088792100
+gsl_ran_lognormal_pdf	3.4	3.2	2.3	0.035268695249
+gsl_ran_lognormal_pdf	3.8	3.2	2.3	0.032856585816
+gsl_ran_lognormal_pdf	4.2	3.2	2.3	0.030765889473
+gsl_ran_lognormal_pdf	4.6	3.2	2.3	0.028933605211
+gsl_cdf_lognormal_P	-5	3.2	2.3	nan
+gsl_cdf_lognormal_Q	-5	3.2	2.3	nan
+gsl_cdf_lognormal_P	-4.6	3.2	2.3	nan
+gsl_cdf_lognormal_Q	-4.6	3.2	2.3	nan
+gsl_cdf_lognormal_P	-4.2	3.2	2.3	nan
+gsl_cdf_lognormal_Q	-4.2	3.2	2.3	nan
+gsl_cdf_lognormal_P	-3.8	3.2	2.3	nan
+gsl_cdf_lognormal_Q	-3.8	3.2	2.3	nan
+gsl_cdf_lognormal_P	-3.4	3.2	2.3	nan
+gsl_cdf_lognormal_Q	-3.4	3.2	2.3	nan
+gsl_cdf_lognormal_P	-3	3.2	2.3	nan
+gsl_cdf_lognormal_Q	-3	3.2	2.3	nan
+gsl_cdf_lognormal_P	-2.6	3.2	2.3	nan
+gsl_cdf_lognormal_Q	-2.6	3.2	2.3	nan
+gsl_cdf_lognormal_P	-2.2	3.2	2.3	nan
+gsl_cdf_lognormal_Q	-2.2	3.2	2.3	nan
+gsl_cdf_lognormal_P	-1.8	3.2	2.3	nan
+gsl_cdf_lognormal_Q	-1.8	3.2	2.3	nan
+gsl_cdf_lognormal_P	-1.4	3.2	2.3	nan
+gsl_cdf_lognormal_Q	-1.4	3.2	2.3	nan
+gsl_cdf_lognormal_P	-1	3.2	2.3	nan
+gsl_cdf_lognormal_Q	-1	3.2	2.3	nan
+gsl_cdf_lognormal_P	-0.6	3.2	2.3	nan
+gsl_cdf_lognormal_Q	-0.6	3.2	2.3	nan
+gsl_cdf_lognormal_P	-0.2	3.2	2.3	nan
+gsl_cdf_lognormal_Q	-0.2	3.2	2.3	nan
+gsl_cdf_lognormal_P	0.2	3.2	2.3	0.018261344606
+gsl_cdf_lognormal_Q	0.2	3.2	2.3	0.981738655394
+gsl_cdf_lognormal_P	0.6	3.2	2.3	0.053328551141
+gsl_cdf_lognormal_Q	0.6	3.2	2.3	0.946671448859
+gsl_cdf_lognormal_P	1	3.2	2.3	0.082066577979
+gsl_cdf_lognormal_Q	1	3.2	2.3	0.917933422021
+gsl_cdf_lognormal_P	1.4	3.2	2.3	0.106563656576
+gsl_cdf_lognormal_Q	1.4	3.2	2.3	0.893436343424
+gsl_cdf_lognormal_P	1.8	3.2	2.3	0.128031665721
+gsl_cdf_lognormal_Q	1.8	3.2	2.3	0.871968334279
+gsl_cdf_lognormal_P	2.2	3.2	2.3	0.147204887968
+gsl_cdf_lognormal_Q	2.2	3.2	2.3	0.852795112032
+gsl_cdf_lognormal_P	2.6	3.2	2.3	0.164565786072
+gsl_cdf_lognormal_Q	2.6	3.2	2.3	0.835434213928
+gsl_cdf_lognormal_P	3	3.2	2.3	0.180451225158
+gsl_cdf_lognormal_Q	3	3.2	2.3	0.819548774842
+gsl_cdf_lognormal_P	3.4	3.2	2.3	0.195107348976
+gsl_cdf_lognormal_Q	3.4	3.2	2.3	0.804892651024
+gsl_cdf_lognormal_P	3.8	3.2	2.3	0.208720423075
+gsl_cdf_lognormal_Q	3.8	3.2	2.3	0.791279576925
+gsl_cdf_lognormal_P	4.2	3.2	2.3	0.221435370450
+gsl_cdf_lognormal_Q	4.2	3.2	2.3	0.778564629550
+gsl_cdf_lognormal_P	4.6	3.2	2.3	0.233367520285
+gsl_cdf_lognormal_Q	4.6	3.2	2.3	0.766632479715
+gsl_cdf_lognormal_Pinv	0.1	3.2	2.3	1.287151193585
+gsl_cdf_lognormal_Qinv	0.1	3.2	2.3	467.579132017583
+gsl_cdf_lognormal_Pinv	0.2	3.2	2.3	3.540511339081
+gsl_cdf_lognormal_Qinv	0.2	3.2	2.3	169.988168440207
+gsl_cdf_lognormal_Pinv	0.3	3.2	2.3	7.343964509863
+gsl_cdf_lognormal_Qinv	0.3	3.2	2.3	81.950973083245
+gsl_cdf_lognormal_Pinv	0.4	3.2	2.3	13.698709931108
+gsl_cdf_lognormal_Qinv	0.4	3.2	2.3	43.934431847876
+gsl_cdf_lognormal_Pinv	0.5	3.2	2.3	24.532530197109
+gsl_cdf_lognormal_Qinv	0.5	3.2	2.3	24.532530197109
+gsl_cdf_lognormal_Pinv	0.6	3.2	2.3	43.934431847876
+gsl_cdf_lognormal_Qinv	0.6	3.2	2.3	13.698709931108
+gsl_cdf_lognormal_Pinv	0.7	3.2	2.3	81.950973083245
+gsl_cdf_lognormal_Qinv	0.7	3.2	2.3	7.343964509863
+gsl_cdf_lognormal_Pinv	0.8	3.2	2.3	169.988168440207
+gsl_cdf_lognormal_Qinv	0.8	3.2	2.3	3.540511339081
+gsl_cdf_lognormal_Pinv	0.9	3.2	2.3	467.579132017583
+gsl_cdf_lognormal_Qinv	0.9	3.2	2.3	1.287151193585
+gsl_ran_lognormal	3.2	2.3	410.219146214862
+gsl_ran_lognormal	3.2	2.3	0.843076779088
+gsl_ran_lognormal	3.2	2.3	954.463074248168
+gsl_ran_lognormal	3.2	2.3	32.479317566734
+gsl_ran_lognormal	3.2	2.3	211.273911561234
+gsl_ran_lognormal	3.2	2.3	5.103752109647
+gsl_ran_lognormal	3.2	2.3	20.424405288839
+gsl_ran_lognormal	3.2	2.3	5.912895079491
+gsl_ran_lognormal	3.2	2.3	13.320213990260
+gsl_ran_lognormal	3.2	2.3	4.284072682788
+gsl_ran_exppow_pdf	-5	2.8	1.2	0.025556447415
+gsl_ran_exppow_pdf	-4.6	2.8	1.2	0.030932953558
+gsl_ran_exppow_pdf	-4.2	2.8	1.2	0.037317371792
+gsl_ran_exppow_pdf	-3.8	2.8	1.2	0.044860192801
+gsl_ran_exppow_pdf	-3.4	2.8	1.2	0.053720853737
+gsl_ran_exppow_pdf	-3	2.8	1.2	0.064062000831
+gsl_ran_exppow_pdf	-2.6	2.8	1.2	0.076039777777
+gsl_ran_exppow_pdf	-2.2	2.8	1.2	0.089787862483
+gsl_ran_exppow_pdf	-1.8	2.8	1.2	0.105391178369
+gsl_ran_exppow_pdf	-1.4	2.8	1.2	0.122841060050
+gsl_ran_exppow_pdf	-1	2.8	1.2	0.141952119217
+gsl_ran_exppow_pdf	-0.6	2.8	1.2	0.162178692815
+gsl_ran_exppow_pdf	-0.2	2.8	1.2	0.182004476117
+gsl_ran_exppow_pdf	0.2	2.8	1.2	0.182004476117
+gsl_ran_exppow_pdf	0.6	2.8	1.2	0.162178692815
+gsl_ran_exppow_pdf	1	2.8	1.2	0.141952119217
+gsl_ran_exppow_pdf	1.4	2.8	1.2	0.122841060050
+gsl_ran_exppow_pdf	1.8	2.8	1.2	0.105391178369
+gsl_ran_exppow_pdf	2.2	2.8	1.2	0.089787862483
+gsl_ran_exppow_pdf	2.6	2.8	1.2	0.076039777777
+gsl_ran_exppow_pdf	3	2.8	1.2	0.064062000831
+gsl_ran_exppow_pdf	3.4	2.8	1.2	0.053720853737
+gsl_ran_exppow_pdf	3.8	2.8	1.2	0.044860192801
+gsl_ran_exppow_pdf	4.2	2.8	1.2	0.037317371792
+gsl_ran_exppow_pdf	4.6	2.8	1.2	0.030932953558
+gsl_cdf_exppow_P	-5	2.8	1.2	0.050059758243
+gsl_cdf_exppow_Q	-5	2.8	1.2	0.949940241757
+gsl_cdf_exppow_P	-4.6	2.8	1.2	0.061326428023
+gsl_cdf_exppow_Q	-4.6	2.8	1.2	0.938673571977
+gsl_cdf_exppow_P	-4.2	2.8	1.2	0.074940454743
+gsl_cdf_exppow_Q	-4.2	2.8	1.2	0.925059545257
+gsl_cdf_exppow_P	-3.8	2.8	1.2	0.091334738065
+gsl_cdf_exppow_Q	-3.8	2.8	1.2	0.908665261935
+gsl_cdf_exppow_P	-3.4	2.8	1.2	0.111004304675
+gsl_cdf_exppow_Q	-3.4	2.8	1.2	0.888995695325
+gsl_cdf_exppow_P	-3	2.8	1.2	0.134508844931
+gsl_cdf_exppow_Q	-3	2.8	1.2	0.865491155069
+gsl_cdf_exppow_P	-2.6	2.8	1.2	0.162472217325
+gsl_cdf_exppow_Q	-2.6	2.8	1.2	0.837527782675
+gsl_cdf_exppow_P	-2.2	2.8	1.2	0.195576915800
+gsl_cdf_exppow_Q	-2.2	2.8	1.2	0.804423084200
+gsl_cdf_exppow_P	-1.8	2.8	1.2	0.234550269516
+gsl_cdf_exppow_Q	-1.8	2.8	1.2	0.765449730484
+gsl_cdf_exppow_P	-1.4	2.8	1.2	0.280136810018
+gsl_cdf_exppow_Q	-1.4	2.8	1.2	0.719863189982
+gsl_cdf_exppow_P	-1	2.8	1.2	0.333046069575
+gsl_cdf_exppow_Q	-1	2.8	1.2	0.666953930425
+gsl_cdf_exppow_P	-0.6	2.8	1.2	0.393850692739
+gsl_cdf_exppow_Q	-0.6	2.8	1.2	0.606149307261
+gsl_cdf_exppow_P	-0.2	2.8	1.2	0.462749927208
+gsl_cdf_exppow_Q	-0.2	2.8	1.2	0.537250072792
+gsl_cdf_exppow_P	0.2	2.8	1.2	0.537250072792
+gsl_cdf_exppow_Q	0.2	2.8	1.2	0.462749927208
+gsl_cdf_exppow_P	0.6	2.8	1.2	0.606149307261
+gsl_cdf_exppow_Q	0.6	2.8	1.2	0.393850692739
+gsl_cdf_exppow_P	1	2.8	1.2	0.666953930425
+gsl_cdf_exppow_Q	1	2.8	1.2	0.333046069575
+gsl_cdf_exppow_P	1.4	2.8	1.2	0.719863189982
+gsl_cdf_exppow_Q	1.4	2.8	1.2	0.280136810018
+gsl_cdf_exppow_P	1.8	2.8	1.2	0.765449730484
+gsl_cdf_exppow_Q	1.8	2.8	1.2	0.234550269516
+gsl_cdf_exppow_P	2.2	2.8	1.2	0.804423084200
+gsl_cdf_exppow_Q	2.2	2.8	1.2	0.195576915800
+gsl_cdf_exppow_P	2.6	2.8	1.2	0.837527782675
+gsl_cdf_exppow_Q	2.6	2.8	1.2	0.162472217325
+gsl_cdf_exppow_P	3	2.8	1.2	0.865491155069
+gsl_cdf_exppow_Q	3	2.8	1.2	0.134508844931
+gsl_cdf_exppow_P	3.4	2.8	1.2	0.888995695325
+gsl_cdf_exppow_Q	3.4	2.8	1.2	0.111004304675
+gsl_cdf_exppow_P	3.8	2.8	1.2	0.908665261935
+gsl_cdf_exppow_Q	3.8	2.8	1.2	0.091334738065
+gsl_cdf_exppow_P	4.2	2.8	1.2	0.925059545257
+gsl_cdf_exppow_Q	4.2	2.8	1.2	0.074940454743
+gsl_cdf_exppow_P	4.6	2.8	1.2	0.938673571977
+gsl_cdf_exppow_Q	4.6	2.8	1.2	0.061326428023
+gsl_ran_exppow	2.8	1.2	-3.044825975668
+gsl_ran_exppow	2.8	1.2	1.459054586974
+gsl_ran_exppow	2.8	1.2	-4.808109514730
+gsl_ran_exppow	2.8	1.2	0.496780206275
+gsl_ran_exppow	2.8	1.2	-0.090066703499
+gsl_ran_exppow	2.8	1.2	0.035955818538
+gsl_ran_exppow	2.8	1.2	2.216131246056
+gsl_ran_exppow	2.8	1.2	5.760009100004
+gsl_ran_exppow	2.8	1.2	-0.001604230333
+gsl_ran_exppow	2.8	1.2	4.090278673331
+gsl_ran_hypergeometric_pdf	0	6	12	8	0.011312217195
+gsl_ran_hypergeometric_pdf	1	6	12	8	0.108597285068
+gsl_ran_hypergeometric_pdf	2	6	12	8	0.316742081448
+gsl_ran_hypergeometric_pdf	3	6	12	8	0.361990950226
+gsl_ran_hypergeometric_pdf	4	6	12	8	0.169683257919
+gsl_ran_hypergeometric_pdf	5	6	12	8	0.030165912519
+gsl_ran_hypergeometric_pdf	6	6	12	8	0.001508295626
+gsl_ran_hypergeometric_pdf	7	6	12	8	0.000000000000
+gsl_ran_hypergeometric_pdf	8	6	12	8	0.000000000000
+gsl_ran_hypergeometric_pdf	9	6	12	8	0.000000000000
+gsl_ran_hypergeometric_pdf	10	6	12	8	0.000000000000
+gsl_cdf_hypergeometric_P	0	6	12	8	0.011312217195
+gsl_cdf_hypergeometric_Q	0	6	12	8	0.988687782805
+gsl_cdf_hypergeometric_P	1	6	12	8	0.119909502262
+gsl_cdf_hypergeometric_Q	1	6	12	8	0.880090497738
+gsl_cdf_hypergeometric_P	2	6	12	8	0.436651583710
+gsl_cdf_hypergeometric_Q	2	6	12	8	0.563348416290
+gsl_cdf_hypergeometric_P	3	6	12	8	0.798642533937
+gsl_cdf_hypergeometric_Q	3	6	12	8	0.201357466063
+gsl_cdf_hypergeometric_P	4	6	12	8	0.968325791855
+gsl_cdf_hypergeometric_Q	4	6	12	8	0.031674208145
+gsl_cdf_hypergeometric_P	5	6	12	8	0.998491704374
+gsl_cdf_hypergeometric_Q	5	6	12	8	0.001508295626
+gsl_cdf_hypergeometric_P	6	6	12	8	1.000000000000
+gsl_cdf_hypergeometric_Q	6	6	12	8	0.000000000000
+gsl_cdf_hypergeometric_P	7	6	12	8	1.000000000000
+gsl_cdf_hypergeometric_Q	7	6	12	8	0.000000000000
+gsl_cdf_hypergeometric_P	8	6	12	8	1.000000000000
+gsl_cdf_hypergeometric_Q	8	6	12	8	0.000000000000
+gsl_cdf_hypergeometric_P	9	6	12	8	1.000000000000
+gsl_cdf_hypergeometric_Q	9	6	12	8	0.000000000000
+gsl_cdf_hypergeometric_P	10	6	12	8	1.000000000000
+gsl_cdf_hypergeometric_Q	10	6	12	8	0.000000000000
+gsl_ran_hypergeometric	6	12	8	3
+gsl_ran_hypergeometric	6	12	8	2
+gsl_ran_hypergeometric	6	12	8	1
+gsl_ran_hypergeometric	6	12	8	4
+gsl_ran_hypergeometric	6	12	8	4
+gsl_ran_hypergeometric	6	12	8	2
+gsl_ran_hypergeometric	6	12	8	1
+gsl_ran_hypergeometric	6	12	8	5
+gsl_ran_hypergeometric	6	12	8	4
+gsl_ran_hypergeometric	6	12	8	3
+gsl_ran_binomial_pdf	0	.7	14	0.000000047830
+gsl_ran_binomial_pdf	1	.7	14	0.000001562437
+gsl_ran_binomial_pdf	2	.7	14	0.000023696954
+gsl_ran_binomial_pdf	3	.7	14	0.000221171572
+gsl_ran_binomial_pdf	4	.7	14	0.001419184256
+gsl_ran_binomial_pdf	5	.7	14	0.006622859864
+gsl_ran_binomial_pdf	6	.7	14	0.023180009523
+gsl_ran_binomial_pdf	7	.7	14	0.061813358727
+gsl_ran_binomial_pdf	8	.7	14	0.126202274068
+gsl_ran_binomial_pdf	9	.7	14	0.196314648550
+gsl_ran_binomial_pdf	10	.7	14	0.229033756642
+gsl_cdf_binomial_P	0	.7	14	0.000000047830
+gsl_cdf_binomial_Q	0	.7	14	0.999999952170
+gsl_cdf_binomial_P	1	.7	14	0.000001610266
+gsl_cdf_binomial_Q	1	.7	14	0.999998389734
+gsl_cdf_binomial_P	2	.7	14	0.000025307220
+gsl_cdf_binomial_Q	2	.7	14	0.999974692780
+gsl_cdf_binomial_P	3	.7	14	0.000246478793
+gsl_cdf_binomial_Q	3	.7	14	0.999753521207
+gsl_cdf_binomial_P	4	.7	14	0.001665663049
+gsl_cdf_binomial_Q	4	.7	14	0.998334336951
+gsl_cdf_binomial_P	5	.7	14	0.008288522913
+gsl_cdf_binomial_Q	5	.7	14	0.991711477087
+gsl_cdf_binomial_P	6	.7	14	0.031468532436
+gsl_cdf_binomial_Q	6	.7	14	0.968531467564
+gsl_cdf_binomial_P	7	.7	14	0.093281891163
+gsl_cdf_binomial_Q	7	.7	14	0.906718108837
+gsl_cdf_binomial_P	8	.7	14	0.219484165231
+gsl_cdf_binomial_Q	8	.7	14	0.780515834769
+gsl_cdf_binomial_P	9	.7	14	0.415798813781
+gsl_cdf_binomial_Q	9	.7	14	0.584201186219
+gsl_cdf_binomial_P	10	.7	14	0.644832570422
+gsl_cdf_binomial_Q	10	.7	14	0.355167429578
+gsl_ran_binomial	.7	14	10
+gsl_ran_binomial	.7	14	7
+gsl_ran_binomial	.7	14	14
+gsl_ran_binomial	.7	14	11
+gsl_ran_binomial	.7	14	9
+gsl_ran_binomial	.7	14	9
+gsl_ran_binomial	.7	14	8
+gsl_ran_binomial	.7	14	8
+gsl_ran_binomial	.7	14	8
+gsl_ran_binomial	.7	14	10
+gsl_ran_tdist_pdf	-5	7.76	0.000703630564
+gsl_ran_tdist_pdf	-4.6	7.76	0.001214793455
+gsl_ran_tdist_pdf	-4.2	7.76	0.002144762802
+gsl_ran_tdist_pdf	-3.8	7.76	0.003868342503
+gsl_ran_tdist_pdf	-3.4	7.76	0.007109511368
+gsl_ran_tdist_pdf	-3	7.76	0.013250454193
+gsl_ran_tdist_pdf	-2.6	7.76	0.024839175044
+gsl_ran_tdist_pdf	-2.2	7.76	0.046230432889
+gsl_ran_tdist_pdf	-1.8	7.76	0.083801344544
+gsl_ran_tdist_pdf	-1.4	7.76	0.144069718403
+gsl_ran_tdist_pdf	-1	7.76	0.227186731083
+gsl_ran_tdist_pdf	-0.6	7.76	0.316734622925
+gsl_ran_tdist_pdf	-0.2	7.76	0.377725746265
+gsl_ran_tdist_pdf	0.2	7.76	0.377725746265
+gsl_ran_tdist_pdf	0.6	7.76	0.316734622925
+gsl_ran_tdist_pdf	1	7.76	0.227186731083
+gsl_ran_tdist_pdf	1.4	7.76	0.144069718403
+gsl_ran_tdist_pdf	1.8	7.76	0.083801344544
+gsl_ran_tdist_pdf	2.2	7.76	0.046230432889
+gsl_ran_tdist_pdf	2.6	7.76	0.024839175044
+gsl_ran_tdist_pdf	3	7.76	0.013250454193
+gsl_ran_tdist_pdf	3.4	7.76	0.007109511368
+gsl_ran_tdist_pdf	3.8	7.76	0.003868342503
+gsl_ran_tdist_pdf	4.2	7.76	0.002144762802
+gsl_ran_tdist_pdf	4.6	7.76	0.001214793455
+gsl_cdf_tdist_P	-5	7.76	0.000576549616
+gsl_cdf_tdist_Q	-5	7.76	0.999423450384
+gsl_cdf_tdist_P	-4.6	7.76	0.000950276299
+gsl_cdf_tdist_Q	-4.6	7.76	0.999049723701
+gsl_cdf_tdist_P	-4.2	7.76	0.001603464585
+gsl_cdf_tdist_Q	-4.2	7.76	0.998396535415
+gsl_cdf_tdist_P	-3.8	7.76	0.002770422455
+gsl_cdf_tdist_Q	-3.8	7.76	0.997229577545
+gsl_cdf_tdist_P	-3.4	7.76	0.004897670111
+gsl_cdf_tdist_Q	-3.4	7.76	0.995102329889
+gsl_cdf_tdist_P	-3	7.76	0.008839591429
+gsl_cdf_tdist_Q	-3	7.76	0.991160408571
+gsl_cdf_tdist_P	-2.6	7.76	0.016216243477
+gsl_cdf_tdist_Q	-2.6	7.76	0.983783756523
+gsl_cdf_tdist_P	-2.2	7.76	0.030007964965
+gsl_cdf_tdist_Q	-2.2	7.76	0.969992035035
+gsl_cdf_tdist_P	-1.8	7.76	0.055354629967
+gsl_cdf_tdist_Q	-1.8	7.76	0.944645370033
+gsl_cdf_tdist_P	-1.4	7.76	0.100100645805
+gsl_cdf_tdist_Q	-1.4	7.76	0.899899354195
+gsl_cdf_tdist_P	-1	7.76	0.173733968742
+gsl_cdf_tdist_Q	-1	7.76	0.826266031258
+gsl_cdf_tdist_P	-0.6	7.76	0.282805137074
+gsl_cdf_tdist_Q	-0.6	7.76	0.717194862926
+gsl_cdf_tdist_P	-0.2	7.76	0.423311008621
+gsl_cdf_tdist_Q	-0.2	7.76	0.576688991379
+gsl_cdf_tdist_P	0.2	7.76	0.576688991379
+gsl_cdf_tdist_Q	0.2	7.76	0.423311008621
+gsl_cdf_tdist_P	0.6	7.76	0.717194862926
+gsl_cdf_tdist_Q	0.6	7.76	0.282805137074
+gsl_cdf_tdist_P	1	7.76	0.826266031258
+gsl_cdf_tdist_Q	1	7.76	0.173733968742
+gsl_cdf_tdist_P	1.4	7.76	0.899899354195
+gsl_cdf_tdist_Q	1.4	7.76	0.100100645805
+gsl_cdf_tdist_P	1.8	7.76	0.944645370033
+gsl_cdf_tdist_Q	1.8	7.76	0.055354629967
+gsl_cdf_tdist_P	2.2	7.76	0.969992035035
+gsl_cdf_tdist_Q	2.2	7.76	0.030007964965
+gsl_cdf_tdist_P	2.6	7.76	0.983783756523
+gsl_cdf_tdist_Q	2.6	7.76	0.016216243477
+gsl_cdf_tdist_P	3	7.76	0.991160408571
+gsl_cdf_tdist_Q	3	7.76	0.008839591429
+gsl_cdf_tdist_P	3.4	7.76	0.995102329889
+gsl_cdf_tdist_Q	3.4	7.76	0.004897670111
+gsl_cdf_tdist_P	3.8	7.76	0.997229577545
+gsl_cdf_tdist_Q	3.8	7.76	0.002770422455
+gsl_cdf_tdist_P	4.2	7.76	0.998396535415
+gsl_cdf_tdist_Q	4.2	7.76	0.001603464585
+gsl_cdf_tdist_P	4.6	7.76	0.999049723701
+gsl_cdf_tdist_Q	4.6	7.76	0.000950276299
+gsl_cdf_tdist_Pinv	0.1	7.76	-1.400698899067
+gsl_cdf_tdist_Qinv	0.1	7.76	1.400698899067
+gsl_cdf_tdist_Pinv	0.2	7.76	-0.890426987597
+gsl_cdf_tdist_Qinv	0.2	7.76	0.890426987597
+gsl_cdf_tdist_Pinv	0.3	7.76	-0.546619301278
+gsl_cdf_tdist_Qinv	0.3	7.76	0.546619301278
+gsl_cdf_tdist_Pinv	0.4	7.76	-0.262190418180
+gsl_cdf_tdist_Qinv	0.4	7.76	0.262190418180
+gsl_cdf_tdist_Pinv	0.5	7.76	0.000000000000
+gsl_cdf_tdist_Qinv	0.5	7.76	0.000000000000
+gsl_cdf_tdist_Pinv	0.6	7.76	0.262190418180
+gsl_cdf_tdist_Qinv	0.6	7.76	-0.262190418180
+gsl_cdf_tdist_Pinv	0.7	7.76	0.546619301278
+gsl_cdf_tdist_Qinv	0.7	7.76	-0.546619301278
+gsl_cdf_tdist_Pinv	0.8	7.76	0.890426987597
+gsl_cdf_tdist_Qinv	0.8	7.76	-0.890426987597
+gsl_cdf_tdist_Pinv	0.9	7.76	1.400698899067
+gsl_cdf_tdist_Qinv	0.9	7.76	-1.400698899067
+gsl_ran_tdist	7.76	1.380161300535
+gsl_ran_tdist	7.76	-0.215615900761
+gsl_ran_tdist	7.76	1.173383508981
+gsl_ran_tdist	7.76	2.266933237660
+gsl_ran_tdist	7.76	0.195822711490
+gsl_ran_tdist	7.76	0.605825204570
+gsl_ran_tdist	7.76	0.266535692737
+gsl_ran_tdist	7.76	0.057272487948
+gsl_ran_tdist	7.76	-0.712337878621
+gsl_ran_tdist	7.76	-0.541435812506
+gsl_ran_geometric_pdf	0	.7	0.000000000000
+gsl_ran_geometric_pdf	1	.7	0.700000000000
+gsl_ran_geometric_pdf	2	.7	0.210000000000
+gsl_ran_geometric_pdf	3	.7	0.063000000000
+gsl_ran_geometric_pdf	4	.7	0.018900000000
+gsl_ran_geometric_pdf	5	.7	0.005670000000
+gsl_ran_geometric_pdf	6	.7	0.001701000000
+gsl_ran_geometric_pdf	7	.7	0.000510300000
+gsl_ran_geometric_pdf	8	.7	0.000153090000
+gsl_ran_geometric_pdf	9	.7	0.000045927000
+gsl_ran_geometric_pdf	10	.7	0.000013778100
+gsl_cdf_geometric_P	0	.7	0.000000000000
+gsl_cdf_geometric_Q	0	.7	1.000000000000
+gsl_cdf_geometric_P	1	.7	0.700000000000
+gsl_cdf_geometric_Q	1	.7	0.300000000000
+gsl_cdf_geometric_P	2	.7	0.910000000000
+gsl_cdf_geometric_Q	2	.7	0.090000000000
+gsl_cdf_geometric_P	3	.7	0.973000000000
+gsl_cdf_geometric_Q	3	.7	0.027000000000
+gsl_cdf_geometric_P	4	.7	0.991900000000
+gsl_cdf_geometric_Q	4	.7	0.008100000000
+gsl_cdf_geometric_P	5	.7	0.997570000000
+gsl_cdf_geometric_Q	5	.7	0.002430000000
+gsl_cdf_geometric_P	6	.7	0.999271000000
+gsl_cdf_geometric_Q	6	.7	0.000729000000
+gsl_cdf_geometric_P	7	.7	0.999781300000
+gsl_cdf_geometric_Q	7	.7	0.000218700000
+gsl_cdf_geometric_P	8	.7	0.999934390000
+gsl_cdf_geometric_Q	8	.7	0.000065610000
+gsl_cdf_geometric_P	9	.7	0.999980317000
+gsl_cdf_geometric_Q	9	.7	0.000019683000
+gsl_cdf_geometric_P	10	.7	0.999994095100
+gsl_cdf_geometric_Q	10	.7	0.000005904900
+gsl_ran_geometric	.7	1
+gsl_ran_geometric	.7	1
+gsl_ran_geometric	.7	2
+gsl_ran_geometric	.7	1
+gsl_ran_geometric	.7	1
+gsl_ran_geometric	.7	2
+gsl_ran_geometric	.7	2
+gsl_ran_geometric	.7	3
+gsl_ran_geometric	.7	2
+gsl_ran_geometric	.7	2
+gsl_ran_chisq_pdf	-5	5.5	0.000000000000
+gsl_ran_chisq_pdf	-4.6	5.5	0.000000000000
+gsl_ran_chisq_pdf	-4.2	5.5	0.000000000000
+gsl_ran_chisq_pdf	-3.8	5.5	0.000000000000
+gsl_ran_chisq_pdf	-3.4	5.5	0.000000000000
+gsl_ran_chisq_pdf	-3	5.5	0.000000000000
+gsl_ran_chisq_pdf	-2.6	5.5	0.000000000000
+gsl_ran_chisq_pdf	-2.2	5.5	0.000000000000
+gsl_ran_chisq_pdf	-1.8	5.5	0.000000000000
+gsl_ran_chisq_pdf	-1.4	5.5	0.000000000000
+gsl_ran_chisq_pdf	-1	5.5	0.000000000000
+gsl_ran_chisq_pdf	-0.6	5.5	0.000000000000
+gsl_ran_chisq_pdf	-0.2	5.5	0.000000000000
+gsl_ran_chisq_pdf	0.2	5.5	0.005002158497
+gsl_ran_chisq_pdf	0.6	5.5	0.028006623169
+gsl_ran_chisq_pdf	1	5.5	0.056057943745
+gsl_ran_chisq_pdf	1.4	5.5	0.082699394438
+gsl_ran_chisq_pdf	1.8	5.5	0.105110536932
+gsl_ran_chisq_pdf	2.2	5.5	0.122264440755
+gsl_ran_chisq_pdf	2.6	5.5	0.134092638654
+gsl_ran_chisq_pdf	3	5.5	0.141027847474
+gsl_ran_chisq_pdf	3.4	5.5	0.143738096726
+gsl_ran_chisq_pdf	3.8	5.5	0.142970416653
+gsl_ran_chisq_pdf	4.2	5.5	0.139460831601
+gsl_ran_chisq_pdf	4.6	5.5	0.133885424968
+gsl_cdf_chisq_P	-5	5.5	0.000000000000
+gsl_cdf_chisq_Q	-5	5.5	1.000000000000
+gsl_cdf_chisq_P	-4.6	5.5	0.000000000000
+gsl_cdf_chisq_Q	-4.6	5.5	1.000000000000
+gsl_cdf_chisq_P	-4.2	5.5	0.000000000000
+gsl_cdf_chisq_Q	-4.2	5.5	1.000000000000
+gsl_cdf_chisq_P	-3.8	5.5	0.000000000000
+gsl_cdf_chisq_Q	-3.8	5.5	1.000000000000
+gsl_cdf_chisq_P	-3.4	5.5	0.000000000000
+gsl_cdf_chisq_Q	-3.4	5.5	1.000000000000
+gsl_cdf_chisq_P	-3	5.5	0.000000000000
+gsl_cdf_chisq_Q	-3	5.5	1.000000000000
+gsl_cdf_chisq_P	-2.6	5.5	0.000000000000
+gsl_cdf_chisq_Q	-2.6	5.5	1.000000000000
+gsl_cdf_chisq_P	-2.2	5.5	0.000000000000
+gsl_cdf_chisq_Q	-2.2	5.5	1.000000000000
+gsl_cdf_chisq_P	-1.8	5.5	0.000000000000
+gsl_cdf_chisq_Q	-1.8	5.5	1.000000000000
+gsl_cdf_chisq_P	-1.4	5.5	0.000000000000
+gsl_cdf_chisq_Q	-1.4	5.5	1.000000000000
+gsl_cdf_chisq_P	-1	5.5	0.000000000000
+gsl_cdf_chisq_Q	-1	5.5	1.000000000000
+gsl_cdf_chisq_P	-0.6	5.5	0.000000000000
+gsl_cdf_chisq_Q	-0.6	5.5	1.000000000000
+gsl_cdf_chisq_P	-0.2	5.5	0.000000000000
+gsl_cdf_chisq_Q	-0.2	5.5	1.000000000000
+gsl_cdf_chisq_P	0.2	5.5	0.000373702341
+gsl_cdf_chisq_Q	0.2	5.5	0.999626297659
+gsl_cdf_chisq_P	0.6	5.5	0.006631938422
+gsl_cdf_chisq_Q	0.6	5.5	0.993368061578
+gsl_cdf_chisq_P	1	5.5	0.023415616128
+gsl_cdf_chisq_Q	1	5.5	0.976584383872
+gsl_cdf_chisq_P	1.4	5.5	0.051275668702
+gsl_cdf_chisq_Q	1.4	5.5	0.948724331298
+gsl_cdf_chisq_P	1.8	5.5	0.089003528591
+gsl_cdf_chisq_Q	1.8	5.5	0.910996471409
+gsl_cdf_chisq_P	2.2	5.5	0.134659051436
+gsl_cdf_chisq_Q	2.2	5.5	0.865340948564
+gsl_cdf_chisq_P	2.6	5.5	0.186102854258
+gsl_cdf_chisq_Q	2.6	5.5	0.813897145742
+gsl_cdf_chisq_P	3	5.5	0.241279773246
+gsl_cdf_chisq_Q	3	5.5	0.758720226754
+gsl_cdf_chisq_P	3.4	5.5	0.298361486934
+gsl_cdf_chisq_Q	3.4	5.5	0.701638513066
+gsl_cdf_chisq_P	3.8	5.5	0.355806596628
+gsl_cdf_chisq_Q	3.8	5.5	0.644193403372
+gsl_cdf_chisq_P	4.2	5.5	0.412372512396
+gsl_cdf_chisq_Q	4.2	5.5	0.587627487604
+gsl_cdf_chisq_P	4.6	5.5	0.467100197502
+gsl_cdf_chisq_Q	4.6	5.5	0.532899802498
+gsl_cdf_chisq_Pinv	0.1	5.5	1.902208296619
+gsl_cdf_chisq_Qinv	0.1	5.5	9.945633289400
+gsl_cdf_chisq_Pinv	0.2	5.5	2.702765558732
+gsl_cdf_chisq_Qinv	0.2	5.5	7.927039982577
+gsl_cdf_chisq_Pinv	0.3	5.5	3.411398377625
+gsl_cdf_chisq_Qinv	0.3	5.5	6.649835334695
+gsl_cdf_chisq_Pinv	0.4	5.5	4.111598060039
+gsl_cdf_chisq_Qinv	0.4	5.5	5.672218852910
+gsl_cdf_chisq_Pinv	0.5	5.5	4.849623406709
+gsl_cdf_chisq_Qinv	0.5	5.5	4.849623406709
+gsl_cdf_chisq_Pinv	0.6	5.5	5.672218852910
+gsl_cdf_chisq_Qinv	0.6	5.5	4.111598060039
+gsl_cdf_chisq_Pinv	0.7	5.5	6.649835334695
+gsl_cdf_chisq_Qinv	0.7	5.5	3.411398377625
+gsl_cdf_chisq_Pinv	0.8	5.5	7.927039982577
+gsl_cdf_chisq_Qinv	0.8	5.5	2.702765558732
+gsl_cdf_chisq_Pinv	0.9	5.5	9.945633289400
+gsl_cdf_chisq_Qinv	0.9	5.5	1.902208296619
+gsl_ran_chisq	5.5	1.466088684325
+gsl_ran_chisq	5.5	4.185807768005
+gsl_ran_chisq	5.5	13.936556852501
+gsl_ran_chisq	5.5	6.600688529918
+gsl_ran_chisq	5.5	13.051007460742
+gsl_ran_chisq	5.5	7.256533786989
+gsl_ran_chisq	5.5	4.876706069831
+gsl_ran_chisq	5.5	5.166212642093
+gsl_ran_chisq	5.5	4.043431710203
+gsl_ran_chisq	5.5	3.979924684257
+gsl_ran_laplace_pdf	-5	2.85	0.030353236142
+gsl_ran_laplace_pdf	-4.6	2.85	0.034926785107
+gsl_ran_laplace_pdf	-4.2	2.85	0.040189464880
+gsl_ran_laplace_pdf	-3.8	2.85	0.046245111950
+gsl_ran_laplace_pdf	-3.4	2.85	0.053213208627
+gsl_ran_laplace_pdf	-3	2.85	0.061231240514
+gsl_ran_laplace_pdf	-2.6	2.85	0.070457409196
+gsl_ran_laplace_pdf	-2.2	2.85	0.081073753675
+gsl_ran_laplace_pdf	-1.8	2.85	0.093289742128
+gsl_ran_laplace_pdf	-1.4	2.85	0.107346404870
+gsl_ran_laplace_pdf	-1	2.85	0.123521090054
+gsl_ran_laplace_pdf	-0.6	2.85	0.142132935953
+gsl_ran_laplace_pdf	-0.2	2.85	0.163549167788
+gsl_ran_laplace_pdf	0.2	2.85	0.163549167788
+gsl_ran_laplace_pdf	0.6	2.85	0.142132935953
+gsl_ran_laplace_pdf	1	2.85	0.123521090054
+gsl_ran_laplace_pdf	1.4	2.85	0.107346404870
+gsl_ran_laplace_pdf	1.8	2.85	0.093289742128
+gsl_ran_laplace_pdf	2.2	2.85	0.081073753675
+gsl_ran_laplace_pdf	2.6	2.85	0.070457409196
+gsl_ran_laplace_pdf	3	2.85	0.061231240514
+gsl_ran_laplace_pdf	3.4	2.85	0.053213208627
+gsl_ran_laplace_pdf	3.8	2.85	0.046245111950
+gsl_ran_laplace_pdf	4.2	2.85	0.040189464880
+gsl_ran_laplace_pdf	4.6	2.85	0.034926785107
+gsl_cdf_laplace_P	-5	2.85	0.086506723004
+gsl_cdf_laplace_Q	-5	2.85	0.913493276996
+gsl_cdf_laplace_P	-4.6	2.85	0.099541337555
+gsl_cdf_laplace_Q	-4.6	2.85	0.900458662445
+gsl_cdf_laplace_P	-4.2	2.85	0.114539974908
+gsl_cdf_laplace_Q	-4.2	2.85	0.885460025092
+gsl_cdf_laplace_P	-3.8	2.85	0.131798569058
+gsl_cdf_laplace_Q	-3.8	2.85	0.868201430942
+gsl_cdf_laplace_P	-3.4	2.85	0.151657644588
+gsl_cdf_laplace_Q	-3.4	2.85	0.848342355412
+gsl_cdf_laplace_P	-3	2.85	0.174509035466
+gsl_cdf_laplace_Q	-3	2.85	0.825490964534
+gsl_cdf_laplace_P	-2.6	2.85	0.200803616210
+gsl_cdf_laplace_Q	-2.6	2.85	0.799196383790
+gsl_cdf_laplace_P	-2.2	2.85	0.231060197974
+gsl_cdf_laplace_Q	-2.2	2.85	0.768939802026
+gsl_cdf_laplace_P	-1.8	2.85	0.265875765065
+gsl_cdf_laplace_Q	-1.8	2.85	0.734124234935
+gsl_cdf_laplace_P	-1.4	2.85	0.305937253880
+gsl_cdf_laplace_Q	-1.4	2.85	0.694062746120
+gsl_cdf_laplace_P	-1	2.85	0.352035106655
+gsl_cdf_laplace_Q	-1	2.85	0.647964893345
+gsl_cdf_laplace_P	-0.6	2.85	0.405078867466
+gsl_cdf_laplace_Q	-0.6	2.85	0.594921132534
+gsl_cdf_laplace_P	-0.2	2.85	0.466115128195
+gsl_cdf_laplace_Q	-0.2	2.85	0.533884871805
+gsl_cdf_laplace_P	0.2	2.85	0.533884871805
+gsl_cdf_laplace_Q	0.2	2.85	0.466115128195
+gsl_cdf_laplace_P	0.6	2.85	0.594921132534
+gsl_cdf_laplace_Q	0.6	2.85	0.405078867466
+gsl_cdf_laplace_P	1	2.85	0.647964893345
+gsl_cdf_laplace_Q	1	2.85	0.352035106655
+gsl_cdf_laplace_P	1.4	2.85	0.694062746120
+gsl_cdf_laplace_Q	1.4	2.85	0.305937253880
+gsl_cdf_laplace_P	1.8	2.85	0.734124234935
+gsl_cdf_laplace_Q	1.8	2.85	0.265875765065
+gsl_cdf_laplace_P	2.2	2.85	0.768939802026
+gsl_cdf_laplace_Q	2.2	2.85	0.231060197974
+gsl_cdf_laplace_P	2.6	2.85	0.799196383790
+gsl_cdf_laplace_Q	2.6	2.85	0.200803616210
+gsl_cdf_laplace_P	3	2.85	0.825490964534
+gsl_cdf_laplace_Q	3	2.85	0.174509035466
+gsl_cdf_laplace_P	3.4	2.85	0.848342355412
+gsl_cdf_laplace_Q	3.4	2.85	0.151657644588
+gsl_cdf_laplace_P	3.8	2.85	0.868201430942
+gsl_cdf_laplace_Q	3.8	2.85	0.131798569058
+gsl_cdf_laplace_P	4.2	2.85	0.885460025092
+gsl_cdf_laplace_Q	4.2	2.85	0.114539974908
+gsl_cdf_laplace_P	4.6	2.85	0.900458662445
+gsl_cdf_laplace_Q	4.6	2.85	0.099541337555
+gsl_cdf_laplace_Pinv	0.1	2.85	-4.586898050437
+gsl_cdf_laplace_Qinv	0.1	2.85	4.586898050437
+gsl_cdf_laplace_Pinv	0.2	2.85	-2.611428585841
+gsl_cdf_laplace_Qinv	0.2	2.85	2.611428585841
+gsl_cdf_laplace_Pinv	0.3	2.85	-1.455853027733
+gsl_cdf_laplace_Qinv	0.3	2.85	1.455853027733
+gsl_cdf_laplace_Pinv	0.4	2.85	-0.635959121245
+gsl_cdf_laplace_Qinv	0.4	2.85	0.635959121245
+gsl_cdf_laplace_Pinv	0.5	2.85	-0.000000000000
+gsl_cdf_laplace_Qinv	0.5	2.85	0.000000000000
+gsl_cdf_laplace_Pinv	0.6	2.85	0.635959121245
+gsl_cdf_laplace_Qinv	0.6	2.85	-0.635959121245
+gsl_cdf_laplace_Pinv	0.7	2.85	1.455853027733
+gsl_cdf_laplace_Qinv	0.7	2.85	-1.455853027733
+gsl_cdf_laplace_Pinv	0.8	2.85	2.611428585841
+gsl_cdf_laplace_Qinv	0.8	2.85	-2.611428585841
+gsl_cdf_laplace_Pinv	0.9	2.85	4.586898050437
+gsl_cdf_laplace_Qinv	0.9	2.85	-4.586898050437
+gsl_ran_laplace	2.85	-3.105931265827
+gsl_ran_laplace	2.85	4.928407435139
+gsl_ran_laplace	2.85	0.181697252656
+gsl_ran_laplace	2.85	-2.918137868020
+gsl_ran_laplace	2.85	-1.298605102044
+gsl_ran_laplace	2.85	-0.079901258051
+gsl_ran_laplace	2.85	-1.067651039640
+gsl_ran_laplace	2.85	-0.418231492670
+gsl_ran_laplace	2.85	-3.740839575430
+gsl_ran_laplace	2.85	1.932087218479
+gsl_ran_flat_pdf	-5	-3.0	2.0	0.000000000000
+gsl_ran_flat_pdf	-4.6	-3.0	2.0	0.000000000000
+gsl_ran_flat_pdf	-4.2	-3.0	2.0	0.000000000000
+gsl_ran_flat_pdf	-3.8	-3.0	2.0	0.000000000000
+gsl_ran_flat_pdf	-3.4	-3.0	2.0	0.000000000000
+gsl_ran_flat_pdf	-3	-3.0	2.0	0.200000000000
+gsl_ran_flat_pdf	-2.6	-3.0	2.0	0.200000000000
+gsl_ran_flat_pdf	-2.2	-3.0	2.0	0.200000000000
+gsl_ran_flat_pdf	-1.8	-3.0	2.0	0.200000000000
+gsl_ran_flat_pdf	-1.4	-3.0	2.0	0.200000000000
+gsl_ran_flat_pdf	-1	-3.0	2.0	0.200000000000
+gsl_ran_flat_pdf	-0.6	-3.0	2.0	0.200000000000
+gsl_ran_flat_pdf	-0.2	-3.0	2.0	0.200000000000
+gsl_ran_flat_pdf	0.2	-3.0	2.0	0.200000000000
+gsl_ran_flat_pdf	0.6	-3.0	2.0	0.200000000000
+gsl_ran_flat_pdf	1	-3.0	2.0	0.200000000000
+gsl_ran_flat_pdf	1.4	-3.0	2.0	0.200000000000
+gsl_ran_flat_pdf	1.8	-3.0	2.0	0.200000000000
+gsl_ran_flat_pdf	2.2	-3.0	2.0	0.000000000000
+gsl_ran_flat_pdf	2.6	-3.0	2.0	0.000000000000
+gsl_ran_flat_pdf	3	-3.0	2.0	0.000000000000
+gsl_ran_flat_pdf	3.4	-3.0	2.0	0.000000000000
+gsl_ran_flat_pdf	3.8	-3.0	2.0	0.000000000000
+gsl_ran_flat_pdf	4.2	-3.0	2.0	0.000000000000
+gsl_ran_flat_pdf	4.6	-3.0	2.0	0.000000000000
+gsl_cdf_flat_P	-5	-3.0	2.0	0.000000000000
+gsl_cdf_flat_Q	-5	-3.0	2.0	1.000000000000
+gsl_cdf_flat_P	-4.6	-3.0	2.0	0.000000000000
+gsl_cdf_flat_Q	-4.6	-3.0	2.0	1.000000000000
+gsl_cdf_flat_P	-4.2	-3.0	2.0	0.000000000000
+gsl_cdf_flat_Q	-4.2	-3.0	2.0	1.000000000000
+gsl_cdf_flat_P	-3.8	-3.0	2.0	0.000000000000
+gsl_cdf_flat_Q	-3.8	-3.0	2.0	1.000000000000
+gsl_cdf_flat_P	-3.4	-3.0	2.0	0.000000000000
+gsl_cdf_flat_Q	-3.4	-3.0	2.0	1.000000000000
+gsl_cdf_flat_P	-3	-3.0	2.0	0.000000000000
+gsl_cdf_flat_Q	-3	-3.0	2.0	1.000000000000
+gsl_cdf_flat_P	-2.6	-3.0	2.0	0.080000000000
+gsl_cdf_flat_Q	-2.6	-3.0	2.0	0.920000000000
+gsl_cdf_flat_P	-2.2	-3.0	2.0	0.160000000000
+gsl_cdf_flat_Q	-2.2	-3.0	2.0	0.840000000000
+gsl_cdf_flat_P	-1.8	-3.0	2.0	0.240000000000
+gsl_cdf_flat_Q	-1.8	-3.0	2.0	0.760000000000
+gsl_cdf_flat_P	-1.4	-3.0	2.0	0.320000000000
+gsl_cdf_flat_Q	-1.4	-3.0	2.0	0.680000000000
+gsl_cdf_flat_P	-1	-3.0	2.0	0.400000000000
+gsl_cdf_flat_Q	-1	-3.0	2.0	0.600000000000
+gsl_cdf_flat_P	-0.6	-3.0	2.0	0.480000000000
+gsl_cdf_flat_Q	-0.6	-3.0	2.0	0.520000000000
+gsl_cdf_flat_P	-0.2	-3.0	2.0	0.560000000000
+gsl_cdf_flat_Q	-0.2	-3.0	2.0	0.440000000000
+gsl_cdf_flat_P	0.2	-3.0	2.0	0.640000000000
+gsl_cdf_flat_Q	0.2	-3.0	2.0	0.360000000000
+gsl_cdf_flat_P	0.6	-3.0	2.0	0.720000000000
+gsl_cdf_flat_Q	0.6	-3.0	2.0	0.280000000000
+gsl_cdf_flat_P	1	-3.0	2.0	0.800000000000
+gsl_cdf_flat_Q	1	-3.0	2.0	0.200000000000
+gsl_cdf_flat_P	1.4	-3.0	2.0	0.880000000000
+gsl_cdf_flat_Q	1.4	-3.0	2.0	0.120000000000
+gsl_cdf_flat_P	1.8	-3.0	2.0	0.960000000000
+gsl_cdf_flat_Q	1.8	-3.0	2.0	0.040000000000
+gsl_cdf_flat_P	2.2	-3.0	2.0	1.000000000000
+gsl_cdf_flat_Q	2.2	-3.0	2.0	0.000000000000
+gsl_cdf_flat_P	2.6	-3.0	2.0	1.000000000000
+gsl_cdf_flat_Q	2.6	-3.0	2.0	0.000000000000
+gsl_cdf_flat_P	3	-3.0	2.0	1.000000000000
+gsl_cdf_flat_Q	3	-3.0	2.0	0.000000000000
+gsl_cdf_flat_P	3.4	-3.0	2.0	1.000000000000
+gsl_cdf_flat_Q	3.4	-3.0	2.0	0.000000000000
+gsl_cdf_flat_P	3.8	-3.0	2.0	1.000000000000
+gsl_cdf_flat_Q	3.8	-3.0	2.0	0.000000000000
+gsl_cdf_flat_P	4.2	-3.0	2.0	1.000000000000
+gsl_cdf_flat_Q	4.2	-3.0	2.0	0.000000000000
+gsl_cdf_flat_P	4.6	-3.0	2.0	1.000000000000
+gsl_cdf_flat_Q	4.6	-3.0	2.0	0.000000000000
+gsl_cdf_flat_Pinv	0.1	-3.0	2.0	-2.500000000000
+gsl_cdf_flat_Qinv	0.1	-3.0	2.0	1.500000000000
+gsl_cdf_flat_Pinv	0.2	-3.0	2.0	-2.000000000000
+gsl_cdf_flat_Qinv	0.2	-3.0	2.0	1.000000000000
+gsl_cdf_flat_Pinv	0.3	-3.0	2.0	-1.500000000000
+gsl_cdf_flat_Qinv	0.3	-3.0	2.0	0.500000000000
+gsl_cdf_flat_Pinv	0.4	-3.0	2.0	-1.000000000000
+gsl_cdf_flat_Qinv	0.4	-3.0	2.0	-0.000000000000
+gsl_cdf_flat_Pinv	0.5	-3.0	2.0	-0.500000000000
+gsl_cdf_flat_Qinv	0.5	-3.0	2.0	-0.500000000000
+gsl_cdf_flat_Pinv	0.6	-3.0	2.0	-0.000000000000
+gsl_cdf_flat_Qinv	0.6	-3.0	2.0	-1.000000000000
+gsl_cdf_flat_Pinv	0.7	-3.0	2.0	0.500000000000
+gsl_cdf_flat_Qinv	0.7	-3.0	2.0	-1.500000000000
+gsl_cdf_flat_Pinv	0.8	-3.0	2.0	1.000000000000
+gsl_cdf_flat_Qinv	0.8	-3.0	2.0	-2.000000000000
+gsl_cdf_flat_Pinv	0.9	-3.0	2.0	1.500000000000
+gsl_cdf_flat_Qinv	0.9	-3.0	2.0	-2.500000000000
+gsl_ran_flat	-3.0	2.0	1.478654823033
+gsl_ran_flat	-3.0	2.0	-2.267309417482
+gsl_ran_flat	-3.0	2.0	-2.603068631841
+gsl_ran_flat	-3.0	2.0	-1.064861193998
+gsl_ran_flat	-3.0	2.0	1.857195426011
+gsl_ran_flat	-3.0	2.0	0.133435889613
+gsl_ran_flat	-3.0	2.0	-2.004862057045
+gsl_ran_flat	-3.0	2.0	0.301295677666
+gsl_ran_flat	-3.0	2.0	1.083724961383
+gsl_ran_flat	-3.0	2.0	-2.383884716081
+gsl_ran_landau_pdf	-5	0.000000000000
+gsl_ran_landau_pdf	-4.6	0.000000000000
+gsl_ran_landau_pdf	-4.2	0.000000000044
+gsl_ran_landau_pdf	-3.8	0.000000116996
+gsl_ran_landau_pdf	-3.4	0.000021693693
+gsl_ran_landau_pdf	-3	0.000673728616
+gsl_ran_landau_pdf	-2.6	0.006318683126
+gsl_ran_landau_pdf	-2.2	0.026571530644
+gsl_ran_landau_pdf	-1.8	0.065311333154
+gsl_ran_landau_pdf	-1.4	0.112097340941
+gsl_ran_landau_pdf	-1	0.151391911359
+gsl_ran_landau_pdf	-0.6	0.174324892810
+gsl_ran_landau_pdf	-0.2	0.180635324039
+gsl_ran_landau_pdf	0.2	0.174667032846
+gsl_ran_landau_pdf	0.6	0.161516250127
+gsl_ran_landau_pdf	1	0.145206637131
+gsl_ran_landau_pdf	1.4	0.128337308363
+gsl_ran_landau_pdf	1.8	0.112348366209
+gsl_ran_landau_pdf	2.2	0.097905674717
+gsl_ran_landau_pdf	2.6	0.085217338246
+gsl_ran_landau_pdf	3	0.074247654557
+gsl_ran_landau_pdf	3.4	0.064846926512
+gsl_ran_landau_pdf	3.8	0.056824297714
+gsl_ran_landau_pdf	4.2	0.049985647067
+gsl_ran_landau_pdf	4.6	0.044151402680
+gsl_ran_landau	0.831503858989
+gsl_ran_landau	9.650593963039
+gsl_ran_landau	-0.097301290668
+gsl_ran_landau	-1.777568743125
+gsl_ran_landau	4.303857429792
+gsl_ran_landau	9.625019845355
+gsl_ran_landau	0.763747847418
+gsl_ran_landau	4.032567732305
+gsl_ran_landau	-0.269020584800
+gsl_ran_landau	0.508524364979
+gsl_ran_levy	0.5	1.1	0.799962783614
+gsl_ran_levy	0.5	1.1	-0.620342638471
+gsl_ran_levy	0.5	1.1	0.274932896580
+gsl_ran_levy	0.5	1.1	18.691890392735
+gsl_ran_levy	0.5	1.1	-0.448729798921
+gsl_ran_levy	0.5	1.1	0.232843067836
+gsl_ran_levy	0.5	1.1	0.890636619332
+gsl_ran_levy	0.5	1.1	-0.506071259266
+gsl_ran_levy	0.5	1.1	6.489213337636
+gsl_ran_levy	0.5	1.1	-0.108232398256
+gsl_ran_gumbel1_pdf	-5	2.9	4.6	0.000000000000
+gsl_ran_gumbel1_pdf	-4.6	2.9	4.6	0.000000000000
+gsl_ran_gumbel1_pdf	-4.2	2.9	4.6	0.000000000000
+gsl_ran_gumbel1_pdf	-3.8	2.9	4.6	0.000000000000
+gsl_ran_gumbel1_pdf	-3.4	2.9	4.6	0.000000000000
+gsl_ran_gumbel1_pdf	-3	2.9	4.6	0.000000000000
+gsl_ran_gumbel1_pdf	-2.6	2.9	4.6	0.000000000000
+gsl_ran_gumbel1_pdf	-2.2	2.9	4.6	0.000000000000
+gsl_ran_gumbel1_pdf	-1.8	2.9	4.6	0.000000000000
+gsl_ran_gumbel1_pdf	-1.4	2.9	4.6	0.000000000000
+gsl_ran_gumbel1_pdf	-1	2.9	4.6	0.000000000000
+gsl_ran_gumbel1_pdf	-0.6	2.9	4.6	0.000000000315
+gsl_ran_gumbel1_pdf	-0.2	2.9	4.6	0.006441397618
+gsl_ran_gumbel1_pdf	0.2	2.9	4.6	0.568493473702
+gsl_ran_gumbel1_pdf	0.6	2.9	4.6	1.044327562726
+gsl_ran_gumbel1_pdf	1	2.9	4.6	0.569874127338
+gsl_ran_gumbel1_pdf	1.4	2.9	4.6	0.212549910035
+gsl_ran_gumbel1_pdf	1.8	2.9	4.6	0.070361666540
+gsl_ran_gumbel1_pdf	2.2	2.9	4.6	0.022437300029
+gsl_ran_gumbel1_pdf	2.6	2.9	4.6	0.007071537259
+gsl_ran_gumbel1_pdf	3	2.9	4.6	0.002220552469
+gsl_ran_gumbel1_pdf	3.4	2.9	4.6	0.000696478814
+gsl_ran_gumbel1_pdf	3.8	2.9	4.6	0.000218372494
+gsl_ran_gumbel1_pdf	4.2	2.9	4.6	0.000068460298
+gsl_ran_gumbel1_pdf	4.6	2.9	4.6	0.000021461705
+gsl_cdf_gumbel1_P	-5	2.9	4.6	0.000000000000
+gsl_cdf_gumbel1_Q	-5	2.9	4.6	1.000000000000
+gsl_cdf_gumbel1_P	-4.6	2.9	4.6	0.000000000000
+gsl_cdf_gumbel1_Q	-4.6	2.9	4.6	1.000000000000
+gsl_cdf_gumbel1_P	-4.2	2.9	4.6	0.000000000000
+gsl_cdf_gumbel1_Q	-4.2	2.9	4.6	1.000000000000
+gsl_cdf_gumbel1_P	-3.8	2.9	4.6	0.000000000000
+gsl_cdf_gumbel1_Q	-3.8	2.9	4.6	1.000000000000
+gsl_cdf_gumbel1_P	-3.4	2.9	4.6	0.000000000000
+gsl_cdf_gumbel1_Q	-3.4	2.9	4.6	1.000000000000
+gsl_cdf_gumbel1_P	-3	2.9	4.6	0.000000000000
+gsl_cdf_gumbel1_Q	-3	2.9	4.6	1.000000000000
+gsl_cdf_gumbel1_P	-2.6	2.9	4.6	0.000000000000
+gsl_cdf_gumbel1_Q	-2.6	2.9	4.6	1.000000000000
+gsl_cdf_gumbel1_P	-2.2	2.9	4.6	0.000000000000
+gsl_cdf_gumbel1_Q	-2.2	2.9	4.6	1.000000000000
+gsl_cdf_gumbel1_P	-1.8	2.9	4.6	0.000000000000
+gsl_cdf_gumbel1_Q	-1.8	2.9	4.6	1.000000000000
+gsl_cdf_gumbel1_P	-1.4	2.9	4.6	0.000000000000
+gsl_cdf_gumbel1_Q	-1.4	2.9	4.6	1.000000000000
+gsl_cdf_gumbel1_P	-1	2.9	4.6	0.000000000000
+gsl_cdf_gumbel1_Q	-1	2.9	4.6	1.000000000000
+gsl_cdf_gumbel1_P	-0.6	2.9	4.6	0.000000000004
+gsl_cdf_gumbel1_Q	-0.6	2.9	4.6	0.999999999996
+gsl_cdf_gumbel1_P	-0.2	2.9	4.6	0.000270354423
+gsl_cdf_gumbel1_Q	-0.2	2.9	4.6	0.999729645577
+gsl_cdf_gumbel1_P	0.2	2.9	4.6	0.076113282733
+gsl_cdf_gumbel1_Q	0.2	2.9	4.6	0.923886717267
+gsl_cdf_gumbel1_P	0.6	2.9	4.6	0.446018948322
+gsl_cdf_gumbel1_Q	0.6	2.9	4.6	0.553981051678
+gsl_cdf_gumbel1_P	1	2.9	4.6	0.776384949964
+gsl_cdf_gumbel1_Q	1	2.9	4.6	0.223615050036
+gsl_cdf_gumbel1_P	1.4	2.9	4.6	0.923720734945
+gsl_cdf_gumbel1_Q	1.4	2.9	4.6	0.076279265055
+gsl_cdf_gumbel1_P	1.8	2.9	4.6	0.975433087811
+gsl_cdf_gumbel1_Q	1.8	2.9	4.6	0.024566912189
+gsl_cdf_gumbel1_P	2.2	2.9	4.6	0.992232756550
+gsl_cdf_gumbel1_Q	2.2	2.9	4.6	0.007767243450
+gsl_cdf_gumbel1_P	2.6	2.9	4.6	0.997558556124
+gsl_cdf_gumbel1_Q	2.6	2.9	4.6	0.002441443876
+gsl_cdf_gumbel1_P	3	2.9	4.6	0.999233998798
+gsl_cdf_gumbel1_Q	3	2.9	4.6	0.000766001202
+gsl_cdf_gumbel1_P	3.4	2.9	4.6	0.999759806043
+gsl_cdf_gumbel1_Q	3.4	2.9	4.6	0.000240193957
+gsl_cdf_gumbel1_P	3.8	2.9	4.6	0.999924696305
+gsl_cdf_gumbel1_Q	3.8	2.9	4.6	0.000075303695
+gsl_cdf_gumbel1_P	4.2	2.9	4.6	0.999976392722
+gsl_cdf_gumbel1_Q	4.2	2.9	4.6	0.000023607278
+gsl_cdf_gumbel1_P	4.6	2.9	4.6	0.999992599385
+gsl_cdf_gumbel1_Q	4.6	2.9	4.6	0.000007400615
+gsl_cdf_gumbel1_Pinv	0.1	2.9	4.6	0.238628916637
+gsl_cdf_gumbel1_Qinv	0.1	2.9	4.6	1.302215045106
+gsl_cdf_gumbel1_Pinv	0.2	2.9	4.6	0.362128037299
+gsl_cdf_gumbel1_Qinv	0.2	2.9	4.6	1.043446996640
+gsl_cdf_gumbel1_Pinv	0.3	2.9	4.6	0.462217084356
+gsl_cdf_gumbel1_Qinv	0.3	2.9	4.6	0.881719564363
+gsl_cdf_gumbel1_Pinv	0.4	2.9	4.6	0.556371681133
+gsl_cdf_gumbel1_Qinv	0.4	2.9	4.6	0.757856308823
+gsl_cdf_gumbel1_Pinv	0.5	2.9	4.6	0.652610077268
+gsl_cdf_gumbel1_Qinv	0.5	2.9	4.6	0.652610077268
+gsl_cdf_gumbel1_Pinv	0.6	2.9	4.6	0.757856308823
+gsl_cdf_gumbel1_Qinv	0.6	2.9	4.6	0.556371681133
+gsl_cdf_gumbel1_Pinv	0.7	2.9	4.6	0.881719564363
+gsl_cdf_gumbel1_Qinv	0.7	2.9	4.6	0.462217084356
+gsl_cdf_gumbel1_Pinv	0.8	2.9	4.6	1.043446996640
+gsl_cdf_gumbel1_Qinv	0.8	2.9	4.6	0.362128037299
+gsl_cdf_gumbel1_Pinv	0.9	2.9	4.6	1.302215045106
+gsl_cdf_gumbel1_Qinv	0.9	2.9	4.6	0.238628916637
+gsl_ran_gumbel1	2.9	4.6	0.456385212158
+gsl_ran_gumbel1	2.9	4.6	1.349877805300
+gsl_ran_gumbel1	2.9	4.6	0.912265039254
+gsl_ran_gumbel1	2.9	4.6	1.646194929582
+gsl_ran_gumbel1	2.9	4.6	0.532615794051
+gsl_ran_gumbel1	2.9	4.6	1.119133830986
+gsl_ran_gumbel1	2.9	4.6	0.812129312115
+gsl_ran_gumbel1	2.9	4.6	0.729153100152
+gsl_ran_gumbel1	2.9	4.6	0.172581809866
+gsl_ran_gumbel1	2.9	4.6	0.055796701768
+gsl_ran_logarithmic_pdf	0	.6	0.000000000000
+gsl_ran_logarithmic_pdf	1	.6	0.654814000762
+gsl_ran_logarithmic_pdf	2	.6	0.196444200229
+gsl_ran_logarithmic_pdf	3	.6	0.078577680091
+gsl_ran_logarithmic_pdf	4	.6	0.035359956041
+gsl_ran_logarithmic_pdf	5	.6	0.016972778900
+gsl_ran_logarithmic_pdf	6	.6	0.008486389450
+gsl_ran_logarithmic_pdf	7	.6	0.004364428860
+gsl_ran_logarithmic_pdf	8	.6	0.002291325151
+gsl_ran_logarithmic_pdf	9	.6	0.001222040081
+gsl_ran_logarithmic_pdf	10	.6	0.000659901644
+gsl_ran_logarithmic	.6	1
+gsl_ran_logarithmic	.6	4
+gsl_ran_logarithmic	.6	1
+gsl_ran_logarithmic	.6	1
+gsl_ran_logarithmic	.6	2
+gsl_ran_logarithmic	.6	1
+gsl_ran_logarithmic	.6	2
+gsl_ran_logarithmic	.6	1
+gsl_ran_logarithmic	.6	1
+gsl_ran_logarithmic	.6	1
+gsl_ran_cauchy_pdf	-5	3.5	0.029908311454
+gsl_ran_cauchy_pdf	-4.6	3.5	0.033345842611
+gsl_ran_cauchy_pdf	-4.2	3.5	0.037272820396
+gsl_ran_cauchy_pdf	-3.8	3.5	0.041741648619
+gsl_ran_cauchy_pdf	-3.4	3.5	0.046790617457
+gsl_ran_cauchy_pdf	-3	3.5	0.052427510666
+gsl_ran_cauchy_pdf	-2.6	3.5	0.058605186830
+gsl_ran_cauchy_pdf	-2.2	3.5	0.065189268674
+gsl_ran_cauchy_pdf	-1.8	3.5	0.071922827737
+gsl_ran_cauchy_pdf	-1.4	3.5	0.078401449799
+gsl_ran_cauchy_pdf	-1	3.5	0.084081856728
+gsl_ran_cauchy_pdf	-0.6	3.5	0.088349294341
+gsl_ran_cauchy_pdf	-0.2	3.5	0.090649682803
+gsl_ran_cauchy_pdf	0.2	3.5	0.090649682803
+gsl_ran_cauchy_pdf	0.6	3.5	0.088349294341
+gsl_ran_cauchy_pdf	1	3.5	0.084081856728
+gsl_ran_cauchy_pdf	1.4	3.5	0.078401449799
+gsl_ran_cauchy_pdf	1.8	3.5	0.071922827737
+gsl_ran_cauchy_pdf	2.2	3.5	0.065189268674
+gsl_ran_cauchy_pdf	2.6	3.5	0.058605186830
+gsl_ran_cauchy_pdf	3	3.5	0.052427510666
+gsl_ran_cauchy_pdf	3.4	3.5	0.046790617457
+gsl_ran_cauchy_pdf	3.8	3.5	0.041741648619
+gsl_ran_cauchy_pdf	4.2	3.5	0.037272820396
+gsl_ran_cauchy_pdf	4.6	3.5	0.033345842611
+gsl_cdf_cauchy_P	-5	3.5	0.194400112214
+gsl_cdf_cauchy_Q	-5	3.5	0.805599887786
+gsl_cdf_cauchy_P	-4.6	3.5	0.207035566117
+gsl_cdf_cauchy_Q	-4.6	3.5	0.792964433883
+gsl_cdf_cauchy_P	-4.2	3.5	0.221142061624
+gsl_cdf_cauchy_Q	-4.2	3.5	0.778857938376
+gsl_cdf_cauchy_P	-3.8	3.5	0.236926128522
+gsl_cdf_cauchy_Q	-3.8	3.5	0.763073871478
+gsl_cdf_cauchy_P	-3.4	3.5	0.254612863813
+gsl_cdf_cauchy_Q	-3.4	3.5	0.745387136187
+gsl_cdf_cauchy_P	-3	3.5	0.274437251972
+gsl_cdf_cauchy_Q	-3	3.5	0.725562748028
+gsl_cdf_cauchy_P	-2.6	3.5	0.296627362152
+gsl_cdf_cauchy_Q	-2.6	3.5	0.703372637848
+gsl_cdf_cauchy_P	-2.2	3.5	0.321376138104
+gsl_cdf_cauchy_Q	-2.2	3.5	0.678623861896
+gsl_cdf_cauchy_P	-1.8	3.5	0.348799380237
+gsl_cdf_cauchy_Q	-1.8	3.5	0.651200619763
+gsl_cdf_cauchy_P	-1.4	3.5	0.378881058409
+gsl_cdf_cauchy_Q	-1.4	3.5	0.621118941591
+gsl_cdf_cauchy_P	-1	3.5	0.411414467217
+gsl_cdf_cauchy_Q	-1	3.5	0.588585532783
+gsl_cdf_cauchy_P	-0.6	3.5	0.445957896937
+gsl_cdf_cauchy_Q	-0.6	3.5	0.554042103063
+gsl_cdf_cauchy_P	-0.2	3.5	0.481830622649
+gsl_cdf_cauchy_Q	-0.2	3.5	0.518169377351
+gsl_cdf_cauchy_P	0.2	3.5	0.518169377351
+gsl_cdf_cauchy_Q	0.2	3.5	0.481830622649
+gsl_cdf_cauchy_P	0.6	3.5	0.554042103063
+gsl_cdf_cauchy_Q	0.6	3.5	0.445957896937
+gsl_cdf_cauchy_P	1	3.5	0.588585532783
+gsl_cdf_cauchy_Q	1	3.5	0.411414467217
+gsl_cdf_cauchy_P	1.4	3.5	0.621118941591
+gsl_cdf_cauchy_Q	1.4	3.5	0.378881058409
+gsl_cdf_cauchy_P	1.8	3.5	0.651200619763
+gsl_cdf_cauchy_Q	1.8	3.5	0.348799380237
+gsl_cdf_cauchy_P	2.2	3.5	0.678623861896
+gsl_cdf_cauchy_Q	2.2	3.5	0.321376138104
+gsl_cdf_cauchy_P	2.6	3.5	0.703372637848
+gsl_cdf_cauchy_Q	2.6	3.5	0.296627362152
+gsl_cdf_cauchy_P	3	3.5	0.725562748028
+gsl_cdf_cauchy_Q	3	3.5	0.274437251972
+gsl_cdf_cauchy_P	3.4	3.5	0.745387136187
+gsl_cdf_cauchy_Q	3.4	3.5	0.254612863813
+gsl_cdf_cauchy_P	3.8	3.5	0.763073871478
+gsl_cdf_cauchy_Q	3.8	3.5	0.236926128522
+gsl_cdf_cauchy_P	4.2	3.5	0.778857938376
+gsl_cdf_cauchy_Q	4.2	3.5	0.221142061624
+gsl_cdf_cauchy_P	4.6	3.5	0.792964433883
+gsl_cdf_cauchy_Q	4.6	3.5	0.207035566117
+gsl_cdf_cauchy_Pinv	0.1	3.5	-10.771892380113
+gsl_cdf_cauchy_Qinv	0.1	3.5	10.771892380113
+gsl_cdf_cauchy_Pinv	0.2	3.5	-4.817336721649
+gsl_cdf_cauchy_Qinv	0.2	3.5	4.817336721649
+gsl_cdf_cauchy_Pinv	0.3	3.5	-2.542898848019
+gsl_cdf_cauchy_Qinv	0.3	3.5	2.542898848019
+gsl_cdf_cauchy_Pinv	0.4	3.5	-1.137218936815
+gsl_cdf_cauchy_Qinv	0.4	3.5	1.137218936815
+gsl_cdf_cauchy_Pinv	0.5	3.5	-0.000000000000
+gsl_cdf_cauchy_Qinv	0.5	3.5	0.000000000000
+gsl_cdf_cauchy_Pinv	0.6	3.5	1.137218936815
+gsl_cdf_cauchy_Qinv	0.6	3.5	-1.137218936815
+gsl_cdf_cauchy_Pinv	0.7	3.5	2.542898848019
+gsl_cdf_cauchy_Qinv	0.7	3.5	-2.542898848019
+gsl_cdf_cauchy_Pinv	0.8	3.5	4.817336721649
+gsl_cdf_cauchy_Qinv	0.8	3.5	-4.817336721649
+gsl_cdf_cauchy_Pinv	0.9	3.5	10.771892380113
+gsl_cdf_cauchy_Qinv	0.9	3.5	-10.771892380113
+gsl_ran_cauchy	3.5	17.545686438784
+gsl_ran_cauchy	3.5	29.489954200269
+gsl_ran_cauchy	3.5	-29.625759959956
+gsl_ran_cauchy	3.5	-2.351454308994
+gsl_ran_cauchy	3.5	1.852256976994
+gsl_ran_cauchy	3.5	4.128216091374
+gsl_ran_cauchy	3.5	4.675845207501
+gsl_ran_cauchy	3.5	0.425650185086
+gsl_ran_cauchy	3.5	1.412681425096
+gsl_ran_cauchy	3.5	-12.385370643739
+gsl_ran_poisson_pdf	0	15.0	0.000000305902
+gsl_ran_poisson_pdf	1	15.0	0.000004588535
+gsl_ran_poisson_pdf	2	15.0	0.000034414011
+gsl_ran_poisson_pdf	3	15.0	0.000172070055
+gsl_ran_poisson_pdf	4	15.0	0.000645262707
+gsl_ran_poisson_pdf	5	15.0	0.001935788122
+gsl_ran_poisson_pdf	6	15.0	0.004839470305
+gsl_ran_poisson_pdf	7	15.0	0.010370293510
+gsl_ran_poisson_pdf	8	15.0	0.019444300332
+gsl_ran_poisson_pdf	9	15.0	0.032407167220
+gsl_ran_poisson_pdf	10	15.0	0.048610750830
+gsl_cdf_poisson_P	0	15.0	0.000000305902
+gsl_cdf_poisson_Q	0	15.0	0.999999694098
+gsl_cdf_poisson_P	1	15.0	0.000004894437
+gsl_cdf_poisson_Q	1	15.0	0.999995105563
+gsl_cdf_poisson_P	2	15.0	0.000039308448
+gsl_cdf_poisson_Q	2	15.0	0.999960691552
+gsl_cdf_poisson_P	3	15.0	0.000211378503
+gsl_cdf_poisson_Q	3	15.0	0.999788621497
+gsl_cdf_poisson_P	4	15.0	0.000856641211
+gsl_cdf_poisson_Q	4	15.0	0.999143358789
+gsl_cdf_poisson_P	5	15.0	0.002792429333
+gsl_cdf_poisson_Q	5	15.0	0.997207570667
+gsl_cdf_poisson_P	6	15.0	0.007631899638
+gsl_cdf_poisson_Q	6	15.0	0.992368100362
+gsl_cdf_poisson_P	7	15.0	0.018002193148
+gsl_cdf_poisson_Q	7	15.0	0.981997806852
+gsl_cdf_poisson_P	8	15.0	0.037446493480
+gsl_cdf_poisson_Q	8	15.0	0.962553506520
+gsl_cdf_poisson_P	9	15.0	0.069853660699
+gsl_cdf_poisson_Q	9	15.0	0.930146339301
+gsl_cdf_poisson_P	10	15.0	0.118464411529
+gsl_cdf_poisson_Q	10	15.0	0.881535588471
+gsl_ran_poisson	15.0	11
+gsl_ran_poisson	15.0	20
+gsl_ran_poisson	15.0	12
+gsl_ran_poisson	15.0	17
+gsl_ran_poisson	15.0	9
+gsl_ran_poisson	15.0	18
+gsl_ran_poisson	15.0	18
+gsl_ran_poisson	15.0	12
+gsl_ran_poisson	15.0	13
+gsl_ran_poisson	15.0	10
+gsl_ran_pascal_pdf	0	.5	5	0.031250000000
+gsl_ran_pascal_pdf	1	.5	5	0.078125000000
+gsl_ran_pascal_pdf	2	.5	5	0.117187500000
+gsl_ran_pascal_pdf	3	.5	5	0.136718750000
+gsl_ran_pascal_pdf	4	.5	5	0.136718750000
+gsl_ran_pascal_pdf	5	.5	5	0.123046875000
+gsl_ran_pascal_pdf	6	.5	5	0.102539062500
+gsl_ran_pascal_pdf	7	.5	5	0.080566406250
+gsl_ran_pascal_pdf	8	.5	5	0.060424804687
+gsl_ran_pascal_pdf	9	.5	5	0.043640136719
+gsl_ran_pascal_pdf	10	.5	5	0.030548095703
+gsl_cdf_pascal_P	0	.5	5	0.031250000000
+gsl_cdf_pascal_Q	0	.5	5	0.968750000000
+gsl_cdf_pascal_P	1	.5	5	0.109375000000
+gsl_cdf_pascal_Q	1	.5	5	0.890625000000
+gsl_cdf_pascal_P	2	.5	5	0.226562500000
+gsl_cdf_pascal_Q	2	.5	5	0.773437500000
+gsl_cdf_pascal_P	3	.5	5	0.363281250000
+gsl_cdf_pascal_Q	3	.5	5	0.636718750000
+gsl_cdf_pascal_P	4	.5	5	0.500000000000
+gsl_cdf_pascal_Q	4	.5	5	0.500000000000
+gsl_cdf_pascal_P	5	.5	5	0.623046875000
+gsl_cdf_pascal_Q	5	.5	5	0.376953125000
+gsl_cdf_pascal_P	6	.5	5	0.725585937500
+gsl_cdf_pascal_Q	6	.5	5	0.274414062500
+gsl_cdf_pascal_P	7	.5	5	0.806152343750
+gsl_cdf_pascal_Q	7	.5	5	0.193847656250
+gsl_cdf_pascal_P	8	.5	5	0.866577148438
+gsl_cdf_pascal_Q	8	.5	5	0.133422851562
+gsl_cdf_pascal_P	9	.5	5	0.910217285156
+gsl_cdf_pascal_Q	9	.5	5	0.089782714844
+gsl_cdf_pascal_P	10	.5	5	0.940765380859
+gsl_cdf_pascal_Q	10	.5	5	0.059234619141
+gsl_ran_pascal	.5	5	5
+gsl_ran_pascal	.5	5	2
+gsl_ran_pascal	.5	5	1
+gsl_ran_pascal	.5	5	2
+gsl_ran_pascal	.5	5	2
+gsl_ran_pascal	.5	5	1
+gsl_ran_pascal	.5	5	14
+gsl_ran_pascal	.5	5	1
+gsl_ran_pascal	.5	5	6
+gsl_ran_pascal	.5	5	5
+gsl_ran_gaussian_pdf	-5	3.4	0.039794409407
+gsl_ran_gaussian_pdf	-4.6	3.4	0.046984436128
+gsl_ran_gaussian_pdf	-4.2	3.4	0.054711041006
+gsl_ran_gaussian_pdf	-3.8	3.4	0.062832586996
+gsl_ran_gaussian_pdf	-3.4	3.4	0.071167860153
+gsl_ran_gaussian_pdf	-3	3.4	0.079500869424
+gsl_ran_gaussian_pdf	-2.6	3.4	0.087588855620
+gsl_ran_gaussian_pdf	-2.2	3.4	0.095173234647
+gsl_ran_gaussian_pdf	-1.8	3.4	0.101992869691
+gsl_ran_gaussian_pdf	-1.4	3.4	0.107798767764
+gsl_ran_gaussian_pdf	-1	3.4	0.112369069702
+gsl_ran_gaussian_pdf	-0.6	3.4	0.115523084974
+gsl_ran_gaussian_pdf	-0.2	3.4	0.117133136932
+gsl_ran_gaussian_pdf	0.2	3.4	0.117133136932
+gsl_ran_gaussian_pdf	0.6	3.4	0.115523084974
+gsl_ran_gaussian_pdf	1	3.4	0.112369069702
+gsl_ran_gaussian_pdf	1.4	3.4	0.107798767764
+gsl_ran_gaussian_pdf	1.8	3.4	0.101992869691
+gsl_ran_gaussian_pdf	2.2	3.4	0.095173234647
+gsl_ran_gaussian_pdf	2.6	3.4	0.087588855620
+gsl_ran_gaussian_pdf	3	3.4	0.079500869424
+gsl_ran_gaussian_pdf	3.4	3.4	0.071167860153
+gsl_ran_gaussian_pdf	3.8	3.4	0.062832586996
+gsl_ran_gaussian_pdf	4.2	3.4	0.054711041006
+gsl_ran_gaussian_pdf	4.6	3.4	0.046984436128
+gsl_cdf_gaussian_P	-5	3.4	0.070701253743
+gsl_cdf_gaussian_Q	-5	3.4	0.929298746257
+gsl_cdf_gaussian_P	-4.6	3.4	0.088037211703
+gsl_cdf_gaussian_Q	-4.6	3.4	0.911962788297
+gsl_cdf_gaussian_P	-4.2	3.4	0.108360531090
+gsl_cdf_gaussian_Q	-4.2	3.4	0.891639468910
+gsl_cdf_gaussian_P	-3.8	3.4	0.131858880917
+gsl_cdf_gaussian_Q	-3.8	3.4	0.868141119083
+gsl_cdf_gaussian_P	-3.4	3.4	0.158655253931
+gsl_cdf_gaussian_Q	-3.4	3.4	0.841344746069
+gsl_cdf_gaussian_P	-3	3.4	0.188792987737
+gsl_cdf_gaussian_Q	-3	3.4	0.811207012263
+gsl_cdf_gaussian_P	-2.6	3.4	0.222223351317
+gsl_cdf_gaussian_Q	-2.6	3.4	0.777776648683
+gsl_cdf_gaussian_P	-2.2	3.4	0.258796936729
+gsl_cdf_gaussian_Q	-2.2	3.4	0.741203063271
+gsl_cdf_gaussian_P	-1.8	3.4	0.298259919363
+gsl_cdf_gaussian_Q	-1.8	3.4	0.701740080637
+gsl_cdf_gaussian_P	-1.4	3.4	0.340255946451
+gsl_cdf_gaussian_Q	-1.4	3.4	0.659744053549
+gsl_cdf_gaussian_P	-1	3.4	0.384334003280
+gsl_cdf_gaussian_Q	-1	3.4	0.615665996720
+gsl_cdf_gaussian_P	-0.6	3.4	0.429962126619
+gsl_cdf_gaussian_Q	-0.6	3.4	0.570037873381
+gsl_cdf_gaussian_P	-0.2	3.4	0.476546333574
+gsl_cdf_gaussian_Q	-0.2	3.4	0.523453666426
+gsl_cdf_gaussian_P	0.2	3.4	0.523453666426
+gsl_cdf_gaussian_Q	0.2	3.4	0.476546333574
+gsl_cdf_gaussian_P	0.6	3.4	0.570037873381
+gsl_cdf_gaussian_Q	0.6	3.4	0.429962126619
+gsl_cdf_gaussian_P	1	3.4	0.615665996720
+gsl_cdf_gaussian_Q	1	3.4	0.384334003280
+gsl_cdf_gaussian_P	1.4	3.4	0.659744053549
+gsl_cdf_gaussian_Q	1.4	3.4	0.340255946451
+gsl_cdf_gaussian_P	1.8	3.4	0.701740080637
+gsl_cdf_gaussian_Q	1.8	3.4	0.298259919363
+gsl_cdf_gaussian_P	2.2	3.4	0.741203063271
+gsl_cdf_gaussian_Q	2.2	3.4	0.258796936729
+gsl_cdf_gaussian_P	2.6	3.4	0.777776648683
+gsl_cdf_gaussian_Q	2.6	3.4	0.222223351317
+gsl_cdf_gaussian_P	3	3.4	0.811207012263
+gsl_cdf_gaussian_Q	3	3.4	0.188792987737
+gsl_cdf_gaussian_P	3.4	3.4	0.841344746069
+gsl_cdf_gaussian_Q	3.4	3.4	0.158655253931
+gsl_cdf_gaussian_P	3.8	3.4	0.868141119083
+gsl_cdf_gaussian_Q	3.8	3.4	0.131858880917
+gsl_cdf_gaussian_P	4.2	3.4	0.891639468910
+gsl_cdf_gaussian_Q	4.2	3.4	0.108360531090
+gsl_cdf_gaussian_P	4.6	3.4	0.911962788297
+gsl_cdf_gaussian_Q	4.6	3.4	0.088037211703
+gsl_cdf_gaussian_Pinv	0.1	3.4	-4.357275322852
+gsl_cdf_gaussian_Qinv	0.1	3.4	4.357275322852
+gsl_cdf_gaussian_Pinv	0.2	3.4	-2.861512194148
+gsl_cdf_gaussian_Qinv	0.2	3.4	2.861512194148
+gsl_cdf_gaussian_Pinv	0.3	3.4	-1.782961743207
+gsl_cdf_gaussian_Qinv	0.3	3.4	1.782961743207
+gsl_cdf_gaussian_Pinv	0.4	3.4	-0.861380150662
+gsl_cdf_gaussian_Qinv	0.4	3.4	0.861380150662
+gsl_cdf_gaussian_Pinv	0.5	3.4	0.000000000000
+gsl_cdf_gaussian_Qinv	0.5	3.4	-0.000000000000
+gsl_cdf_gaussian_Pinv	0.6	3.4	0.861380150662
+gsl_cdf_gaussian_Qinv	0.6	3.4	-0.861380150662
+gsl_cdf_gaussian_Pinv	0.7	3.4	1.782961743207
+gsl_cdf_gaussian_Qinv	0.7	3.4	-1.782961743207
+gsl_cdf_gaussian_Pinv	0.8	3.4	2.861512194148
+gsl_cdf_gaussian_Qinv	0.8	3.4	-2.861512194148
+gsl_cdf_gaussian_Pinv	0.9	3.4	4.357275322852
+gsl_cdf_gaussian_Qinv	0.9	3.4	-4.357275322852
+gsl_ran_gaussian	3.4	-2.924209129222
+gsl_ran_gaussian	3.4	-3.179988491224
+gsl_ran_gaussian	3.4	-0.263350238482
+gsl_ran_gaussian	3.4	-1.477490231988
+gsl_ran_gaussian	3.4	-3.085088208242
+gsl_ran_gaussian	3.4	0.635791769092
+gsl_ran_gaussian	3.4	-3.959912168531
+gsl_ran_gaussian	3.4	2.846265665328
+gsl_ran_gaussian	3.4	2.982418925183
+gsl_ran_gaussian	3.4	-1.156285422445
+gsl_ran_weibull_pdf	-5	4.32	1.80	0.000000000000
+gsl_ran_weibull_pdf	-4.6	4.32	1.80	0.000000000000
+gsl_ran_weibull_pdf	-4.2	4.32	1.80	0.000000000000
+gsl_ran_weibull_pdf	-3.8	4.32	1.80	0.000000000000
+gsl_ran_weibull_pdf	-3.4	4.32	1.80	0.000000000000
+gsl_ran_weibull_pdf	-3	4.32	1.80	0.000000000000
+gsl_ran_weibull_pdf	-2.6	4.32	1.80	0.000000000000
+gsl_ran_weibull_pdf	-2.2	4.32	1.80	0.000000000000
+gsl_ran_weibull_pdf	-1.8	4.32	1.80	0.000000000000
+gsl_ran_weibull_pdf	-1.4	4.32	1.80	0.000000000000
+gsl_ran_weibull_pdf	-1	4.32	1.80	0.000000000000
+gsl_ran_weibull_pdf	-0.6	4.32	1.80	0.000000000000
+gsl_ran_weibull_pdf	-0.2	4.32	1.80	0.000000000000
+gsl_ran_weibull_pdf	0.2	4.32	1.80	0.035522605284
+gsl_ran_weibull_pdf	0.6	4.32	1.80	0.083462132734
+gsl_ran_weibull_pdf	1	4.32	1.80	0.120287104697
+gsl_ran_weibull_pdf	1.4	4.32	1.80	0.148307696673
+gsl_ran_weibull_pdf	1.8	4.32	1.80	0.168187357852
+gsl_ran_weibull_pdf	2.2	4.32	1.80	0.180481848940
+gsl_ran_weibull_pdf	2.6	4.32	1.80	0.185888982162
+gsl_ran_weibull_pdf	3	4.32	1.80	0.185273795479
+gsl_ran_weibull_pdf	3.4	4.32	1.80	0.179627490561
+gsl_ran_weibull_pdf	3.8	4.32	1.80	0.170005490320
+gsl_ran_weibull_pdf	4.2	4.32	1.80	0.157463430974
+gsl_ran_weibull_pdf	4.6	4.32	1.80	0.143000585853
+gsl_cdf_weibull_P	-5	4.32	1.80	nan
+gsl_cdf_weibull_Q	-5	4.32	1.80	nan
+gsl_cdf_weibull_P	-4.6	4.32	1.80	nan
+gsl_cdf_weibull_Q	-4.6	4.32	1.80	nan
+gsl_cdf_weibull_P	-4.2	4.32	1.80	nan
+gsl_cdf_weibull_Q	-4.2	4.32	1.80	nan
+gsl_cdf_weibull_P	-3.8	4.32	1.80	nan
+gsl_cdf_weibull_Q	-3.8	4.32	1.80	nan
+gsl_cdf_weibull_P	-3.4	4.32	1.80	nan
+gsl_cdf_weibull_Q	-3.4	4.32	1.80	nan
+gsl_cdf_weibull_P	-3	4.32	1.80	nan
+gsl_cdf_weibull_Q	-3	4.32	1.80	nan
+gsl_cdf_weibull_P	-2.6	4.32	1.80	nan
+gsl_cdf_weibull_Q	-2.6	4.32	1.80	nan
+gsl_cdf_weibull_P	-2.2	4.32	1.80	nan
+gsl_cdf_weibull_Q	-2.2	4.32	1.80	nan
+gsl_cdf_weibull_P	-1.8	4.32	1.80	nan
+gsl_cdf_weibull_Q	-1.8	4.32	1.80	nan
+gsl_cdf_weibull_P	-1.4	4.32	1.80	nan
+gsl_cdf_weibull_Q	-1.4	4.32	1.80	nan
+gsl_cdf_weibull_P	-1	4.32	1.80	nan
+gsl_cdf_weibull_Q	-1	4.32	1.80	nan
+gsl_cdf_weibull_P	-0.6	4.32	1.80	nan
+gsl_cdf_weibull_Q	-0.6	4.32	1.80	nan
+gsl_cdf_weibull_P	-0.2	4.32	1.80	nan
+gsl_cdf_weibull_Q	-0.2	4.32	1.80	nan
+gsl_cdf_weibull_P	0.2	4.32	1.80	0.003954786641
+gsl_cdf_weibull_Q	0.2	4.32	1.80	0.996045213359
+gsl_cdf_weibull_P	0.6	4.32	1.80	0.028222773868
+gsl_cdf_weibull_Q	0.6	4.32	1.80	0.971777226132
+gsl_cdf_weibull_P	1	4.32	1.80	0.069283719752
+gsl_cdf_weibull_Q	1	4.32	1.80	0.930716280248
+gsl_cdf_weibull_P	1.4	4.32	1.80	0.123282852975
+gsl_cdf_weibull_Q	1.4	4.32	1.80	0.876717147025
+gsl_cdf_weibull_P	1.8	4.32	1.80	0.186844538723
+gsl_cdf_weibull_Q	1.8	4.32	1.80	0.813155461277
+gsl_cdf_weibull_P	2.2	4.32	1.80	0.256820663502
+gsl_cdf_weibull_Q	2.2	4.32	1.80	0.743179336498
+gsl_cdf_weibull_P	2.6	4.32	1.80	0.330310930995
+gsl_cdf_weibull_Q	2.6	4.32	1.80	0.669689069005
+gsl_cdf_weibull_P	3	4.32	1.80	0.404728303090
+gsl_cdf_weibull_Q	3	4.32	1.80	0.595271696910
+gsl_cdf_weibull_P	3.4	4.32	1.80	0.477858865733
+gsl_cdf_weibull_Q	3.4	4.32	1.80	0.522141134267
+gsl_cdf_weibull_P	3.8	4.32	1.80	0.547900206158
+gsl_cdf_weibull_Q	3.8	4.32	1.80	0.452099793842
+gsl_cdf_weibull_P	4.2	4.32	1.80	0.613474174014
+gsl_cdf_weibull_Q	4.2	4.32	1.80	0.386525825986
+gsl_cdf_weibull_P	4.6	4.32	1.80	0.673615301144
+gsl_cdf_weibull_Q	4.6	4.32	1.80	0.326384698856
+gsl_cdf_weibull_Pinv	0.1	4.32	1.80	1.237448169717
+gsl_cdf_weibull_Qinv	0.1	4.32	1.80	6.866172103195
+gsl_cdf_weibull_Pinv	0.2	4.32	1.80	1.877526857746
+gsl_cdf_weibull_Qinv	0.2	4.32	1.80	5.627334899545
+gsl_cdf_weibull_Pinv	0.3	4.32	1.80	2.436387166889
+gsl_cdf_weibull_Qinv	0.3	4.32	1.80	4.789286189811
+gsl_cdf_weibull_Pinv	0.4	4.32	1.80	2.974493403568
+gsl_cdf_weibull_Qinv	0.4	4.32	1.80	4.115201756167
+gsl_cdf_weibull_Pinv	0.5	4.32	1.80	3.524142389991
+gsl_cdf_weibull_Qinv	0.5	4.32	1.80	3.524142389991
+gsl_cdf_weibull_Pinv	0.6	4.32	1.80	4.115201756167
+gsl_cdf_weibull_Qinv	0.6	4.32	1.80	2.974493403568
+gsl_cdf_weibull_Pinv	0.7	4.32	1.80	4.789286189811
+gsl_cdf_weibull_Qinv	0.7	4.32	1.80	2.436387166889
+gsl_cdf_weibull_Pinv	0.8	4.32	1.80	5.627334899545
+gsl_cdf_weibull_Qinv	0.8	4.32	1.80	1.877526857746
+gsl_cdf_weibull_Pinv	0.9	4.32	1.80	6.866172103195
+gsl_cdf_weibull_Qinv	0.9	4.32	1.80	1.237448169717
+gsl_ran_weibull	4.32	1.80	3.929916617567
+gsl_ran_weibull	4.32	1.80	0.143844078272
+gsl_ran_weibull	4.32	1.80	4.359083372641
+gsl_ran_weibull	4.32	1.80	5.516317012737
+gsl_ran_weibull	4.32	1.80	5.692651574239
+gsl_ran_weibull	4.32	1.80	2.635787498074
+gsl_ran_weibull	4.32	1.80	2.922152937386
+gsl_ran_weibull	4.32	1.80	1.762667945971
+gsl_ran_weibull	4.32	1.80	3.317201288768
+gsl_ran_weibull	4.32	1.80	4.257372922104
+gsl_ran_rayleigh_pdf	-5	2.3	0.000000000000
+gsl_ran_rayleigh_pdf	-4.6	2.3	0.000000000000
+gsl_ran_rayleigh_pdf	-4.2	2.3	0.000000000000
+gsl_ran_rayleigh_pdf	-3.8	2.3	0.000000000000
+gsl_ran_rayleigh_pdf	-3.4	2.3	0.000000000000
+gsl_ran_rayleigh_pdf	-3	2.3	0.000000000000
+gsl_ran_rayleigh_pdf	-2.6	2.3	0.000000000000
+gsl_ran_rayleigh_pdf	-2.2	2.3	0.000000000000
+gsl_ran_rayleigh_pdf	-1.8	2.3	0.000000000000
+gsl_ran_rayleigh_pdf	-1.4	2.3	0.000000000000
+gsl_ran_rayleigh_pdf	-1	2.3	0.000000000000
+gsl_ran_rayleigh_pdf	-0.6	2.3	0.000000000000
+gsl_ran_rayleigh_pdf	-0.2	2.3	0.000000000000
+gsl_ran_rayleigh_pdf	0.2	2.3	0.037664514918
+gsl_ran_rayleigh_pdf	0.6	2.3	0.109627137009
+gsl_ran_rayleigh_pdf	1	2.3	0.171987031325
+gsl_ran_rayleigh_pdf	1.4	2.3	0.219895860132
+gsl_ran_rayleigh_pdf	1.8	2.3	0.250506661443
+gsl_ran_rayleigh_pdf	2.2	2.3	0.263203494085
+gsl_ran_rayleigh_pdf	2.6	2.3	0.259435230830
+gsl_ran_rayleigh_pdf	3	2.3	0.242230001949
+gsl_ran_rayleigh_pdf	3.4	2.3	0.215526714162
+gsl_ran_rayleigh_pdf	3.8	2.3	0.183478735945
+gsl_ran_rayleigh_pdf	4.2	2.3	0.149863483847
+gsl_ran_rayleigh_pdf	4.6	2.3	0.117682854988
+gsl_cdf_rayleigh_P	-5	2.3	0.905857808140
+gsl_cdf_rayleigh_Q	-5	2.3	0.094142191860
+gsl_cdf_rayleigh_P	-4.6	2.3	0.864664716763
+gsl_cdf_rayleigh_Q	-4.6	2.3	0.135335283237
+gsl_cdf_rayleigh_P	-4.2	2.3	0.811243373916
+gsl_cdf_rayleigh_Q	-4.2	2.3	0.188756626084
+gsl_cdf_rayleigh_P	-3.8	2.3	0.744578286013
+gsl_cdf_rayleigh_Q	-3.8	2.3	0.255421713987
+gsl_cdf_rayleigh_P	-3.4	2.3	0.664665788848
+gsl_cdf_rayleigh_Q	-3.4	2.3	0.335334211152
+gsl_cdf_rayleigh_P	-3	2.3	0.572867763229
+gsl_cdf_rayleigh_Q	-3	2.3	0.427132236771
+gsl_cdf_rayleigh_P	-2.6	2.3	0.472149088043
+gsl_cdf_rayleigh_Q	-2.6	2.3	0.527850911957
+gsl_cdf_rayleigh_P	-2.2	2.3	0.367115234678
+gsl_cdf_rayleigh_Q	-2.2	2.3	0.632884765322
+gsl_cdf_rayleigh_P	-1.8	2.3	0.263788756092
+gsl_cdf_rayleigh_Q	-1.8	2.3	0.736211243908
+gsl_cdf_rayleigh_P	-1.4	2.3	0.169107785643
+gsl_cdf_rayleigh_Q	-1.4	2.3	0.830892214357
+gsl_cdf_rayleigh_P	-1	2.3	0.090188604289
+gsl_cdf_rayleigh_Q	-1	2.3	0.909811395711
+gsl_cdf_rayleigh_P	-0.6	2.3	0.033454075366
+gsl_cdf_rayleigh_Q	-0.6	2.3	0.966545924634
+gsl_cdf_rayleigh_P	-0.2	2.3	0.003773580419
+gsl_cdf_rayleigh_Q	-0.2	2.3	0.996226419581
+gsl_cdf_rayleigh_P	0.2	2.3	0.003773580419
+gsl_cdf_rayleigh_Q	0.2	2.3	0.996226419581
+gsl_cdf_rayleigh_P	0.6	2.3	0.033454075366
+gsl_cdf_rayleigh_Q	0.6	2.3	0.966545924634
+gsl_cdf_rayleigh_P	1	2.3	0.090188604289
+gsl_cdf_rayleigh_Q	1	2.3	0.909811395711
+gsl_cdf_rayleigh_P	1.4	2.3	0.169107785643
+gsl_cdf_rayleigh_Q	1.4	2.3	0.830892214357
+gsl_cdf_rayleigh_P	1.8	2.3	0.263788756092
+gsl_cdf_rayleigh_Q	1.8	2.3	0.736211243908
+gsl_cdf_rayleigh_P	2.2	2.3	0.367115234678
+gsl_cdf_rayleigh_Q	2.2	2.3	0.632884765322
+gsl_cdf_rayleigh_P	2.6	2.3	0.472149088043
+gsl_cdf_rayleigh_Q	2.6	2.3	0.527850911957
+gsl_cdf_rayleigh_P	3	2.3	0.572867763229
+gsl_cdf_rayleigh_Q	3	2.3	0.427132236771
+gsl_cdf_rayleigh_P	3.4	2.3	0.664665788848
+gsl_cdf_rayleigh_Q	3.4	2.3	0.335334211152
+gsl_cdf_rayleigh_P	3.8	2.3	0.744578286013
+gsl_cdf_rayleigh_Q	3.8	2.3	0.255421713987
+gsl_cdf_rayleigh_P	4.2	2.3	0.811243373916
+gsl_cdf_rayleigh_Q	4.2	2.3	0.188756626084
+gsl_cdf_rayleigh_P	4.6	2.3	0.864664716763
+gsl_cdf_rayleigh_Q	4.6	2.3	0.135335283237
+gsl_cdf_rayleigh_Pinv	0.1	2.3	1.055800291561
+gsl_cdf_rayleigh_Qinv	0.1	2.3	4.935721860465
+gsl_cdf_rayleigh_Pinv	0.2	2.3	1.536508630924
+gsl_cdf_rayleigh_Qinv	0.2	2.3	4.126481929386
+gsl_cdf_rayleigh_Pinv	0.3	2.3	1.942580991071
+gsl_cdf_rayleigh_Qinv	0.3	2.3	3.569038003408
+gsl_cdf_rayleigh_Pinv	0.4	2.3	2.324765600968
+gsl_cdf_rayleigh_Qinv	0.4	2.3	3.113576069928
+gsl_cdf_rayleigh_Pinv	0.5	2.3	2.708043051786
+gsl_cdf_rayleigh_Qinv	0.5	2.3	2.708043051786
+gsl_cdf_rayleigh_Pinv	0.6	2.3	3.113576069928
+gsl_cdf_rayleigh_Qinv	0.6	2.3	2.324765600968
+gsl_cdf_rayleigh_Pinv	0.7	2.3	3.569038003408
+gsl_cdf_rayleigh_Qinv	0.7	2.3	1.942580991071
+gsl_cdf_rayleigh_Pinv	0.8	2.3	4.126481929386
+gsl_cdf_rayleigh_Qinv	0.8	2.3	1.536508630924
+gsl_cdf_rayleigh_Pinv	0.9	2.3	4.935721860465
+gsl_cdf_rayleigh_Qinv	0.9	2.3	1.055800291561
+gsl_ran_rayleigh	2.3	2.146705546401
+gsl_ran_rayleigh	2.3	3.488683633286
+gsl_ran_rayleigh	2.3	2.162599342556
+gsl_ran_rayleigh	2.3	2.511693374927
+gsl_ran_rayleigh	2.3	5.352787872559
+gsl_ran_rayleigh	2.3	4.276928994146
+gsl_ran_rayleigh	2.3	0.791984020818
+gsl_ran_rayleigh	2.3	2.147612927853
+gsl_ran_rayleigh	2.3	1.769635516875
+gsl_ran_rayleigh	2.3	2.315028607536
+gsl_ran_rayleigh_tail_pdf	-5	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	-4.6	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	-4.2	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	-3.8	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	-3.4	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	-3	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	-2.6	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	-2.2	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	-1.8	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	-1.4	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	-1	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	-0.6	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	-0.2	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	0.2	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	0.6	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	1	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	1.4	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	1.8	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	2.2	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	2.6	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	3	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	3.4	3.8	2.3	0.000000000000
+gsl_ran_rayleigh_tail_pdf	3.8	3.8	2.3	0.718336483932
+gsl_ran_rayleigh_tail_pdf	4.2	3.8	2.3	0.586729614753
+gsl_ran_rayleigh_tail_pdf	4.6	3.8	2.3	0.460739430299
+gsl_ran_rayleigh_tail	3.8	2.3	4.067933407397
+gsl_ran_rayleigh_tail	3.8	2.3	5.887341635329
+gsl_ran_rayleigh_tail	3.8	2.3	4.698048301475
+gsl_ran_rayleigh_tail	3.8	2.3	3.845113951752
+gsl_ran_rayleigh_tail	3.8	2.3	6.468776459898
+gsl_ran_rayleigh_tail	3.8	2.3	6.811100126760
+gsl_ran_rayleigh_tail	3.8	2.3	7.685216689862
+gsl_ran_rayleigh_tail	3.8	2.3	5.473663295057
+gsl_ran_rayleigh_tail	3.8	2.3	5.542730053070
+gsl_ran_rayleigh_tail	3.8	2.3	4.665906403201
+gsl_ran_fdist_pdf	-5	7.0	8.0	0.000000000000
+gsl_ran_fdist_pdf	-4.6	7.0	8.0	0.000000000000
+gsl_ran_fdist_pdf	-4.2	7.0	8.0	0.000000000000
+gsl_ran_fdist_pdf	-3.8	7.0	8.0	0.000000000000
+gsl_ran_fdist_pdf	-3.4	7.0	8.0	0.000000000000
+gsl_ran_fdist_pdf	-3	7.0	8.0	0.000000000000
+gsl_ran_fdist_pdf	-2.6	7.0	8.0	0.000000000000
+gsl_ran_fdist_pdf	-2.2	7.0	8.0	0.000000000000
+gsl_ran_fdist_pdf	-1.8	7.0	8.0	0.000000000000
+gsl_ran_fdist_pdf	-1.4	7.0	8.0	0.000000000000
+gsl_ran_fdist_pdf	-1	7.0	8.0	0.000000000000
+gsl_ran_fdist_pdf	-0.6	7.0	8.0	0.000000000000
+gsl_ran_fdist_pdf	-0.2	7.0	8.0	0.000000000000
+gsl_ran_fdist_pdf	0.2	7.0	8.0	0.313851731566
+gsl_ran_fdist_pdf	0.6	7.0	8.0	0.692289648417
+gsl_ran_fdist_pdf	1	7.0	8.0	0.527137604893
+gsl_ran_fdist_pdf	1.4	7.0	8.0	0.338671392768
+gsl_ran_fdist_pdf	1.8	7.0	8.0	0.212219629448
+gsl_ran_fdist_pdf	2.2	7.0	8.0	0.134755411126
+gsl_ran_fdist_pdf	2.6	7.0	8.0	0.087656096535
+gsl_ran_fdist_pdf	3	7.0	8.0	0.058536478813
+gsl_ran_fdist_pdf	3.4	7.0	8.0	0.040096118665
+gsl_ran_fdist_pdf	3.8	7.0	8.0	0.028118794156
+gsl_ran_fdist_pdf	4.2	7.0	8.0	0.020146270062
+gsl_ran_fdist_pdf	4.6	7.0	8.0	0.014716604647
+gsl_cdf_fdist_P	-5	7.0	8.0	nan
+gsl_cdf_fdist_Q	-5	7.0	8.0	nan
+gsl_cdf_fdist_P	-4.6	7.0	8.0	nan
+gsl_cdf_fdist_Q	-4.6	7.0	8.0	nan
+gsl_cdf_fdist_P	-4.2	7.0	8.0	nan
+gsl_cdf_fdist_Q	-4.2	7.0	8.0	nan
+gsl_cdf_fdist_P	-3.8	7.0	8.0	nan
+gsl_cdf_fdist_Q	-3.8	7.0	8.0	nan
+gsl_cdf_fdist_P	-3.4	7.0	8.0	nan
+gsl_cdf_fdist_Q	-3.4	7.0	8.0	nan
+gsl_cdf_fdist_P	-3	7.0	8.0	nan
+gsl_cdf_fdist_Q	-3	7.0	8.0	nan
+gsl_cdf_fdist_P	-2.6	7.0	8.0	nan
+gsl_cdf_fdist_Q	-2.6	7.0	8.0	nan
+gsl_cdf_fdist_P	-2.2	7.0	8.0	nan
+gsl_cdf_fdist_Q	-2.2	7.0	8.0	nan
+gsl_cdf_fdist_P	-1.8	7.0	8.0	nan
+gsl_cdf_fdist_Q	-1.8	7.0	8.0	nan
+gsl_cdf_fdist_P	-1.4	7.0	8.0	nan
+gsl_cdf_fdist_Q	-1.4	7.0	8.0	nan
+gsl_cdf_fdist_P	-1	7.0	8.0	nan
+gsl_cdf_fdist_Q	-1	7.0	8.0	nan
+gsl_cdf_fdist_P	-0.6	7.0	8.0	nan
+gsl_cdf_fdist_Q	-0.6	7.0	8.0	nan
+gsl_cdf_fdist_P	-0.2	7.0	8.0	nan
+gsl_cdf_fdist_Q	-0.2	7.0	8.0	nan
+gsl_cdf_fdist_P	0.2	7.0	8.0	0.023692069664
+gsl_cdf_fdist_Q	0.2	7.0	8.0	0.976307930336
+gsl_cdf_fdist_P	0.6	7.0	8.0	0.257398583736
+gsl_cdf_fdist_Q	0.6	7.0	8.0	0.742601416264
+gsl_cdf_fdist_P	1	7.0	8.0	0.506595661983
+gsl_cdf_fdist_Q	1	7.0	8.0	0.493404338017
+gsl_cdf_fdist_P	1.4	7.0	8.0	0.677892437759
+gsl_cdf_fdist_Q	1.4	7.0	8.0	0.322107562241
+gsl_cdf_fdist_P	1.8	7.0	8.0	0.786089377466
+gsl_cdf_fdist_Q	1.8	7.0	8.0	0.213910622534
+gsl_cdf_fdist_P	2.2	7.0	8.0	0.854196214766
+gsl_cdf_fdist_Q	2.2	7.0	8.0	0.145803785234
+gsl_cdf_fdist_P	2.6	7.0	8.0	0.897910784945
+gsl_cdf_fdist_Q	2.6	7.0	8.0	0.102089215055
+gsl_cdf_fdist_P	3	7.0	8.0	0.926695853416
+gsl_cdf_fdist_Q	3	7.0	8.0	0.073304146584
+gsl_cdf_fdist_P	3.4	7.0	8.0	0.946150587509
+gsl_cdf_fdist_Q	3.4	7.0	8.0	0.053849412491
+gsl_cdf_fdist_P	3.8	7.0	8.0	0.959626970638
+gsl_cdf_fdist_Q	3.8	7.0	8.0	0.040373029362
+gsl_cdf_fdist_P	4.2	7.0	8.0	0.969175339210
+gsl_cdf_fdist_Q	4.2	7.0	8.0	0.030824660790
+gsl_cdf_fdist_P	4.6	7.0	8.0	0.976080585122
+gsl_cdf_fdist_Q	4.6	7.0	8.0	0.023919414878
+gsl_cdf_fdist_Pinv	0.1	7.0	8.0	0.363427613808
+gsl_cdf_fdist_Qinv	0.1	7.0	8.0	2.624134873561
+gsl_cdf_fdist_Pinv	0.2	7.0	8.0	0.517089411397
+gsl_cdf_fdist_Qinv	0.2	7.0	8.0	1.868168097454
+gsl_cdf_fdist_Pinv	0.3	7.0	8.0	0.661962822260
+gsl_cdf_fdist_Qinv	0.3	7.0	8.0	1.467895261518
+gsl_cdf_fdist_Pinv	0.4	7.0	8.0	0.814771472519
+gsl_cdf_fdist_Qinv	0.4	7.0	8.0	1.195976166381
+gsl_cdf_fdist_Pinv	0.5	7.0	8.0	0.987565130026
+gsl_cdf_fdist_Qinv	0.5	7.0	8.0	0.987565130026
+gsl_cdf_fdist_Pinv	0.6	7.0	8.0	1.195976166381
+gsl_cdf_fdist_Qinv	0.6	7.0	8.0	0.814771472519
+gsl_cdf_fdist_Pinv	0.7	7.0	8.0	1.467895261518
+gsl_cdf_fdist_Qinv	0.7	7.0	8.0	0.661962822260
+gsl_cdf_fdist_Pinv	0.8	7.0	8.0	1.868168097454
+gsl_cdf_fdist_Qinv	0.8	7.0	8.0	0.517089411397
+gsl_cdf_fdist_Pinv	0.9	7.0	8.0	2.624134873561
+gsl_cdf_fdist_Qinv	0.9	7.0	8.0	0.363427613808
+gsl_ran_fdist	7.0	8.0	0.807693486490
+gsl_ran_fdist	7.0	8.0	1.049026958698
+gsl_ran_fdist	7.0	8.0	2.271041861456
+gsl_ran_fdist	7.0	8.0	0.926950470720
+gsl_ran_fdist	7.0	8.0	0.709135311400
+gsl_ran_fdist	7.0	8.0	2.016207844178
+gsl_ran_fdist	7.0	8.0	0.755904205596
+gsl_ran_fdist	7.0	8.0	3.028066625004
+gsl_ran_fdist	7.0	8.0	3.355797890632
+gsl_ran_fdist	7.0	8.0	0.789368659364
+gsl_ran_gumbel2_pdf	-5	2.9	4.6	0.000000000000
+gsl_ran_gumbel2_pdf	-4.6	2.9	4.6	0.000000000000
+gsl_ran_gumbel2_pdf	-4.2	2.9	4.6	0.000000000000
+gsl_ran_gumbel2_pdf	-3.8	2.9	4.6	0.000000000000
+gsl_ran_gumbel2_pdf	-3.4	2.9	4.6	0.000000000000
+gsl_ran_gumbel2_pdf	-3	2.9	4.6	0.000000000000
+gsl_ran_gumbel2_pdf	-2.6	2.9	4.6	0.000000000000
+gsl_ran_gumbel2_pdf	-2.2	2.9	4.6	0.000000000000
+gsl_ran_gumbel2_pdf	-1.8	2.9	4.6	0.000000000000
+gsl_ran_gumbel2_pdf	-1.4	2.9	4.6	0.000000000000
+gsl_ran_gumbel2_pdf	-1	2.9	4.6	0.000000000000
+gsl_ran_gumbel2_pdf	-0.6	2.9	4.6	0.000000000000
+gsl_ran_gumbel2_pdf	-0.2	2.9	4.6	0.000000000000
+gsl_ran_gumbel2_pdf	0.2	2.9	4.6	0.000000000000
+gsl_ran_gumbel2_pdf	0.6	2.9	4.6	0.000000159255
+gsl_ran_gumbel2_pdf	1	2.9	4.6	0.134091488833
+gsl_ran_gumbel2_pdf	1.4	2.9	4.6	0.634305297633
+gsl_ran_gumbel2_pdf	1.8	2.9	4.6	0.583854146793
+gsl_ran_gumbel2_pdf	2.2	2.9	4.6	0.386098283701
+gsl_ran_gumbel2_pdf	2.6	2.9	4.6	0.240823842627
+gsl_ran_gumbel2_pdf	3	2.9	4.6	0.151984733017
+gsl_ran_gumbel2_pdf	3.4	2.9	4.6	0.098842316305
+gsl_ran_gumbel2_pdf	3.8	2.9	4.6	0.066434318716
+gsl_ran_gumbel2_pdf	4.2	2.9	4.6	0.046063601640
+gsl_ran_gumbel2_pdf	4.6	2.9	4.6	0.032846736069
+gsl_cdf_gumbel2_P	-5	2.9	4.6	nan
+gsl_cdf_gumbel2_Q	-5	2.9	4.6	nan
+gsl_cdf_gumbel2_P	-4.6	2.9	4.6	nan
+gsl_cdf_gumbel2_Q	-4.6	2.9	4.6	nan
+gsl_cdf_gumbel2_P	-4.2	2.9	4.6	nan
+gsl_cdf_gumbel2_Q	-4.2	2.9	4.6	nan
+gsl_cdf_gumbel2_P	-3.8	2.9	4.6	nan
+gsl_cdf_gumbel2_Q	-3.8	2.9	4.6	nan
+gsl_cdf_gumbel2_P	-3.4	2.9	4.6	nan
+gsl_cdf_gumbel2_Q	-3.4	2.9	4.6	nan
+gsl_cdf_gumbel2_P	-3	2.9	4.6	nan
+gsl_cdf_gumbel2_Q	-3	2.9	4.6	nan
+gsl_cdf_gumbel2_P	-2.6	2.9	4.6	nan
+gsl_cdf_gumbel2_Q	-2.6	2.9	4.6	nan
+gsl_cdf_gumbel2_P	-2.2	2.9	4.6	nan
+gsl_cdf_gumbel2_Q	-2.2	2.9	4.6	nan
+gsl_cdf_gumbel2_P	-1.8	2.9	4.6	nan
+gsl_cdf_gumbel2_Q	-1.8	2.9	4.6	nan
+gsl_cdf_gumbel2_P	-1.4	2.9	4.6	nan
+gsl_cdf_gumbel2_Q	-1.4	2.9	4.6	nan
+gsl_cdf_gumbel2_P	-1	2.9	4.6	nan
+gsl_cdf_gumbel2_Q	-1	2.9	4.6	nan
+gsl_cdf_gumbel2_P	-0.6	2.9	4.6	nan
+gsl_cdf_gumbel2_Q	-0.6	2.9	4.6	nan
+gsl_cdf_gumbel2_P	-0.2	2.9	4.6	nan
+gsl_cdf_gumbel2_Q	-0.2	2.9	4.6	nan
+gsl_cdf_gumbel2_P	0.2	2.9	4.6	0.000000000000
+gsl_cdf_gumbel2_Q	0.2	2.9	4.6	1.000000000000
+gsl_cdf_gumbel2_P	0.6	2.9	4.6	0.000000001628
+gsl_cdf_gumbel2_Q	0.6	2.9	4.6	0.999999998372
+gsl_cdf_gumbel2_P	1	2.9	4.6	0.010051835745
+gsl_cdf_gumbel2_Q	1	2.9	4.6	0.989948164255
+gsl_cdf_gumbel2_P	1.4	2.9	4.6	0.176620800238
+gsl_cdf_gumbel2_Q	1.4	2.9	4.6	0.823379199762
+gsl_cdf_gumbel2_P	1.8	2.9	4.6	0.433222804464
+gsl_cdf_gumbel2_Q	1.8	2.9	4.6	0.566777195536
+gsl_cdf_gumbel2_P	2.2	2.9	4.6	0.626600153177
+gsl_cdf_gumbel2_Q	2.2	2.9	4.6	0.373399846823
+gsl_cdf_gumbel2_P	2.6	2.9	4.6	0.749790112888
+gsl_cdf_gumbel2_Q	2.6	2.9	4.6	0.250209887112
+gsl_cdf_gumbel2_P	3	2.9	4.6	0.826831528664
+gsl_cdf_gumbel2_Q	3	2.9	4.6	0.173168471336
+gsl_cdf_gumbel2_P	3.4	2.9	4.6	0.876102382042
+gsl_cdf_gumbel2_Q	3.4	2.9	4.6	0.123897617958
+gsl_cdf_gumbel2_P	3.8	2.9	4.6	0.908641739803
+gsl_cdf_gumbel2_Q	3.8	2.9	4.6	0.091358260197
+gsl_cdf_gumbel2_P	4.2	2.9	4.6	0.930838408006
+gsl_cdf_gumbel2_Q	4.2	2.9	4.6	0.069161591994
+gsl_cdf_gumbel2_P	4.6	2.9	4.6	0.946437489388
+gsl_cdf_gumbel2_Q	4.6	2.9	4.6	0.053562510612
+gsl_cdf_gumbel2_Pinv	0.1	2.9	4.6	1.269507356106
+gsl_cdf_gumbel2_Qinv	0.1	2.9	4.6	3.677433333460
+gsl_cdf_gumbel2_Pinv	0.2	2.9	4.6	1.436382840767
+gsl_cdf_gumbel2_Qinv	0.2	2.9	4.6	2.838986143297
+gsl_cdf_gumbel2_Pinv	0.3	2.9	4.6	1.587589906753
+gsl_cdf_gumbel2_Qinv	0.3	2.9	4.6	2.415048970077
+gsl_cdf_gumbel2_Pinv	0.4	2.9	4.6	1.744332011846
+gsl_cdf_gumbel2_Qinv	0.4	2.9	4.6	2.133697326250
+gsl_cdf_gumbel2_Pinv	0.5	2.9	4.6	1.920547069082
+gsl_cdf_gumbel2_Qinv	0.5	2.9	4.6	1.920547069082
+gsl_cdf_gumbel2_Pinv	0.6	2.9	4.6	2.133697326250
+gsl_cdf_gumbel2_Qinv	0.6	2.9	4.6	1.744332011846
+gsl_cdf_gumbel2_Pinv	0.7	2.9	4.6	2.415048970077
+gsl_cdf_gumbel2_Qinv	0.7	2.9	4.6	1.587589906753
+gsl_cdf_gumbel2_Pinv	0.8	2.9	4.6	2.838986143297
+gsl_cdf_gumbel2_Qinv	0.8	2.9	4.6	1.436382840767
+gsl_cdf_gumbel2_Pinv	0.9	2.9	4.6	3.677433333460
+gsl_cdf_gumbel2_Qinv	0.9	2.9	4.6	1.269507356106
+gsl_ran_gumbel2	2.9	4.6	3.103622695209
+gsl_ran_gumbel2	2.9	4.6	2.528202376452
+gsl_ran_gumbel2	2.9	4.6	4.720974994104
+gsl_ran_gumbel2	2.9	4.6	1.366830660487
+gsl_ran_gumbel2	2.9	4.6	1.465416553597
+gsl_ran_gumbel2	2.9	4.6	1.201368456904
+gsl_ran_gumbel2	2.9	4.6	3.277280483423
+gsl_ran_gumbel2	2.9	4.6	1.996178699267
+gsl_ran_gumbel2	2.9	4.6	1.722711384646
+gsl_ran_gumbel2	2.9	4.6	2.320994820319
+gsl_ran_negative_binomial_pdf	0	.6	30	0.000000221074
+gsl_ran_negative_binomial_pdf	1	.6	30	0.000002652887
+gsl_ran_negative_binomial_pdf	2	.6	30	0.000016447900
+gsl_ran_negative_binomial_pdf	3	.6	30	0.000070177705
+gsl_ran_negative_binomial_pdf	4	.6	30	0.000231586427
+gsl_ran_negative_binomial_pdf	5	.6	30	0.000629915081
+gsl_ran_negative_binomial_pdf	6	.6	30	0.001469801855
+gsl_ran_negative_binomial_pdf	7	.6	30	0.003023592388
+gsl_ran_negative_binomial_pdf	8	.6	30	0.005593645917
+gsl_ran_negative_binomial_pdf	9	.6	30	0.009447046438
+gsl_ran_negative_binomial_pdf	10	.6	30	0.014737392443
+gsl_cdf_negative_binomial_P	0	.6	30	0.000000221074
+gsl_cdf_negative_binomial_Q	0	.6	30	0.999999778926
+gsl_cdf_negative_binomial_P	1	.6	30	0.000002873961
+gsl_cdf_negative_binomial_Q	1	.6	30	0.999997126039
+gsl_cdf_negative_binomial_P	2	.6	30	0.000019321861
+gsl_cdf_negative_binomial_Q	2	.6	30	0.999980678139
+gsl_cdf_negative_binomial_P	3	.6	30	0.000089499566
+gsl_cdf_negative_binomial_Q	3	.6	30	0.999910500434
+gsl_cdf_negative_binomial_P	4	.6	30	0.000321085992
+gsl_cdf_negative_binomial_Q	4	.6	30	0.999678914008
+gsl_cdf_negative_binomial_P	5	.6	30	0.000951001073
+gsl_cdf_negative_binomial_Q	5	.6	30	0.999048998927
+gsl_cdf_negative_binomial_P	6	.6	30	0.002420802928
+gsl_cdf_negative_binomial_Q	6	.6	30	0.997579197072
+gsl_cdf_negative_binomial_P	7	.6	30	0.005444395316
+gsl_cdf_negative_binomial_Q	7	.6	30	0.994555604684
+gsl_cdf_negative_binomial_P	8	.6	30	0.011038041233
+gsl_cdf_negative_binomial_Q	8	.6	30	0.988961958767
+gsl_cdf_negative_binomial_P	9	.6	30	0.020485087671
+gsl_cdf_negative_binomial_Q	9	.6	30	0.979514912329
+gsl_cdf_negative_binomial_P	10	.6	30	0.035222480114
+gsl_cdf_negative_binomial_Q	10	.6	30	0.964777519886
+gsl_ran_negative_binomial	.6	30	22
+gsl_ran_negative_binomial	.6	30	10
+gsl_ran_negative_binomial	.6	30	16
+gsl_ran_negative_binomial	.6	30	14
+gsl_ran_negative_binomial	.6	30	35
+gsl_ran_negative_binomial	.6	30	6
+gsl_ran_negative_binomial	.6	30	14
+gsl_ran_negative_binomial	.6	30	31
+gsl_ran_negative_binomial	.6	30	17
+gsl_ran_negative_binomial	.6	30	14
+gsl_ran_levy_skew	0.5	1.1	0.4	-4.282830736103
+gsl_ran_levy_skew	0.5	1.1	0.4	-0.882884167295
+gsl_ran_levy_skew	0.5	1.1	0.4	-1.575738565796
+gsl_ran_levy_skew	0.5	1.1	0.4	-1.206120764036
+gsl_ran_levy_skew	0.5	1.1	0.4	-2.712471701851
+gsl_ran_levy_skew	0.5	1.1	0.4	-1.554769357102
+gsl_ran_levy_skew	0.5	1.1	0.4	-1.395586862081
+gsl_ran_levy_skew	0.5	1.1	0.4	0.794598924825
+gsl_ran_levy_skew	0.5	1.1	0.4	-0.751025694537
+gsl_ran_levy_skew	0.5	1.1	0.4	-1.131848165405
+gsl_ran_logistic_pdf	-5	2.6	0.042791456554
+gsl_ran_logistic_pdf	-4.6	2.6	0.047856763293
+gsl_ran_logistic_pdf	-4.2	2.6	0.053207184500
+gsl_ran_logistic_pdf	-3.8	2.6	0.058769537661
+gsl_ran_logistic_pdf	-3.4	2.6	0.064445475237
+gsl_ran_logistic_pdf	-3	2.6	0.070111282489
+gsl_ran_logistic_pdf	-2.6	2.6	0.075619974324
+gsl_ran_logistic_pdf	-2.2	2.6	0.080806177475
+gsl_ran_logistic_pdf	-1.8	2.6	0.085493992471
+gsl_ran_logistic_pdf	-1.4	2.6	0.089507586533
+gsl_ran_logistic_pdf	-1	2.6	0.092683730396
+gsl_ran_logistic_pdf	-0.6	2.6	0.094884968587
+gsl_ran_logistic_pdf	-0.2	2.6	0.096011746895
+gsl_ran_logistic_pdf	0.2	2.6	0.096011746895
+gsl_ran_logistic_pdf	0.6	2.6	0.094884968587
+gsl_ran_logistic_pdf	1	2.6	0.092683730396
+gsl_ran_logistic_pdf	1.4	2.6	0.089507586533
+gsl_ran_logistic_pdf	1.8	2.6	0.085493992471
+gsl_ran_logistic_pdf	2.2	2.6	0.080806177475
+gsl_ran_logistic_pdf	2.6	2.6	0.075619974324
+gsl_ran_logistic_pdf	3	2.6	0.070111282489
+gsl_ran_logistic_pdf	3.4	2.6	0.064445475237
+gsl_ran_logistic_pdf	3.8	2.6	0.058769537661
+gsl_ran_logistic_pdf	4.2	2.6	0.053207184500
+gsl_ran_logistic_pdf	4.6	2.6	0.047856763293
+gsl_cdf_logistic_P	-5	2.6	0.127518842142
+gsl_cdf_logistic_Q	-5	2.6	0.872481157858
+gsl_cdf_logistic_P	-4.6	2.6	0.145638016376
+gsl_cdf_logistic_Q	-4.6	2.6	0.854361983624
+gsl_cdf_logistic_P	-4.2	2.6	0.165842372075
+gsl_cdf_logistic_Q	-4.2	2.6	0.834157627925
+gsl_cdf_logistic_P	-3.8	2.6	0.188232134302
+gsl_cdf_logistic_Q	-3.8	2.6	0.811767865698
+gsl_cdf_logistic_P	-3.4	2.6	0.212873260763
+gsl_cdf_logistic_Q	-3.4	2.6	0.787126739237
+gsl_cdf_logistic_P	-3	2.6	0.239787268703
+gsl_cdf_logistic_Q	-3	2.6	0.760212731297
+gsl_cdf_logistic_P	-2.6	2.6	0.268941421370
+gsl_cdf_logistic_Q	-2.6	2.6	0.731058578630
+gsl_cdf_logistic_P	-2.2	2.6	0.300240297944
+gsl_cdf_logistic_Q	-2.2	2.6	0.699759702056
+gsl_cdf_logistic_P	-1.8	2.6	0.333519912372
+gsl_cdf_logistic_Q	-1.8	2.6	0.666480087628
+gsl_cdf_logistic_P	-1.4	2.6	0.368545540147
+gsl_cdf_logistic_Q	-1.4	2.6	0.631454459853
+gsl_cdf_logistic_P	-1	2.6	0.405014206477
+gsl_cdf_logistic_Q	-1	2.6	0.594985793523
+gsl_cdf_logistic_P	-0.6	2.6	0.442562367089
+gsl_cdf_logistic_Q	-0.6	2.6	0.557437632911
+gsl_cdf_logistic_P	-0.2	2.6	0.480778707789
+gsl_cdf_logistic_Q	-0.2	2.6	0.519221292211
+gsl_cdf_logistic_P	0.2	2.6	0.519221292211
+gsl_cdf_logistic_Q	0.2	2.6	0.480778707789
+gsl_cdf_logistic_P	0.6	2.6	0.557437632911
+gsl_cdf_logistic_Q	0.6	2.6	0.442562367089
+gsl_cdf_logistic_P	1	2.6	0.594985793523
+gsl_cdf_logistic_Q	1	2.6	0.405014206477
+gsl_cdf_logistic_P	1.4	2.6	0.631454459853
+gsl_cdf_logistic_Q	1.4	2.6	0.368545540147
+gsl_cdf_logistic_P	1.8	2.6	0.666480087628
+gsl_cdf_logistic_Q	1.8	2.6	0.333519912372
+gsl_cdf_logistic_P	2.2	2.6	0.699759702056
+gsl_cdf_logistic_Q	2.2	2.6	0.300240297944
+gsl_cdf_logistic_P	2.6	2.6	0.731058578630
+gsl_cdf_logistic_Q	2.6	2.6	0.268941421370
+gsl_cdf_logistic_P	3	2.6	0.760212731297
+gsl_cdf_logistic_Q	3	2.6	0.239787268703
+gsl_cdf_logistic_P	3.4	2.6	0.787126739237
+gsl_cdf_logistic_Q	3.4	2.6	0.212873260763
+gsl_cdf_logistic_P	3.8	2.6	0.811767865698
+gsl_cdf_logistic_Q	3.8	2.6	0.188232134302
+gsl_cdf_logistic_P	4.2	2.6	0.834157627925
+gsl_cdf_logistic_Q	4.2	2.6	0.165842372075
+gsl_cdf_logistic_P	4.6	2.6	0.854361983624
+gsl_cdf_logistic_Q	4.6	2.6	0.145638016376
+gsl_cdf_logistic_Pinv	0.1	2.6	-5.712783901074
+gsl_cdf_logistic_Qinv	0.1	2.6	5.712783901074
+gsl_cdf_logistic_Pinv	0.2	2.6	-3.604365338912
+gsl_cdf_logistic_Qinv	0.2	2.6	3.604365338912
+gsl_cdf_logistic_Pinv	0.3	2.6	-2.202974437007
+gsl_cdf_logistic_Qinv	0.3	2.6	2.202974437007
+gsl_cdf_logistic_Pinv	0.4	2.6	-1.054209281081
+gsl_cdf_logistic_Qinv	0.4	2.6	1.054209281081
+gsl_cdf_logistic_Pinv	0.5	2.6	0.000000000000
+gsl_cdf_logistic_Qinv	0.5	2.6	0.000000000000
+gsl_cdf_logistic_Pinv	0.6	2.6	1.054209281081
+gsl_cdf_logistic_Qinv	0.6	2.6	-1.054209281081
+gsl_cdf_logistic_Pinv	0.7	2.6	2.202974437007
+gsl_cdf_logistic_Qinv	0.7	2.6	-2.202974437007
+gsl_cdf_logistic_Pinv	0.8	2.6	3.604365338912
+gsl_cdf_logistic_Qinv	0.8	2.6	-3.604365338912
+gsl_cdf_logistic_Pinv	0.9	2.6	5.712783901074
+gsl_cdf_logistic_Qinv	0.9	2.6	-5.712783901074
+gsl_ran_logistic	2.6	2.082286999948
+gsl_ran_logistic	2.6	0.327172517153
+gsl_ran_logistic	2.6	3.231696506063
+gsl_ran_logistic	2.6	3.215738862687
+gsl_ran_logistic	2.6	3.042498846495
+gsl_ran_logistic	2.6	-2.738637296921
+gsl_ran_logistic	2.6	1.946266513377
+gsl_ran_logistic	2.6	-0.957978444128
+gsl_ran_logistic	2.6	-3.145824448421
+gsl_ran_logistic	2.6	1.615988091783
+gsl_ran_gamma_pdf	-5	3.1	2.4	0.000000000000
+gsl_ran_gamma_pdf	-4.6	3.1	2.4	0.000000000000
+gsl_ran_gamma_pdf	-4.2	3.1	2.4	0.000000000000
+gsl_ran_gamma_pdf	-3.8	3.1	2.4	0.000000000000
+gsl_ran_gamma_pdf	-3.4	3.1	2.4	0.000000000000
+gsl_ran_gamma_pdf	-3	3.1	2.4	0.000000000000
+gsl_ran_gamma_pdf	-2.6	3.1	2.4	0.000000000000
+gsl_ran_gamma_pdf	-2.2	3.1	2.4	0.000000000000
+gsl_ran_gamma_pdf	-1.8	3.1	2.4	0.000000000000
+gsl_ran_gamma_pdf	-1.4	3.1	2.4	0.000000000000
+gsl_ran_gamma_pdf	-1	3.1	2.4	0.000000000000
+gsl_ran_gamma_pdf	-0.6	3.1	2.4	0.000000000000
+gsl_ran_gamma_pdf	-0.2	3.1	2.4	0.000000000000
+gsl_ran_gamma_pdf	0.2	3.1	2.4	0.000944853075
+gsl_ran_gamma_pdf	0.6	3.1	2.4	0.008034086479
+gsl_ran_gamma_pdf	1	3.1	2.4	0.019880919313
+gsl_ran_gamma_pdf	1.4	3.1	2.4	0.034113236410
+gsl_ran_gamma_pdf	1.8	3.1	2.4	0.048949008147
+gsl_ran_gamma_pdf	2.2	3.1	2.4	0.063150508436
+gsl_ran_gamma_pdf	2.6	3.1	2.4	0.075919062913
+gsl_ran_gamma_pdf	3	3.1	2.4	0.086791866739
+gsl_ran_gamma_pdf	3.4	3.1	2.4	0.095553743623
+gsl_ran_gamma_pdf	3.8	3.1	2.4	0.102165701197
+gsl_ran_gamma_pdf	4.2	3.1	2.4	0.106708904989
+gsl_ran_gamma_pdf	4.6	3.1	2.4	0.109341791782
+gsl_cdf_gamma_P	-5	3.1	2.4	0.000000000000
+gsl_cdf_gamma_Q	-5	3.1	2.4	1.000000000000
+gsl_cdf_gamma_P	-4.6	3.1	2.4	0.000000000000
+gsl_cdf_gamma_Q	-4.6	3.1	2.4	1.000000000000
+gsl_cdf_gamma_P	-4.2	3.1	2.4	0.000000000000
+gsl_cdf_gamma_Q	-4.2	3.1	2.4	1.000000000000
+gsl_cdf_gamma_P	-3.8	3.1	2.4	0.000000000000
+gsl_cdf_gamma_Q	-3.8	3.1	2.4	1.000000000000
+gsl_cdf_gamma_P	-3.4	3.1	2.4	0.000000000000
+gsl_cdf_gamma_Q	-3.4	3.1	2.4	1.000000000000
+gsl_cdf_gamma_P	-3	3.1	2.4	0.000000000000
+gsl_cdf_gamma_Q	-3	3.1	2.4	1.000000000000
+gsl_cdf_gamma_P	-2.6	3.1	2.4	0.000000000000
+gsl_cdf_gamma_Q	-2.6	3.1	2.4	1.000000000000
+gsl_cdf_gamma_P	-2.2	3.1	2.4	0.000000000000
+gsl_cdf_gamma_Q	-2.2	3.1	2.4	1.000000000000
+gsl_cdf_gamma_P	-1.8	3.1	2.4	0.000000000000
+gsl_cdf_gamma_Q	-1.8	3.1	2.4	1.000000000000
+gsl_cdf_gamma_P	-1.4	3.1	2.4	0.000000000000
+gsl_cdf_gamma_Q	-1.4	3.1	2.4	1.000000000000
+gsl_cdf_gamma_P	-1	3.1	2.4	0.000000000000
+gsl_cdf_gamma_Q	-1	3.1	2.4	1.000000000000
+gsl_cdf_gamma_P	-0.6	3.1	2.4	0.000000000000
+gsl_cdf_gamma_Q	-0.6	3.1	2.4	1.000000000000
+gsl_cdf_gamma_P	-0.2	3.1	2.4	0.000000000000
+gsl_cdf_gamma_Q	-0.2	3.1	2.4	1.000000000000
+gsl_cdf_gamma_P	0.2	3.1	2.4	0.000062217777
+gsl_cdf_gamma_Q	0.2	3.1	2.4	0.999937782223
+gsl_cdf_gamma_P	0.6	3.1	2.4	0.001654645862
+gsl_cdf_gamma_Q	0.6	3.1	2.4	0.998345354138
+gsl_cdf_gamma_P	1	3.1	2.4	0.007122057170
+gsl_cdf_gamma_Q	1	3.1	2.4	0.992877942830
+gsl_cdf_gamma_P	1.4	3.1	2.4	0.017874689608
+gsl_cdf_gamma_Q	1.4	3.1	2.4	0.982125310392
+gsl_cdf_gamma_P	1.8	3.1	2.4	0.034490669669
+gsl_cdf_gamma_Q	1.8	3.1	2.4	0.965509330331
+gsl_cdf_gamma_P	2.2	3.1	2.4	0.056947378801
+gsl_cdf_gamma_Q	2.2	3.1	2.4	0.943052621199
+gsl_cdf_gamma_P	2.6	3.1	2.4	0.084818532802
+gsl_cdf_gamma_Q	2.6	3.1	2.4	0.915181467198
+gsl_cdf_gamma_P	3	3.1	2.4	0.117428770903
+gsl_cdf_gamma_Q	3	3.1	2.4	0.882571229097
+gsl_cdf_gamma_P	3.4	3.1	2.4	0.153969794443
+gsl_cdf_gamma_Q	3.4	3.1	2.4	0.846030205557
+gsl_cdf_gamma_P	3.8	3.1	2.4	0.193584582811
+gsl_cdf_gamma_Q	3.8	3.1	2.4	0.806415417189
+gsl_cdf_gamma_P	4.2	3.1	2.4	0.235426183817
+gsl_cdf_gamma_Q	4.2	3.1	2.4	0.764573816183
+gsl_cdf_gamma_P	4.6	3.1	2.4	0.278696801693
+gsl_cdf_gamma_Q	4.6	3.1	2.4	0.721303198307
+gsl_cdf_gamma_Pinv	0.1	3.1	2.4	2.792887158395
+gsl_cdf_gamma_Qinv	0.1	3.1	2.4	13.106021436093
+gsl_cdf_gamma_Pinv	0.2	3.1	2.4	3.862533555511
+gsl_cdf_gamma_Qinv	0.2	3.1	2.4	10.570542313500
+gsl_cdf_gamma_Pinv	0.3	3.1	2.4	4.794197061806
+gsl_cdf_gamma_Qinv	0.3	3.1	2.4	8.955153602535
+gsl_cdf_gamma_Pinv	0.4	3.1	2.4	5.705013270284
+gsl_cdf_gamma_Qinv	0.4	3.1	2.4	7.710856472316
+gsl_cdf_gamma_Pinv	0.5	3.1	2.4	6.657112257180
+gsl_cdf_gamma_Qinv	0.5	3.1	2.4	6.657112257180
+gsl_cdf_gamma_Pinv	0.6	3.1	2.4	7.710856472316
+gsl_cdf_gamma_Qinv	0.6	3.1	2.4	5.705013270284
+gsl_cdf_gamma_Pinv	0.7	3.1	2.4	8.955153602535
+gsl_cdf_gamma_Qinv	0.7	3.1	2.4	4.794197061806
+gsl_cdf_gamma_Pinv	0.8	3.1	2.4	10.570542313500
+gsl_cdf_gamma_Qinv	0.8	3.1	2.4	3.862533555511
+gsl_cdf_gamma_Pinv	0.9	3.1	2.4	13.106021436093
+gsl_cdf_gamma_Qinv	0.9	3.1	2.4	2.792887158395
+gsl_ran_gamma	3.1	2.4	11.213679217203
+gsl_ran_gamma	3.1	2.4	4.963800559972
+gsl_ran_gamma	3.1	2.4	9.017319543852
+gsl_ran_gamma	3.1	2.4	7.239601812863
+gsl_ran_gamma	3.1	2.4	4.203727778046
+gsl_ran_gamma	3.1	2.4	13.648674421369
+gsl_ran_gamma	3.1	2.4	9.034758323555
+gsl_ran_gamma	3.1	2.4	4.613114014283
+gsl_ran_gamma	3.1	2.4	9.043685616624
+gsl_ran_gamma	3.1	2.4	5.428594350744
+gsl_ran_gaussian_ziggurat	7.76	-11.373877683640
+gsl_ran_gaussian_ziggurat	7.76	-2.393149600232
+gsl_ran_gaussian_ziggurat	7.76	-2.645691901757
+gsl_ran_gaussian_ziggurat	7.76	-3.564352033430
+gsl_ran_gaussian_ziggurat	7.76	8.906002078579
+gsl_ran_gaussian_ziggurat	7.76	11.948573658053
+gsl_ran_gaussian_ziggurat	7.76	7.464910844804
+gsl_ran_gaussian_ziggurat	7.76	4.099640164324
+gsl_ran_gaussian_ziggurat	7.76	5.119963669779
+gsl_ran_gaussian_ziggurat	7.76	-17.175553684248
+gsl_ran_gaussian_ratio_method	7.76	13.810242976800
+gsl_ran_gaussian_ratio_method	7.76	2.339992588266
+gsl_ran_gaussian_ratio_method	7.76	0.594831227815
+gsl_ran_gaussian_ratio_method	7.76	-3.170096791815
+gsl_ran_gaussian_ratio_method	7.76	-5.032981141786
+gsl_ran_gaussian_ratio_method	7.76	-9.558140934004
+gsl_ran_gaussian_ratio_method	7.76	13.936471276327
+gsl_ran_gaussian_ratio_method	7.76	-11.152469078072
+gsl_ran_gaussian_ratio_method	7.76	10.517593532729
+gsl_ran_gaussian_ratio_method	7.76	10.906221015600
+gsl_ran_gamma_knuth	3.1	2.4	14.035850214091
+gsl_ran_gamma_knuth	3.1	2.4	6.741693641450
+gsl_ran_gamma_knuth	3.1	2.4	10.739303494447
+gsl_ran_gamma_knuth	3.1	2.4	9.821186543889
+gsl_ran_gamma_knuth	3.1	2.4	11.878239402624
+gsl_ran_gamma_knuth	3.1	2.4	3.604685666998
+gsl_ran_gamma_knuth	3.1	2.4	9.864162516406
+gsl_ran_gamma_knuth	3.1	2.4	2.818566557275
+gsl_ran_gamma_knuth	3.1	2.4	7.019629561043
+gsl_ran_gamma_knuth	3.1	2.4	9.468030886463
